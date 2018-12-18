@@ -17,6 +17,7 @@ my $BLAST = $ARGV[0];
 my $PatientNo = $ARGV[1];
 
 print "reading BLAST ouput file $BLAST \n";
+print out1 "***** IDENTIFER No.: $PatientNo *****";
 
 ######OUTPUT FILES
 ##############################################################################
@@ -80,6 +81,8 @@ my @duplicatedtRNA;
 my %uniqueduptRNA;
 my $uniqueCounter = 0;
 
+close(inp0); #Finish reading in BLAST file
+
 foreach my $readID (keys %StartStop){
 	foreach my $tRNAz (keys %{$StartStop{$readID}}){
 		if( $#{$StartStop{$readID}{$tRNAz}} >=1 ){
@@ -89,14 +92,82 @@ foreach my $readID (keys %StartStop){
 	}
 }
 
-print "Reads with two tRNAs: $randCounter\n";
+print out1 "Reads with two tRNAs: $randCounter\n";
 
 foreach(@duplicatedtRNA){
 	$uniqueduptRNA{$_} = 0;
 }
 
-print "Duplicated tRNAs: ";
-print scalar keys %uniqueduptRNA;
+print out1 "No. of Duplicated tRNAs: ";
+print out1 scalar keys %uniqueduptRNA;
+print out1 "\n";
+print out1 "List of Duplicated tRNAs: ";
+print out1 "\t$_ " for keys %uniqueduptRNA;
+
+#####Checks if readID are unique or are hits for multiple tRNAs
+##############################################################################
+
+my $UniqueReadsCounter = 0;
+my $MultipleMappingReadsCounter = 0;
+my $uniqueduplicatesCounter = 0;
+my %confidentalleles;
 
 
-close(inp0); #Finish reading in BLAST file
+foreach my $readID (keys %allele){
+
+		
+		my $mappings = scalar keys %{ $allele{$readID} };
+		if($mappings == 1){
+			$UniqueReadsCounter++;
+			foreach my $tRNAz (keys %{$StartStop{$readID}}){
+				if( $#{$StartStop{$readID}{$tRNAz}} >=1 ){
+					for(my $i=0; $i <= $#{ $allele{$readID}{$tRNAz} }; $i++){
+						my $allele = $allele{$readID}{$tRNAz}[$i];
+						$confidentalleles{$tRNAz}{$allele}++;
+					}
+		
+				}
+				elsif( $#{$StartStop{$readID}{$tRNAz}} == 0){
+				my $allele = $allele{$readID}{$tRNAz}[0];
+				$confidentalleles{$tRNAz}{$allele}++;
+				}
+			}
+		}
+		
+		elsif($mappings > 1){
+			$MultipleMappingReadsCounter++;
+			foreach my $tRNAz (keys %{$StartStop{$readID}}){
+				if( $#{$StartStop{$readID}{$tRNAz}} >=1 ){
+					$uniqueduplicatesCounter++;
+		
+				}
+			}
+		}
+		
+}
+
+print out1 "Unique Reads: $UniqueReadsCounter\nMultiple hit reads: $MultipleMappingReadsCounter\n";
+
+##### Output of alleles that map confidently
+##############################################################################
+
+my $confidentuniqueallelecounter = 0;
+my $confidenttRNAs = 0;
+
+foreach my $tRNAz (sort keys %confidentalleles){
+	$confidenttRNAs++;
+	foreach my $allele (keys %{$confidentalleles{$tRNAz}}){
+		if($confidentalleles{$tRNAz}{$allele} >= 10){
+			print  "$tRNAz\t$allele\t$confidentalleles{$tRNAz}{$allele}\n";
+			$confidentuniqueallelecounter++;
+		}
+		else{
+		}
+	}
+}
+
+
+print $confidentuniqueallelecounter;
+print "\n";
+print $confidenttRNAs;
+print "\n";
