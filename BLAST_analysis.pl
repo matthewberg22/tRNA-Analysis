@@ -147,3 +147,27 @@ foreach my $readID (keys %allele){
 }
 
 print out1 "Unique Reads: $UniqueReadsCounter\nMultiple hit reads: $MultipleMappingReadsCounter\n";
+
+##### Output of alleles that map confidently
+##############################################################################
+
+my $confidentuniqueallelecounter = 0;
+my $confidenttRNAs = 0;
+
+foreach my $tRNAz (sort keys %confidentalleles){
+	$confidenttRNAs++;
+	foreach my $allele (keys %{$confidentalleles{$tRNAz}}){
+		if($confidentalleles{$tRNAz}{$allele} >= 10){
+			print  "$tRNAz\t$allele\t$confidentalleles{$tRNAz}{$allele}\n";
+			$confidentuniqueallelecounter++;
+		}
+		else{
+		}
+	}
+}
+
+
+print $confidentuniqueallelecounter;
+print "\n";
+print $confidenttRNAs;
+print "\n";
