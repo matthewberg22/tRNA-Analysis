@@ -14,14 +14,11 @@ READS='/Volumes/data/trna/reads/'
 $FASTQC $READS -o .
 ```
 
-################################################################################
-
 # Merge overlapped read pairs with Pandaseq
 
 Merge overlapping raw reads. Pandaseq (pandaseq 2.11 <andre@masella.name>) was run with default settings on macOS. Distrubition of length overlap by sample is plotted with proportion of reads merged by sample.
 
 ```
-################################################################################
 # run pandaseq
 
 # this needs to be done with UNTRIMMED READS
@@ -85,7 +82,6 @@ for (i in seq(e)) {
 legend("topright", col=c("blue", "red"), pch = 19, legend = c("Sample 1", "Sample 96"))
 
 dev.off()
-################################################################################
 ```
 
 ### Blast against db of reads
@@ -100,6 +96,7 @@ for sample in ./*merged.fasta; do
 # get the sample name (i.e., GL141 from GL141_001_R1...)
 NAME=`basename $sample | cut -d "_" -f1`
 
+# the regex is required since difference samples have different values
 sed 's/M00388:[0-9]*:000000000-[a-zA-Z0-9]*//' $sample > $NAME-merged-edited.fasta
 
 done
