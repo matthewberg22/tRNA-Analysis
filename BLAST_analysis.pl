@@ -1070,6 +1070,15 @@ foreach(@tRNARefname){
 	}
 }
 
+my $totallowcovtRNAs;
+
+foreach my $keys (keys %totaltRNAcoverage){
+	my @splitgrouptRNA = split(" ", $keys);
+	foreach(@splitgrouptRNA){
+	$totallowcovtRNAs++;
+	}
+}
+
 print out1 "***** IDENTIFER No.: $PatientNo *****\n";
 print out1 "Total reads with full length tRNAs: $totalfulllength\n";
 print out1 "Total confident reads: $UniqueReadsCounter\n";
@@ -1078,26 +1087,21 @@ print out1 "Reads with two tRNAs: $twotRNAreads\n";
 print out1 "No. of duplicated tRNAs: $numberduplicatedtRNAs\n";  
 print out1 "List of Duplicated tRNAs: ";
 print out1 "\t$_ " for keys %uniqueduptRNA;
-print out1 "\nTotal tRNAs identified: $totaltRNAs\n";
+print out1 "\nTotal tRNAs identified: $totaltRNAs ($totallowcovtRNAs)\n";
+print out1 "Missing/low coverage tRNAs: $missingtRNAs\n";
 print out1 "Total unique sequences: $unsequences\n";
-print out1 "Missing tRNAs: $missingtRNAs\n";
 print out1 "#############################################################################\n";
-print out1 "tRNAname\tallele\tCoverage\n";
 
 my @sepallele;
-my $WTCounter = 0;
 
 foreach my $tRNAz (sort keys %counts){
 	for my $tops (sort keys %{$counts{$tRNAz}}){
 		if($counts{$tRNAz}{$tops} > 9){
-	
-			print out1 ">$tRNAz\t$tops\t$counts{$tRNAz}{$tops}\n";
 			
 			my @brokendown = split(" ", $tRNAz);
 			
 			
 			if($tRNAqueryLength{$brokendown[0]} eq $tops){
-				$WTCounter++;
 				if(scalar @brokendown > 1){
 					print out2 ">$tRNAz WT Cov:$counts{$tRNAz}{$tops}\n";
 					print out2 "$StoreSeq{$tRNAz}{$tops}\n";
@@ -1219,5 +1223,3 @@ foreach my $keys (keys %totaltRNAcoverage){
 	print out1 "$keys\t$totaltRNAcoverage{$keys}\n";
 }
 
-print $WTCounter;
-print "\n";
