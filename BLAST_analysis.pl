@@ -2,9 +2,11 @@
 use strict;
 use warnings;
 
+use Scalar::Util qw(looks_like_number);
+
 #By Matt Berg
 #Department of Biochemistry, University of Western Ontario
-#December 15, 2018
+#December 20, 2018
 
 #To run enter script.pl BLAST.blast reads.fasta
 #BLAST.blast contains the output of a BLAST with reference tRNA as query and all the reads as the database
@@ -23,8 +25,8 @@ print "reading BLAST ouput file $BLAST \n";
 
 system("rm BLAST_analysis_$PatientNo.txt"); #for Windows computers use del and for UNIX use rm -f
 open(out1, ">BLAST_analysis_$PatientNo.txt") or die("Cannot open output1 file");
-#system("rm multiply_mapping_tRNAfamiles.txt"); #for Windows computers use del and for UNIX use rm -f
-#open(out2, ">multiply_mapping_tRNAfamiles.txt") or die("Cannot open output2 file");
+system("rm tRNA_sequence_$PatientNo.fasta"); #for Windows computers use del and for UNIX use rm -f
+open(out2, ">tRNA_sequence_$PatientNo.fasta") or die("Cannot open output2 file");
 
 #####Reads in BLAST file and saves the information
 ##############################################################################
@@ -78,6 +80,18 @@ while(<inp0>){
         }
     }
 }
+
+my %tRNAstrand;
+@tRNAstrand{@tRNARefname} = @strand;
+
+my %UpCoord;
+@UpCoord{@tRNARefname} = @tRNAUpCoord;
+
+my %DnCoord;
+@DnCoord{@tRNARefname} = @tRNADnCoord;
+
+my %Chr;
+@Chr{@tRNARefname} = @tRNAchr;
 
 
 my @duplicatedtRNA;
@@ -989,8 +1003,7 @@ foreach my $readID (sort keys %allele){
 			
 				else{
 					print $tRNAfamilystring;
-					print "\n";
-				
+					print " - Problem \n";
 				}
 				
 				delete $StartStop{$readID};
@@ -1009,6 +1022,7 @@ foreach my $readID (sort keys %allele){
 my %counts;
 my %totaltRNAcoverage;
 my %totaltRNAalleleCounter;
+my %StoreSeq;
 
 foreach(@tRNARefname){
 	$totaltRNAalleleCounter{$_} = 0;
@@ -1021,7 +1035,7 @@ foreach my $readID (keys %allele){
 	my $tops = $allele{$readID}{$tRNAz}[0];	
 	$counts{$tRNAz}{$tops}++;
 	$totaltRNAcoverage{$tRNAz}++;
-
+	$StoreSeq{$tRNAz}{$tops} = $seq{$readID}{$tRNAz}[0];
 	
 	}
 }
@@ -1044,13 +1058,15 @@ foreach my $tRNAz (keys %counts){
 	}
 }
 
-my $totaltRNAs = scalar keys %totaltRNAalleleCounter;
-my $missingtRNAs;
+my $totaltRNAs = 0;
+my $missingtRNAs = "";
 
 foreach(@tRNARefname){
 	if($totaltRNAalleleCounter{$_} == 0){
-	
 	$missingtRNAs = $missingtRNAs." ".$_;
+	}
+	else{
+	$totaltRNAs++;
 	}
 }
 
@@ -1068,13 +1084,131 @@ print out1 "Missing tRNAs: $missingtRNAs\n";
 print out1 "#############################################################################\n";
 print out1 "tRNAname\tallele\tCoverage\n";
 
-foreach my $tRNAz (keys %counts){
-	for my $tops (keys %{$counts{$tRNAz}}){
+my @sepallele;
+my $WTCounter = 0;
+
+foreach my $tRNAz (sort keys %counts){
+	for my $tops (sort keys %{$counts{$tRNAz}}){
 		if($counts{$tRNAz}{$tops} > 9){
 	
-			print out1 "$tRNAz\t$tops\t$counts{$tRNAz}{$tops}\n";
-
-		}	
+			print out1 ">$tRNAz\t$tops\t$counts{$tRNAz}{$tops}\n";
+			
+			my @brokendown = split(" ", $tRNAz);
+			
+			
+			if($tRNAqueryLength{$brokendown[0]} eq $tops){
+				$WTCounter++;
+				if(scalar @brokendown > 1){
+					print out2 ">$tRNAz WT Cov:$counts{$tRNAz}{$tops}\n";
+					print out2 "$StoreSeq{$tRNAz}{$tops}\n";
+				}
+				elsif(scalar @brokendown == 1){			
+					print out2 ">$tRNAz $Chr{$tRNAz}:$UpCoord{$tRNAz}-$DnCoord{$tRNAz} ($tRNAstrand{$tRNAz}) WT Cov:$counts{$tRNAz}{$tops}\n";
+					print out2 "$StoreSeq{$tRNAz}{$tops}\n";
+				}
+			}
+			else{
+				my $usefultRNA = $brokendown[0];
+				
+				my $BLASTallele = $tops;
+				$tops =~ s/(\d+)/"$1 "/eg;
+				$tops =~ s/(\D+)/"$1 "/eg;
+				@sepallele = split(" ", $tops);
+				
+				
+				my $startposition;
+				my $mutChr = $Chr{$usefultRNA};
+				
+				if($tRNAstrand{$usefultRNA} eq '+'){
+					$startposition = $UpCoord{$usefultRNA};
+					my $j = 0;
+					my @mutation;
+					
+					foreach(@sepallele){
+						my $ref;
+						my$alt;
+						
+						if(looks_like_number($_)){
+						$startposition = $startposition + $_;
+						}
+						elsif(length($_) > 2){
+							my @splitmultiples = $_ =~ m/../g;
+							my $newj = 0;
+							foreach(@splitmultiples){
+							$ref = substr($_, 0, 1);
+							$alt = substr($_, 1, 1);
+							$startposition++;
+							$mutation[$j] = "$mutChr:$startposition $ref/$alt";
+							$j++;
+							}
+						}
+						else{
+						$ref = substr($_, 0, 1);
+						$alt = substr($_, 1, 1);
+						$startposition++;
+						$mutation[$j] = "$mutChr:$startposition $ref/$alt";
+						$j++;
+						}
+					}
+				
+					my $newj2 = 0;
+				
+					print out2 ">$tRNAz $Chr{$usefultRNA}:$UpCoord{$usefultRNA}-$DnCoord{$usefultRNA} ($tRNAstrand{$usefultRNA}) ";
+					foreach(@mutation){
+						print out2 "$mutation[$newj2] ";
+						$newj2++;
+					}
+					print out2 "Cov:$counts{$tRNAz}{$BLASTallele}\n$StoreSeq{$tRNAz}{$BLASTallele}\n";
+				}
+			
+			
+				elsif($tRNAstrand{$usefultRNA} eq '-'){
+					$startposition = $DnCoord{$usefultRNA};
+					my $j = 0;
+					my @mutation;
+					
+					foreach(@sepallele){
+						my $ref;
+						my$alt;
+						
+						if(looks_like_number($_)){
+						$startposition = $startposition - $_;
+						}
+						elsif(length($_) > 2){
+							my @splitmultiples = $_ =~ m/../g;
+							my $newj = 0;
+							foreach(@splitmultiples){
+							$ref = substr($_, 0, 1);
+							$ref =~ tr/-ATGC/-TACG/;
+							$alt = substr($_, 1, 1);
+							$alt =~ tr/-ATGC/-TACG/;
+							$startposition--;
+							$mutation[$j] = "$mutChr:$startposition $ref/$alt";
+							$j++;
+							}
+						}
+						else{
+						$ref = substr($_, 0, 1);
+						$ref =~ tr/-ATGC/-TACG/;
+						$alt = substr($_, 1, 1);
+						$alt =~ tr/-ATGC/-TACG/;
+						$startposition--;
+						$mutation[$j] = "$mutChr:$startposition $ref/$alt";
+						$j++;
+						}
+					}
+				
+					my $newj2 = 0;
+				
+					print out2 ">$tRNAz $Chr{$usefultRNA}:$UpCoord{$usefultRNA}-$DnCoord{$usefultRNA} ($tRNAstrand{$usefultRNA}) ";
+					foreach(@mutation){
+						print out2 "$mutation[$newj2] ";
+						$newj2++;
+					}
+					print out2 "Cov:$counts{$tRNAz}{$BLASTallele}\n$StoreSeq{$tRNAz}{$BLASTallele}\n";
+				}
+			}	
+		}
 	}
 }
 
@@ -1085,4 +1219,5 @@ foreach my $keys (keys %totaltRNAcoverage){
 	print out1 "$keys\t$totaltRNAcoverage{$keys}\n";
 }
 
-
+print $WTCounter;
+print "\n";
