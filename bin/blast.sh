@@ -16,6 +16,4 @@ DB=`basename $sample | cut -d "." -f1`
 echo $NAME
 
 # max target seqs set to 10 000 to ensure all reads are identified
-blastn -query 20181215_tRNASeq_Query.fasta -db all_blast_dbs/$DB -perc_identity 95 -outfmt 7 -max_target_seqs 10000 -num_threads 40 > blast_output/$DB.blast
-
-done
+blastn -query all20_tRNAquery.fasta -db $DB  -perc_identity 95 -outfmt "7 std btop sseq"   -max_target_seqs 10000 -num_threads 40 > blast_output/$DB.blastdone
