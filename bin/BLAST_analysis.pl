@@ -8,9 +8,9 @@ use Scalar::Util qw(looks_like_number);
 #Department of Biochemistry, University of Western Ontario
 #December 20, 2018
 
-#To run enter script.pl BLAST.blast reads.fasta
+#To run enter script.pl BLAST.blast patientNo
 #BLAST.blast contains the output of a BLAST with reference tRNA as query and all the reads as the database
-#read.fasta contains all the merged paired end reads from the sequencing run
+#patientNo is just the patient number. 
 
 #####Reads in input files
 ##############################################################################
