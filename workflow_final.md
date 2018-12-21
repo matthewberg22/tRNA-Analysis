@@ -109,7 +109,7 @@ Make the DBs for each file and BLAST them.
 nohup makeblastdb -in GL141_S2_L001_R1_001_edited.merged.fasta -dbtype nucl -out all_blast_dbs/GL141 &
 
 DB="all_blast_dbs/GL141"
-nohup blastn -query 20181215_tRNASeq_Query -db $DB -perc_identity 95 -outfmt 7 -max_target_seqs 10000 -num_threads 40 > GL141.blast &
+nohup blastn -query all20_tRNAquery.fasta -db $DB  -perc_identity 95 -outfmt "7 std btop sseq"   -max_target_seqs 10000 -num_threads 1 > $DB.blast &
 
 #the rest of the files
 nohup ./bin/makeblastdbs.sh &
