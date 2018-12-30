@@ -6,11 +6,11 @@ use Scalar::Util qw(looks_like_number);
 
 #By Matt Berg
 #Department of Biochemistry, University of Western Ontario
-#December 20, 2018
+#December 29, 2018
 
-#To run enter script.pl BLAST.blast patientNo
+#To run enter script.pl BLAST.blast IDENTIFIER#
 #BLAST.blast contains the output of a BLAST with reference tRNA as query and all the reads as the database
-#patientNo is just the patient number. 
+#IDENTIFIER# is the unique identifier for the sample you are analyzing
 
 #####Reads in input files
 ##############################################################################
@@ -27,6 +27,8 @@ system("rm BLAST_analysis_$PatientNo.txt"); #for Windows computers use del and f
 open(out1, ">BLAST_analysis_$PatientNo.txt") or die("Cannot open output1 file");
 system("rm tRNA_sequence_$PatientNo.fasta"); #for Windows computers use del and for UNIX use rm -f
 open(out2, ">tRNA_sequence_$PatientNo.fasta") or die("Cannot open output2 file");
+system("rm problem_tRNAs_$PatientNo.txt"); #for Windows computers use del and for UNIX use rm -f
+open(out3, ">problem_tRNAs_$PatientNo.txt") or die("Cannot open output3 file");
 
 #####Reads in BLAST file and saves the information
 ##############################################################################
@@ -38,22 +40,24 @@ open(inp0, "$BLAST") or die("Cannot open BLAST file");
               my @tRNAchr; #The chromosome the reference tRNA is on
               my @strand;
 			  
-			  my %StartStop;
-			  my %allele;
-			  my %seq;
-			  my %tRNAqueryLength;
-              
+			  my %StartStop; #A hash to store the start and stop coordinates of the hit within the read
+			  my %allele; #A hash to store the btop output
+			  my %seq; #A hash to store the sequence of the BLAST hit (read)
+			  my %tRNAqueryLength; #A hash to store the total length of each reference tRNA (including 20 bp flanking 5')
+
+#Reads line by line through the BLAST output file              
 while(<inp0>){
     chomp;
-	my @inpfield = split ; #Splits on each line
 
-    my $check = substr($inpfield[0],0,1); #Tests if the line starts with # meaning it is not a BLAST hit
+    my $check = substr($_,0,1); #Tests if the line starts with # meaning it is not a BLAST hit
               
     #If the line is an information line, check if the line has information about the Query (starts with # Query) and store tRNA name and co-ordinates
     if($check eq "#"){
-        my $check2 = substr($inpfield[1],0,1);
-        if($check2 eq "Q"){
-            my @splitLine = split(" ", $_);
+        my @splitLine = split(" ", $_); #Splits the line on spaces
+		my $check2 = substr($splitLine[1],0,1);
+        
+		#If the first word after the # starts with Q (ie its Query) stores the tRNA name and co-ordinates
+		if($check2 eq "Q"){
             push @tRNARefname, substr($splitLine[2],11);
 			my @tRNACoords = split(":", $splitLine[3]);
             my @tRNACoords3 = split("=", $tRNACoords[0]);
@@ -65,8 +69,7 @@ while(<inp0>){
             push @strand, $TempStrand[1];                        
         }
     }
-	
-              
+	       
     #If the line is not an information line, check if BLAST hit covers the full tRNA sequence. If its a full length hit, store information about the BLAST hit including readID, alignment length, read start and stop locations
     elsif($check ne "#"){
         my @splitLine = split("\t", $_);
@@ -81,25 +84,23 @@ while(<inp0>){
     }
 }
 
+#Creates four hashs, storing information about the reference tRNAs and where they are in the genome
 my %tRNAstrand;
 @tRNAstrand{@tRNARefname} = @strand;
-
 my %UpCoord;
 @UpCoord{@tRNARefname} = @tRNAUpCoord;
-
 my %DnCoord;
 @DnCoord{@tRNARefname} = @tRNADnCoord;
-
 my %Chr;
 @Chr{@tRNARefname} = @tRNAchr;
 
+close(inp0); 
+#Finish reading in BLAST file
+#####################################################################################################
 
-my @duplicatedtRNA;
-my %uniqueduptRNA;
-my $uniqueCounter = 0;
 
-close(inp0); #Finish reading in BLAST file
-
+#####Counts how many reads contain a full length tRNA and how many reads contain two 'duplicated'tRNAs
+#####################################################################################################
 my $totalfulllength = 0;
 my $twotRNAreads = 0;
 
@@ -107,27 +108,17 @@ foreach my $readID (keys %StartStop){
 	$totalfulllength++;
 	foreach my $tRNAz (keys %{$StartStop{$readID}}){
 		if( $#{$StartStop{$readID}{$tRNAz}} >=1 ){
-			push @duplicatedtRNA, $tRNAz;
 			$twotRNAreads++;
 		}
 	}
 }
 
 
-
-foreach(@duplicatedtRNA){
-	$uniqueduptRNA{$_} = 0;
-}
-
-my $numberduplicatedtRNAs = scalar keys %uniqueduptRNA;
-
-
 #####Checks if readID are unique or are hits for multiple tRNAs
 ##############################################################################
 
-my $funcounter = 0;
 
-my $UniqueReadsCounter = 0;
+
 my $MultipleMappingReadsCounter = 0;
 my %confidentalleles;
 my $startstop;
@@ -137,27 +128,23 @@ my $unresolvable = 0;
 my $resolvable = 0;
 my %resolvabletRNAs;
 
+####Checks if any of the reads have two tRNAs in them and if true removes the readID from the list
+############################################################################################################
 
+#Loops through all the keys of alleles (ie all the readIDs that contain a full length tRNA)
 foreach my $readID (sort keys %allele){
 	
-	my $trip = 0;
+	my $trip = 0; #Counter to keep track of which readIDs contain more than one full length tRNA hit
 	
+	#For each tRNA that is a hit for the readID, are there >1 start and stop locations for the same tRNA? If yes, trip counter is set to 1
 	foreach my $tRNAz (keys %{$StartStop{$readID}}){
 		if( $#{$StartStop{$readID}{$tRNAz}} >=1 ){
 			$trip = 1;
 		}
 	}
 	
+	#If trip counter is 1, that means a read has a 'duplicated' tRNA, which is an artifact of merging the paired end reads. Therefore the read is deleted
 	if($trip == 1){
-		foreach my $tRNAz (keys %{$StartStop{$readID}}){
-		for(my $i=0; $i <= $#{ $allele{$readID}{$tRNAz} }; $i++){
-				my $newreadID = $i.$readID;
-				$StartStop{$newreadID}{$tRNAz}[0] = $StartStop{$readID}{$tRNAz}[$i];
-				$allele{$newreadID}{$tRNAz}[0] = $allele{$readID}{$tRNAz}[$i];
-				$seq{$newreadID}{$tRNAz}[0] = $seq{$readID}{$tRNAz}[$i];
-			
-			}
-		}
 
 	delete $StartStop{$readID};
 	delete $seq{$readID};
@@ -166,58 +153,69 @@ foreach my $readID (sort keys %allele){
 	}
 }
 
+####Determines which reads are hits for only one reference tRNA and which are hits for multiple tRNAs and need to be looked at closer to be resolved
+###############################################################################################################
+
+my $UniqueReadsCounter = 0;
+
 
 foreach my $readID (sort keys %allele){
 	my %allelecheck;
 	my @tRNAfamily;
 
-
 	my $mappings = scalar keys %{ $allele{$readID} };
 	
+	#If there is only one tRNA associated with each readID, it is a unique mapping and doesn't need to be resolved further
 	if($mappings == 1){
 		$UniqueReadsCounter++;			
 	}
 	
+	#If the read is associated with mutltiple tRNAs, it needs to be sorted out
 	elsif($mappings > 1){
 		$MultipleMappingReadsCounter++;
+		
+		#Make a list of all the tRNAs that could be the read
 		foreach my $tRNAz (keys %{$allele{$readID}}){
-
 			push @tRNAfamily, $tRNAz;
 					
-			$allelecheck{$allele{$readID}{$tRNAz}[0]} = 0;
+			$allelecheck{$allele{$readID}{$tRNAz}[0]} = 0; #A hash where the keys are all the btop outputs for each tRNA corresponding to the read
 
 			$startstop = $StartStop{$readID}{$tRNAz}[0];
 			$seq = $seq{$readID}{$tRNAz}[0];
 			$allele = $allele{$readID}{$tRNAz}[0];
 		
 		}
-	
+		
+		#If the alleles associated with each tRNA for a single read are all the same, we cannot resolve which reference tRNA the read corresponds to
 		if(scalar keys %allelecheck == 1){
-			$unresolvable++;
-			my $mergedtRNA = join(" ", sort(@tRNAfamily));
-			delete $StartStop{$readID};
+			$unresolvable++; #Keeps track of how many tRNA groups cannot be resolved
+			my $mergedtRNA = join(" ", sort(@tRNAfamily)); #Merge all the tRNAs that it could be into one string
+			delete $StartStop{$readID}; #Delete all the information for this readID
 			delete $seq{$readID};
 			delete $allele{$readID};
-			push @{$StartStop{$readID}{$mergedtRNA}}, $startstop;
+			push @{$StartStop{$readID}{$mergedtRNA}}, $startstop; #Rewrite the information with this readID with the merged tRNA as the tRNA name
 			push @{$seq{$readID}{$mergedtRNA}}, $seq;
 			push @{$allele{$readID}{$mergedtRNA}}, $allele;
 		}
-
+		
+		#If the alleles associated with each tRNA for a single read are different, we might be able to tell which reference tRNA the read truly corresponds to
 		elsif(scalar keys %allelecheck > 1){
-			my $mergedtRNA;
+			my $mergedtRNA = '';
 			my $tripcounter = 0;
-			my @mertRNA;
+			my @WTtRNA;
 			my $keytRNA;
+			
+			#For each tRNA in the family, if one is WT it is probably the tRNA that truly maps to the read
 			foreach(sort @tRNAfamily){
 				if($tRNAqueryLength{$_} eq $allele{$readID}{$_}[0]){
-					push @mertRNA, $_;
+					push @WTtRNA, $_;
 					$keytRNA = $_;
 					$tripcounter = 1;
 				}
 			}
 			
 			if($tripcounter == 1){
-				$mergedtRNA = join(" ", @mertRNA);
+				$mergedtRNA = join(" ", sort(@WTtRNA));
 				$startstop = $StartStop{$readID}{$keytRNA}[0];
 				$seq = $seq{$readID}{$keytRNA}[0];
 				$allele = $allele{$readID}{$keytRNA}[0];
@@ -228,7 +226,8 @@ foreach my $readID (sort keys %allele){
 				push @{$seq{$readID}{$mergedtRNA}}, $seq;
 				push @{$allele{$readID}{$mergedtRNA}}, $allele;
 			}
-		
+			
+			#If no tRNA corresponds to a WT match, then using differences that we have determined by hand between similar tRNAs, we might be able to tell which tRNA corresponds to the read
 			elsif($tripcounter == 0){
 				my $tRNAfamilystring = join(" ", sort(@tRNAfamily));
 				my $allele = "";
@@ -360,7 +359,7 @@ foreach my $readID (sort keys %allele){
 					my $check_nuc = substr($check_seq, 31, 1);
 					
 					
-					if($check_nuc eq 'C'){
+					if($check_nuc eq 'C'){						
 						$startstop = $StartStop{$readID}{"tRNA-Ala-AGC-16-1"}[0];
 						my $seq = $seq{$readID}{"tRNA-Ala-AGC-16-1"}[0];
 						my $allele = $allele{$readID}{"tRNA-Ala-AGC-16-1"}[0];
@@ -383,6 +382,26 @@ foreach my $readID (sort keys %allele){
 						}
 						
 					}
+				}
+				
+				elsif($tRNAfamilystring =~ m/tRNA-Ala-AGC-12-2/ && $tRNAfamilystring =~ m/tRNA-Ala-AGC-14-1/){
+					
+					my $check_seq = $seq{$readID}{"tRNA-Ala-AGC-12-2"}[0];
+					my $check_nuc = substr($check_seq, 76, 1);
+
+					if($check_nuc eq 'G'){
+						$startstop = $StartStop{$readID}{"tRNA-Ala-AGC-12-2"}[0];
+						$seq = $seq{$readID}{"tRNA-Ala-AGC-12-2"}[0];
+						$allele = $allele{$readID}{"tRNA-Ala-AGC-12-2"}[0];
+						$mergedtRNA = "tRNA-Ala-AGC-12-2";
+					}
+					elsif($check_nuc eq 'A'){
+						$startstop = $StartStop{$readID}{"tRNA-Ala-AGC-14-1"}[0];
+						$seq = $seq{$readID}{"tRNA-Ala-AGC-14-1"}[0];
+						$allele = $allele{$readID}{"tRNA-Ala-AGC-14-1"}[0];
+						$mergedtRNA = "tRNA-Ala-AGC-14-1";
+					}
+						
 				}
 				
 				elsif($tRNAfamilystring =~ m/tRNA-Ala-AGC-10-1/ && $tRNAfamilystring =~ m/tRNA-Ala-AGC-12-3/){
@@ -501,7 +520,7 @@ foreach my $readID (sort keys %allele){
 					if($check_nuc eq 'A'){
 						$startstop = $StartStop{$readID}{"tRNA-Gly-CCC-6-1"}[0];
 						$seq = $seq{$readID}{"tRNA-Gly-CCC-6-1"}[0];
-						$allele = $allele{$readID}{"tRNA-Gly-CCC-6-11"}[0];
+						$allele = $allele{$readID}{"tRNA-Gly-CCC-6-1"}[0];
 						$mergedtRNA = "tRNA-Gly-CCC-6-1";
 					}
 					elsif($check_nuc eq 'G'){
@@ -541,6 +560,27 @@ foreach my $readID (sort keys %allele){
 					}
 
 				}
+				
+				elsif($tRNAfamilystring =~ m/tRNA-Asn-GTT-10-1/ && $tRNAfamilystring =~ m/tRNA-Asn-GTT-12-1/){
+					
+					my $check_seq = $seq{$readID}{"tRNA-Asn-GTT-10-1"}[0];
+					my $check_nuc = substr($check_seq, 65, 1);
+
+					if($check_nuc eq 'G'){
+						$startstop = $StartStop{$readID}{"tRNA-Asn-GTT-10-1"}[0];
+						$seq = $seq{$readID}{"tRNA-Asn-GTT-10-1"}[0];
+						$allele = $allele{$readID}{"tRNA-Asn-GTT-10-1"}[0];
+						$mergedtRNA = "tRNA-Asn-GTT-10-1";
+					}
+					elsif($check_nuc eq 'A'){
+						$startstop = $StartStop{$readID}{"tRNA-Asn-GTT-12-1"}[0];
+						$seq = $seq{$readID}{"tRNA-Asn-GTT-12-1"}[0];
+						$allele = $allele{$readID}{"tRNA-Asn-GTT-12-1"}[0];
+						$mergedtRNA = "tRNA-Asn-GTT-12-1";
+					}
+				}
+
+				
 				
 				elsif($tRNAfamilystring =~ m/tRNA-Asn-GTT-10-1/ && $tRNAfamilystring =~ m/tRNA-Asn-GTT-8-1/){
 					
@@ -956,6 +996,26 @@ foreach my $readID (sort keys %allele){
 					}
 				}
 				
+				elsif($tRNAfamilystring =~ m/nmt-tRNA-Gln-TTG-7-1/ && $tRNAfamilystring =~ m/nmt-tRNA-Gln-TTG-13-1/){
+					
+					my $check_seq = $seq{$readID}{"nmt-tRNA-Gln-TTG-7-1"}[0];
+					my $check_nuc = substr($check_seq, 18, 1);
+					
+					
+					if($check_nuc eq 'C'){
+						$startstop = $StartStop{$readID}{"nmt-tRNA-Gln-TTG-13-1"}[0];
+						$seq = $seq{$readID}{"nmt-tRNA-Gln-TTG-13-1"}[0];
+						$allele = $allele{$readID}{"nmt-tRNA-Gln-TTG-13-1"}[0];
+						$mergedtRNA = "nmt-tRNA-Gln-TTG-13-1";
+					}
+					elsif($check_nuc eq 'T'){
+						$startstop = $StartStop{$readID}{"nmt-tRNA-Gln-TTG-7-1"}[0];
+						$seq = $seq{$readID}{"nmt-tRNA-Gln-TTG-7-1"}[0];
+						$allele = $allele{$readID}{"nmt-tRNA-Gln-TTG-7-1"}[0];
+						$mergedtRNA = "nmt-tRNA-Gln-TTG-7-1";
+					}
+				}
+				
 				elsif($tRNAfamilystring =~ m/tRNA-Glu-TTC-10-1/ && $tRNAfamilystring =~ m/tRNA-Glu-TTC-8-1/){
 					
 					my $check_seq = $seq{$readID}{"tRNA-Glu-TTC-10-1"}[0];
@@ -1000,18 +1060,86 @@ foreach my $readID (sort keys %allele){
 					}
 
 				}
-			
-				else{
-					print $tRNAfamilystring;
-					print " - Problem \n";
+				
+				elsif($tRNAfamilystring =~ m/tRNA-Met-CAT-5-1/ && $tRNAfamilystring =~ m/tRNA-Met-CAT-7-1/){
+					
+					my $check_seq = $seq{$readID}{"tRNA-Met-CAT-5-1"}[0];
+					my $check_nuc = substr($check_seq, 6, 1);
+					
+					if($check_nuc eq 'G'){
+						$startstop = $StartStop{$readID}{"tRNA-Met-CAT-5-1"}[0];
+						$seq = $seq{$readID}{"tRNA-Met-CAT-5-1"}[0];
+						$allele = $allele{$readID}{"tRNA-Met-CAT-5-1"}[0];
+						$mergedtRNA = "tRNA-Met-CAT-5-1";
+					}
+					elsif($check_nuc eq 'A'){
+						$startstop = $StartStop{$readID}{"tRNA-Met-CAT-7-1"}[0];
+						$seq = $seq{$readID}{"tRNA-Met-CAT-7-1"}[0];
+						$allele = $allele{$readID}{"tRNA-Met-CAT-7-1"}[0];
+						$mergedtRNA = "tRNA-Met-CAT-7-1";
+					}
+
 				}
 				
-				delete $StartStop{$readID};
-				delete $seq{$readID};
-				delete $allele{$readID};
-				push @{$StartStop{$readID}{$mergedtRNA}}, $startstop;
-				push @{$seq{$readID}{$mergedtRNA}}, $seq;
-				push @{$allele{$readID}{$mergedtRNA}}, $allele;
+				elsif($tRNAfamilystring =~ m/tRNA-Ile-AAT-1-1/ && $tRNAfamilystring =~ m/tRNA-Ile-AAT-7-1/ && $tRNAfamilystring =~ m/tRNA-Ile-AAT-7-2/){
+					
+					my $check_seq = $seq{$readID}{"tRNA-Ile-AAT-1-1"}[0];
+					my $check_nuc = substr($check_seq, 3, 1);
+					
+					if($check_nuc eq 'T'){
+						$startstop = $StartStop{$readID}{"tRNA-Ile-AAT-1-1"}[0];
+						$seq = $seq{$readID}{"tRNA-Ile-AAT-1-1"}[0];
+						$allele = $allele{$readID}{"tRNA-Ile-AAT-1-1"}[0];
+						$mergedtRNA = "tRNA-Ile-AAT-1-1";
+					}
+					elsif($check_nuc eq 'G'){
+						$startstop = $StartStop{$readID}{"tRNA-Ile-AAT-7-1"}[0];
+						$seq = $seq{$readID}{"tRNA-Ile-AAT-7-1"}[0];
+						$allele = $allele{$readID}{"tRNA-Ile-AAT-7-1"}[0];
+						$mergedtRNA = "tRNA-Ile-AAT-7-1 tRNA-Ile-AAT-7-2";
+					}
+
+				}
+				
+				elsif($tRNAfamilystring =~ m/tRNA-Leu-AAG-1-1/ && $tRNAfamilystring =~ m/tRNA-Leu-AAG-1-2/ && $tRNAfamilystring =~ m/tRNA-Leu-AAG-1-3/){
+					
+					my $check_seq = $seq{$readID}{"tRNA-Leu-AAG-1-1"}[0];
+					my $check_nuc = substr($check_seq, 8, 1);
+					
+					if($check_nuc eq 'G'){
+						$startstop = $StartStop{$readID}{"tRNA-Leu-AAG-1-1"}[0];
+						$seq = $seq{$readID}{"tRNA-Leu-AAG-1-1"}[0];
+						$allele = $allele{$readID}{"tRNA-Leu-AAG-1-1"}[0];
+						$mergedtRNA = "tRNA-Leu-AAG-1-1 tRNA-Leu-AAG-1-2";
+					}
+					elsif($check_nuc eq 'C'){
+						$startstop = $StartStop{$readID}{"tRNA-Leu-AAG-1-3"}[0];
+						$seq = $seq{$readID}{"tRNA-Leu-AAG-1-3"}[0];
+						$allele = $allele{$readID}{"tRNA-Leu-AAG-1-3"}[0];
+						$mergedtRNA = "tRNA-Leu-AAG-1-3";
+					}
+
+				}
+			
+				else{
+					print out3 $tRNAfamilystring;
+					print out3 "\n";
+				}
+				
+				if($mergedtRNA eq ''){
+					delete $StartStop{$readID};
+					delete $seq{$readID};
+					delete $allele{$readID};
+				}
+				
+				elsif($mergedtRNA ne ''){
+					delete $StartStop{$readID};
+					delete $seq{$readID};
+					delete $allele{$readID};
+					push @{$StartStop{$readID}{$mergedtRNA}}, $startstop;
+					push @{$seq{$readID}{$mergedtRNA}}, $seq;
+					push @{$allele{$readID}{$mergedtRNA}}, $allele;
+				}
 		
 			}
 		
@@ -1019,10 +1147,14 @@ foreach my $readID (sort keys %allele){
 	}
 }
 
-my %counts;
-my %totaltRNAcoverage;
+
+#####Collects stats on how many tRNAs were identified, coverage for each allele, etc.
+##############################################################################33
+
+my %counts; #A hash to correlate tRNA-allele (key) and number of times its seen/coverage (value)
+my %totaltRNAcoverage; #A hash to store each tRNA (key) and how many times reads were seen that map to that tRNA (value)
 my %totaltRNAalleleCounter;
-my %StoreSeq;
+my %StoreSeq; #A hash to store each tRNA-allele (key) and a sequence (value)
 
 foreach(@tRNARefname){
 	$totaltRNAalleleCounter{$_} = 0;
@@ -1030,24 +1162,24 @@ foreach(@tRNARefname){
 			
 foreach my $readID (keys %allele){
 	foreach my $tRNAz (keys %{$allele{$readID}}){
-	$funcounter++;
 	
-	my $tops = $allele{$readID}{$tRNAz}[0];	
-	$counts{$tRNAz}{$tops}++;
+	my $uniqueallele = $allele{$readID}{$tRNAz}[0];	
+	$counts{$tRNAz}{$uniqueallele}++;
 	$totaltRNAcoverage{$tRNAz}++;
-	$StoreSeq{$tRNAz}{$tops} = $seq{$readID}{$tRNAz}[0];
+	$StoreSeq{$tRNAz}{$uniqueallele} = $seq{$readID}{$tRNAz}[0];
 	
 	}
 }
 
 
-my $unsequences = 0;
+my $uniquesequences = 0; #A counter for the total number of unique sequences with >10x coverage seen
 
+#Filters out anything with coverage less than 10x
 foreach my $tRNAz (keys %counts){
-	for my $tops (keys %{$counts{$tRNAz}}){
-		if($counts{$tRNAz}{$tops} > 9){
+	for my $uniqueallele (keys %{$counts{$tRNAz}}){
+		if($counts{$tRNAz}{$uniqueallele} > 9){
 	
-			$unsequences++;
+			$uniquesequences++;
 			my @brokendown = split(" ", $tRNAz);
 			foreach(@brokendown){
 				$totaltRNAalleleCounter{$_}++;
@@ -1058,6 +1190,7 @@ foreach my $tRNAz (keys %counts){
 	}
 }
 
+#Determines which tRNAs have been identified and which are missing (with 10x coverage or greater)
 my $totaltRNAs = 0;
 my $missingtRNAs = "";
 
@@ -1070,6 +1203,7 @@ foreach(@tRNARefname){
 	}
 }
 
+#Determines how many tRNAs in total have been identified, even those with low coverage (ie less than 10x)
 my $totallowcovtRNAs;
 
 foreach my $keys (keys %totaltRNAcoverage){
@@ -1084,13 +1218,14 @@ print out1 "Total reads with full length tRNAs: $totalfulllength\n";
 print out1 "Total confident reads: $UniqueReadsCounter\n";
 print out1 "Total ambiguous reads: $MultipleMappingReadsCounter\n";
 print out1 "Reads with two tRNAs: $twotRNAreads\n";
-print out1 "No. of duplicated tRNAs: $numberduplicatedtRNAs\n";  
-print out1 "List of Duplicated tRNAs: ";
-print out1 "\t$_ " for keys %uniqueduptRNA;
-print out1 "\nTotal tRNAs identified: $totaltRNAs ($totallowcovtRNAs)\n";
+print out1 "Total tRNAs identified: $totaltRNAs ($totallowcovtRNAs)\n";
 print out1 "Missing/low coverage tRNAs: $missingtRNAs\n";
-print out1 "Total unique sequences: $unsequences\n";
+print out1 "Total unique sequences: $uniquesequences\n";
 print out1 "#############################################################################\n";
+
+
+####Creates information for second output containing tRNA name, information, WT/MUT and the mutation position, 20bp flanking + tRNA sequence
+###########################################################################################################################
 
 my @sepallele;
 
@@ -1216,10 +1351,9 @@ foreach my $tRNAz (sort keys %counts){
 	}
 }
 
-print out1 "#############################################################################\n";
 print out1 "tRNAname\tTotalCoverage\n";
 
-foreach my $keys (keys %totaltRNAcoverage){
+foreach my $keys (sort keys %totaltRNAcoverage){
 	print out1 "$keys\t$totaltRNAcoverage{$keys}\n";
 }
 
