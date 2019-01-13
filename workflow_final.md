@@ -114,7 +114,7 @@ nohup blastn -query all20_tRNAquery.fasta -db $DB  -perc_identity 95 -outfmt "7 
 #the rest of the files
 nohup ./bin/makeblastdbs.sh &
 ```
-Then blast the tRNAs against each database.
+Then blast the tRNAs against each database. 
 
 ```
 nohup ./bin/blast.sh &
