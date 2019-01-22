@@ -73,9 +73,9 @@ d.t$group <- ordered(d.t$Sample, levels = Groups$Sample, labels = Groups$Group)
 d.t <- d.t[order(d.t$group),]
 
 #Graphs the percent merged
-p0 <- ggplot(d.t, aes(order(d.t$group), prop, col = group, label = Sample)) + geom_point() + theme(axis.text.x=element_blank(), axis.ticks=element_blank()) + xlab('') + ylab('Percent Merged') + geom_text_repel(aes(label=ifelse(prop<80,as.character(Sample),'')), force =50) + coord_cartesian(ylim = c(30,100))
-pdf("figs/percentage_reads_merged_all_samples.pdf")
-p0
+PercentMerged <- ggplot(d.t, aes(order(d.t$group), prop, col = group, label = Sample)) + geom_point() + theme(axis.text.x=element_blank(), axis.ticks=element_blank()) + xlab('') + ylab('Percent Merged') + geom_text_repel(aes(label=ifelse(prop<80,as.character(Sample),'')), force =50) + coord_cartesian(ylim = c(30,100))
+svg("figs/percentage_reads_merged_all_samples.svg")
+PercentMerged
 dev.off()
 
 
@@ -134,8 +134,62 @@ nohup blastn -query all20_tRNAquery.fasta -db $DB  -perc_identity 95 -outfmt "7 
 #the rest of the files
 nohup ./bin/makeblastdbs.sh &
 ```
-Then blast the tRNAs against each database. 
+Then blast the tRNAs against each database and run the blast anaylsis script. 
 
 ```
 nohup ./bin/blast.sh &
+```
+
+Next, determine the ideal cutoff by graphing total coverage for every unique tRNA sequence observed from all individuals sequenced.
+
+```
+R
+#Packages needed to make the graphs
+library(ggplot2)
+library(cowplot)
+library(compositions)
+
+#Reads in coverage summary file that is the output from my perl script
+all.coverage <- read.table(file.choose(), header = TRUE, sep = "\t")
+
+#Plots the frequency of coverage for all unique sequences seen in the 96 individuals sequenced
+#Limits the x-axis to 300 to scale plot better
+#Red line indicates the mean coverage
+#Blue line is my coverage cut off right now
+p0 <- ggplot(all.coverage, aes(x = Coverage)) + 
+  geom_histogram(binwidth = 1) + 
+  coord_cartesian(xlim=c(0, 300), ylim=c(0,1000)) + xlab("Coverage of tRNA allele") + 
+  ylab("Frequency") + 
+  geom_vline(aes(xintercept = 5), color = 'orange') + 
+  geom_vline(aes(xintercept = 10), color = 'red') + 
+  geom_vline(aes(xintercept = 15), color = 'blue') +
+  theme(legend.position="none")
+
+#Centered log ratio transformation of the data
+clr <- all.coverage[which(all.coverage$Coverage == 5), 5]
+clr5 <- clr[1]
+
+clr <- all.coverage[which(all.coverage$Coverage == 10), 5]
+clr10 <- clr[1]
+
+clr <- all.coverage[which(all.coverage$Coverage == 15), 5]
+clr15 <- clr[1]
+
+all.coverage$CLR <- as.vector(clr((all.coverage$Coverage)))
+
+p1 <- ggplot(all.coverage, aes(x = CLR)) + 
+  geom_histogram(binwidth = 0.5) + 
+  coord_cartesian(ylim=c(0,10000)) + xlab("clr(Coverage of tRNA allele)") + 
+  ylab("Frequency") + 
+  theme(legend.position="none") +
+  geom_vline(aes_(xintercept = clr15), color = 'blue') +
+  geom_vline(aes_(xintercept = clr10), color = 'red') +
+  geom_vline(aes_(xintercept = clr5), color = 'orange')
+
+plot_grid(p0, p1, labels = c("A", "B"))
+
+svg("figs/CoveragePlots.svg")
+CoveragePlots
+dev.off()
+
 ```
