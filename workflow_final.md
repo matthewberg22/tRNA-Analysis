@@ -54,10 +54,30 @@ d.t <- data.frame(t(d))
 # calculate proportion of reads that passed merging
 d.t$prop <- (d.t$OK / d.t$READS) * 100
 
-# plot percentage of reads merged against sample ID
+#Librarys to make the graphs and clean the data
+library(ggplot2)
+library(tidyr)
+library(cowplot)
+library(ggrepel)
+
+#A list of sample groups
+Groups <- read.table(file.choose(), sep = "\t", header = TRUE)
+
+#Shortens the identifiers to just the GL number
+d.t$Sample <- rownames(d.t)
+Split <- d.t %>% separate(Sample, c("Sample", NA, NA, NA, NA), "_")
+d.t$Sample <- Split$Sample
+
+#Adds which group corresponds to which GL number
+d.t$group <- ordered(d.t$Sample, levels = Groups$Sample, labels = Groups$Group)
+d.t <- d.t[order(d.t$group),]
+
+#Graphs the percent merged
+p0 <- ggplot(d.t, aes(order(d.t$group), prop, col = group, label = Sample)) + geom_point() + theme(axis.text.x=element_blank(), axis.ticks=element_blank()) + xlab('') + ylab('Percent Merged') + geom_text_repel(aes(label=ifelse(prop<80,as.character(Sample),'')), force =50) + coord_cartesian(ylim = c(30,100))
 pdf("figs/percentage_reads_merged_all_samples.pdf")
-plot(d.t$prop, ylim = c(0,100), main = "Proportion of read pairs merged", xlab = "Sample Number", ylab = "% merged")
+p0
 dev.off()
+
 
 # plot length of overlaps for each sample now
 awk '$3 ~ "OVERLAPS" {$1=$2=$3=""; x = $0} $1 ~ "FINISHED" {name = substr($0, 10); print name x} END {exit}' pandaseq_stats.out > overlaps.txt
