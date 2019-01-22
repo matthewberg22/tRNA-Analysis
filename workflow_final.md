@@ -193,3 +193,8 @@ CoveragePlots
 dev.off()
 
 ```
+After looking at the cutoff graphs, cutoff was selected as 10x coverage. Ran perl script again to get list of tRNAs with >10x coverage.
+
+```
+nohup ./bin/tRNA_sequences_cutoff10.sh &
+```
