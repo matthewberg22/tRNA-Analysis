@@ -169,8 +169,8 @@ foreach my $tRNA (sort keys %tRNAs){
 	if($names ne 'WT'){
 	$mutcounter++;
 	
-	print out2 "$identifier\n";
-	print out2 "$tRNA\t";
+	print out2 "# $identifier\n";
+	print out2 ">$tRNA\t";
 	print out2 "$names\tCOV:$tRNAs{$tRNA}{$names}\n$seq{$tRNA}{$names}\n\n";
 	}
 	
