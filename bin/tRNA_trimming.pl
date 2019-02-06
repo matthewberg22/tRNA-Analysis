@@ -169,9 +169,9 @@ foreach my $tRNA (sort keys %tRNAs){
 	if($names ne 'WT'){
 	$mutcounter++;
 	
-	# print out2 "$identifier\n";
-	# print out2 "$tRNA\t";
-	# print out2 "$names\tCOV:$tRNAs{$tRNA}{$names}\n $seq{$tRNA}{$names}\n\n";
+	print out2 "$identifier\n";
+	print out2 "$tRNA\t";
+	print out2 "$names\tCOV:$tRNAs{$tRNA}{$names}\n $seq{$tRNA}{$names}\n\n";
 	}
 	
 	}
@@ -183,7 +183,6 @@ my %allele_output;
 
 foreach my $key (sort keys %numberAlleles){
 	$allele_output{$key} = 0;
-	print "$key\n";
 	my @tRNALength = split(" ", $key);
 	
 	if(scalar(@tRNALength) > 1){
