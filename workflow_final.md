@@ -140,7 +140,7 @@ Then blast the tRNAs against each database and run the blast anaylsis script.
 nohup ./bin/blast.sh &
 ```
 
-Next, determine the ideal cutoff by graphing total coverage for every unique tRNA sequence observed from all individuals sequenced.
+Next, determine the ideal cutoff by graphing total coverage for every unique tRNA sequence observed from all individuals sequenced. 
 
 ```
 R
@@ -200,6 +200,12 @@ nohup ./bin/tRNA_sequences_cutoff10.sh &
 ```
 
 *NEW*
+
+Ran coverage analysis script to determine coverage of each tRNA (or family of tRNAs) across the capture array.
+
+```
+perl capturearray_coverage.pl all_coverage.txt
+```
 
 Ran tRNA trimming perl script on all samples to get tRNA mutant sequences without 20 bp 5' flanking, concatenates all individual samples into one file
 
