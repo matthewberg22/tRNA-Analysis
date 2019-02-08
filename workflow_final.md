@@ -231,8 +231,8 @@ Ran perl script to extract copy number of each isoacceptor and isodecoder in the
 
 ```
 # The UCSC_tRNAsequences.fasta file was downloaded from UCSC genome browser hg19 on February 8, 2019
-perl counting_total_iso.pl UCSC_tRNAsequences.fasta
+perl ./bin/counting_total_iso.pl ./data/UCSC_tRNAsequences.fasta
 
 # nonredundant_mutants.txt and total_counts. txt come from Allele_Frequencies.pl
-perl counting_mutant_iso.pl nonredundant_mutants.txt total_counts.txt
+perl ./bin/counting_mutant_iso.pl ./data/nonredundant_mutants.txt ./data/total_counts.txt
 ```
