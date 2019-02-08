@@ -227,3 +227,12 @@ Ran perl script to extract information on how many overall mutations per tRNA, h
 perl ./bin/nonredundant_tRNA_analysis.pl nonredundant_mutants.txt
 ```
 
+Ran perl script to extract copy number of each isoacceptor and isodecoder in the reference set. Also ran seperate perl script to count how many variants there are in each isoacceptor and isodecoder in our sample, as well as how many total alleles were counted for each isoacceptor and isodecoder.
+
+```
+# The UCSC_tRNAsequences.fasta file was downloaded from UCSC genome browser hg19 on February 8, 2019
+perl counting_total_iso.pl UCSC_tRNAsequences.fasta
+
+# nonredundant_mutants.txt and total_counts. txt come from Allele_Frequencies.pl
+perl counting_mutant_iso.pl nonredundant_mutants.txt total_counts.txt
+```
