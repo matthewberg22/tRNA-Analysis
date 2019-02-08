@@ -46,7 +46,7 @@ awk '$3 ~ "READS" {x = x$4"\t"} $3 ~ "OK" {y = y$4"\t"} $1 ~ "FINISHED" {name = 
 
 R
 
-d <- read.table("passed_merging.txt", sep = "\t", row.names= 1, header = TRUE)
+d <- read.table("data/passed_merging.txt", sep = "\t", row.names= 1, header = TRUE)
 # remove last column that shouldn't really be there.
 d$X <- NULL
 d.t <- data.frame(t(d))
@@ -61,7 +61,7 @@ library(cowplot)
 library(ggrepel)
 
 #A list of sample groups
-Groups <- read.table(file.choose(), sep = "\t", header = TRUE)
+Groups <- read.table("data/Samplegroup.txt"), sep = "\t", header = TRUE)
 
 #Shortens the identifiers to just the GL number
 d.t$Sample <- rownames(d.t)
@@ -74,7 +74,7 @@ d.t <- d.t[order(d.t$group),]
 
 #Graphs the percent merged
 PercentMerged <- ggplot(d.t, aes(order(d.t$group), prop, col = group, label = Sample)) + geom_point() + theme(axis.text.x=element_blank(), axis.ticks=element_blank()) + xlab('') + ylab('Percent Merged') + geom_text_repel(aes(label=ifelse(prop<80,as.character(Sample),'')), force =50) + coord_cartesian(ylim = c(30,100))
-svg("figs/percentage_reads_merged_all_samples.svg")
+svg("percentage_reads_merged_all_samples.svg")
 PercentMerged
 dev.off()
 
@@ -134,7 +134,7 @@ nohup blastn -query all20_tRNAquery.fasta -db $DB  -perc_identity 95 -outfmt "7 
 #the rest of the files
 nohup ./bin/makeblastdbs.sh &
 ```
-Then blast the tRNAs against each database and run the blast anaylsis script. 
+Then blast the tRNAs against each database and run the blast anaylsis script.
 
 ```
 nohup ./bin/blast.sh &
@@ -150,18 +150,20 @@ library(cowplot)
 library(compositions)
 
 #Reads in coverage summary file that is the output from my perl script
-all.coverage <- read.table(file.choose(), header = TRUE, sep = "\t")
+#setwd in top of analysis directory
+all.coverage <- read.table("blast_analysis_output/TotalCoverage.txt", sep = "\t")
 
+colnames(all.coverage) <- c("Patient_id", "tRNA", "allele", "Coverage")
 #Plots the frequency of coverage for all unique sequences seen in the 96 individuals sequenced
 #Limits the x-axis to 300 to scale plot better
 #Red line indicates the mean coverage
 #Blue line is my coverage cut off right now
-p0 <- ggplot(all.coverage, aes(x = Coverage)) + 
-  geom_histogram(binwidth = 1) + 
-  coord_cartesian(xlim=c(0, 300), ylim=c(0,1000)) + xlab("Coverage of tRNA allele") + 
-  ylab("Frequency") + 
-  geom_vline(aes(xintercept = 5), color = 'orange') + 
-  geom_vline(aes(xintercept = 10), color = 'red') + 
+p0 <- ggplot(all.coverage, aes(x = Coverage)) +
+  geom_histogram(binwidth = 1) +
+  coord_cartesian(xlim=c(0, 300), ylim=c(0,1000)) + xlab("Coverage of tRNA allele") +
+  ylab("Frequency") +
+  geom_vline(aes(xintercept = 5), color = 'orange') +
+  geom_vline(aes(xintercept = 10), color = 'red') +
   geom_vline(aes(xintercept = 15), color = 'blue') +
   theme(legend.position="none")
 
@@ -177,18 +179,20 @@ clr15 <- clr[1]
 
 all.coverage$CLR <- as.vector(clr((all.coverage$Coverage)))
 
-p1 <- ggplot(all.coverage, aes(x = CLR)) + 
-  geom_histogram(binwidth = 0.5) + 
-  coord_cartesian(ylim=c(0,10000)) + xlab("clr(Coverage of tRNA allele)") + 
-  ylab("Frequency") + 
+# this line has to be run separately.
+p1 <- ggplot(all.coverage, aes(x = CLR)) +
+  geom_histogram(binwidth = 0.5) +
+  coord_cartesian(ylim=c(0,10000)) + xlab("clr(Coverage of tRNA allele)") +
+  ylab("Frequency") +
   theme(legend.position="none") +
   geom_vline(aes_(xintercept = clr15), color = 'blue') +
   geom_vline(aes_(xintercept = clr10), color = 'red') +
   geom_vline(aes_(xintercept = clr5), color = 'orange')
 
-plot_grid(p0, p1, labels = c("A", "B"))
+# this line has to be run separately.
+CoveragePlots <- plot_grid(p0, p1, labels = c("A", "B"))
 
-svg("figs/CoveragePlots.svg")
+pdf("CoveragePlots.pdf")
 CoveragePlots
 dev.off()
 
