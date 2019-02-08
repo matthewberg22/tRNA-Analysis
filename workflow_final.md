@@ -212,3 +212,12 @@ Ran tRNA allele frequency counting script to get count of how many alleles we se
 ```
 perl ./bin/Allele_Frequencies.pl total_alleles.txt tRNAmutants.txt
 ```
+
+### Analysis of tRNA Variants
+
+Ran perl script to extract information on how many overall mutations per tRNA, how many uncommon ( AF < 5%) mutations per tRNA and how many mutations per allele.
+
+```
+perl ./bin/nonredundant_tRNA_analysis.pl nonredundant_mutants.txt
+```
+
