@@ -198,6 +198,17 @@ After looking at the cutoff graphs, cutoff was selected as 10x coverage. Ran per
 ```
 nohup ./bin/tRNA_sequences_cutoff10.sh &
 ```
-Ran tRNA trimming perl script on all samples to get tRNA mutant sequences without 20 bp 5' flanking and to get total counts for each loci.
 
-Ran script to calculate allele frequency of each mutant. Output is a non-redundant list of mutant tRNA sequences with allele frequencies.
+*NEW*
+
+Ran tRNA trimming perl script on all samples to get tRNA mutant sequences without 20 bp 5' flanking, concatenates all individual samples into one file
+
+```
+./bin/tRNA_trimming_run.sh
+```
+
+Ran tRNA allele frequency counting script to get count of how many alleles we see for each tRNA total across all individuals and how many times we see each variant tRNA in our sample. Also outputs non-redundant list of mutant tRNA sequences with allele frequencies
+
+```
+perl ./bin/Allele_Frequencies.pl total_alleles.txt tRNAmutants.txt
+```
