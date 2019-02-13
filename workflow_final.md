@@ -141,7 +141,7 @@ Then blast the tRNAs against each database and run the blast anaylsis script.
 nohup ./bin/blast.sh &
 ```
 
-Next, determine the ideal cutoff by graphing total coverage for every unique tRNA sequence observed from all individuals sequenced.
+Next, determine the ideal cutoff by graphing total coverage for every unique tRNA sequence observed from all individuals sequenced. 
 
 ```
 R
@@ -206,6 +206,12 @@ nohup ./bin/tRNA_sequences_cutoff10.sh &
 
 *NEW*
 
+Ran coverage analysis script to determine coverage of each tRNA (or family of tRNAs) across the capture array.
+
+```
+perl capturearray_coverage.pl all_coverage.txt
+```
+
 Ran tRNA trimming perl script on all samples to get tRNA mutant sequences without 20 bp 5' flanking, concatenates all individual samples into one file
 
 ```
@@ -234,3 +240,16 @@ perl ./bin/nonredundant_tRNA_analysis.pl nonredundant_mutants.txt
 # mv output files to data folder
 # add sanity check that output exists and looks correct
 ```
+<<<<<<< HEAD
+=======
+
+Ran perl script to extract copy number of each isoacceptor and isodecoder in the reference set. Also ran seperate perl script to count how many variants there are in each isoacceptor and isodecoder in our sample, as well as how many total alleles were counted for each isoacceptor and isodecoder.
+
+```
+# The UCSC_tRNAsequences.fasta file was downloaded from UCSC genome browser hg19 on February 8, 2019
+perl ./bin/counting_total_iso.pl ./data/UCSC_tRNAsequences.fasta
+
+# nonredundant_mutants.txt and total_counts. txt come from Allele_Frequencies.pl
+perl ./bin/counting_mutant_iso.pl ./data/nonredundant_mutants.txt ./data/total_counts.txt
+```
+>>>>>>> d8f68cd4a2fa87dc951925d3fdcb31341a0d04dd
