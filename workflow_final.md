@@ -1,5 +1,6 @@
 # Workflow for processing tRNA reads
-Daniel Giguere Oct 2 2018
+Daniel Giguere and Matthew Berg
+Last updated Februrary 8 2019.
 
 **Summary:**
 
@@ -208,13 +209,20 @@ nohup ./bin/tRNA_sequences_cutoff10.sh &
 Ran tRNA trimming perl script on all samples to get tRNA mutant sequences without 20 bp 5' flanking, concatenates all individual samples into one file
 
 ```
+
+# change tRNA_trimming.pl to the corerct name
 ./bin/tRNA_trimming_run.sh
+# mv output files to data folder
+# add sanity check that output exists and looks correct
 ```
 
 Ran tRNA allele frequency counting script to get count of how many alleles we see for each tRNA total across all individuals and how many times we see each variant tRNA in our sample. Also outputs non-redundant list of mutant tRNA sequences with allele frequencies
 
 ```
 perl ./bin/Allele_Frequencies.pl total_alleles.txt tRNAmutants.txt
+# mv output files to data folder
+# add sanity check that output exists and looks correct
+# lots of things call from the output, "master file"
 ```
 
 ### Analysis of tRNA Variants
@@ -223,5 +231,6 @@ Ran perl script to extract information on how many overall mutations per tRNA, h
 
 ```
 perl ./bin/nonredundant_tRNA_analysis.pl nonredundant_mutants.txt
+# mv output files to data folder
+# add sanity check that output exists and looks correct
 ```
-
