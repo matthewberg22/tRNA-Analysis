@@ -243,7 +243,7 @@ perl ./bin/nonredundant_tRNA_analysis.pl nonredundant_mutants.txt
 
 ### tRNAscan-se
 
-The paths for searching for infernal need to be changed depending on where the install was. Open tRNAscan-SE.conf and change the infernal_dir setting to the location of the cmsearch executable.
+The paths for searching for infernal need to be changed depending on where the install was. Open tRNAscan-SE.conf and change the infernal_dir setting to the location of the cmsearch executable. (https://bioinformatics.stackexchange.com/questions/4637/trnascan-se-error-fatal-unable-to-find-usr-local-bin-cmsearch-executable)
 
 ```
 infernal_dir: /Volumes/data/bin/infernal/bin
