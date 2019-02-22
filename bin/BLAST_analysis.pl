@@ -8,10 +8,11 @@ use Scalar::Util qw(looks_like_number);
 #Department of Biochemistry, University of Western Ontario
 #January 22, 2019
 
+#Script to parse through BLAST output, select hits that contain full length tRNAs plus flanking sequence and sort out possibly ambiguous hits
 #To run enter script.pl BLAST.blast IDENTIFIER_Number Coverage_Cutoff_Number
-#BLAST.blast contains the output of a BLAST with reference tRNA as query and all the reads as the database
+#BLAST.blast contains the output of a BLAST with reference tRNA as query and all the paired end reads as the database
 #IDENTIFIER_Number is the unique identifier for the sample you are analyzing
-#Coverage_Cutoff_Number is the cutoff you want to use (if you don't know the cutoff and want to get total coverage, put this as 0)
+#Coverage_Cutoff_Number is the cutoff you want to use (if you don't know the cutoff and want to get everything set this as 0)
 
 #####Reads in input files
 ##############################################################################
@@ -23,11 +24,11 @@ my $coveragecutoff = $ARGV[2];
 ######OUTPUT FILES
 ##############################################################################
 
-system("rm BLAST_analysis_$PatientNo.txt"); #for Windows computers use del and for UNIX use rm -f
+system("rm BLAST_analysis_$PatientNo.txt"); 
 open(out1, ">BLAST_analysis_$PatientNo.txt") or die("Cannot open output1 file");
-system("rm tRNA_sequence_$PatientNo_$coveragecutoff.fasta"); #for Windows computers use del and for UNIX use rm -f
-open(out2, ">tRNA_sequence_$PatientNo_$coveragecutoff.fasta") or die("Cannot open output2 file");
-system("rm Allcoverage_$PatientNo.txt"); #for Windows computers use del and for UNIX use rm -f
+system("rm tRNA_sequence-$PatientNo-Cov$coveragecutoff.fasta");
+open(out2, ">tRNA_sequence-$PatientNo-Cov$coveragecutoff.fasta") or die("Cannot open output2 file");
+system("rm Allcoverage_$PatientNo.txt");
 open(out3, ">Allcoverage_$PatientNo.txt") or die("Cannot open output2 file");
 
 #####Reads in BLAST file and saves the information
@@ -39,11 +40,10 @@ open(inp0, "$BLAST") or die("Cannot open BLAST file");
               my @tRNARefname; #The name of the reference tRNA from the genome
               my @tRNAchr; #The chromosome the reference tRNA is on
               my @strand;
-			  
-			  my %StartStop; #A hash to store the start and stop coordinates of the hit within the read
-			  my %allele; #A hash to store the btop output
-			  my %seq; #A hash to store the sequence of the BLAST hit (read)
-			  my %tRNAqueryLength; #A hash to store the total length of each reference tRNA (including 20 bp flanking 5')
+	      my %StartStop; #A hash to store the start and stop coordinates of the hit within the read
+	      my %allele; #A hash to store the btop output
+	      my %seq; #A hash to store the sequence of the BLAST hit (read)
+	      my %tRNAqueryLength; #A hash to store the total length of each reference tRNA (including 20 bp flanking 5')
 
 #Reads line by line through the BLAST output file              
 while(<inp0>){
@@ -54,12 +54,12 @@ while(<inp0>){
     #If the line is an information line, check if the line has information about the Query (starts with # Query) and store tRNA name and co-ordinates
     if($check eq "#"){
         my @splitLine = split(" ", $_); #Splits the line on spaces
-		my $check2 = substr($splitLine[1],0,1);
+	my $check2 = substr($splitLine[1],0,1);
         
-		#If the first word after the # starts with Q (ie its Query) stores the tRNA name and co-ordinates
-		if($check2 eq "Q"){
-            push @tRNARefname, substr($splitLine[2],11);
-			my @tRNACoords = split(":", $splitLine[3]);
+	#If the first word after the # starts with Q (ie its Query) stores the tRNA name and co-ordinates
+	if($check2 eq "Q"){
+            push @tRNARefname, substr($splitLine[2],13);
+	    my @tRNACoords = split(":", $splitLine[3]);
             my @tRNACoords3 = split("=", $tRNACoords[0]);
             push @tRNAchr, $tRNACoords3[1];
             my @tRNACoords2 = split("-", $tRNACoords[1]);
@@ -74,12 +74,12 @@ while(<inp0>){
     elsif($check ne "#"){
         my @splitLine = split("\t", $_);
         
-		if($splitLine[3] == $splitLine[14]){
-			my $tRNAname = substr($splitLine[0],11);
-			$tRNAqueryLength{$tRNAname} = $splitLine[14];
-			push @{ $StartStop{$splitLine[1]}{$tRNAname} }, $splitLine[8].",".$splitLine[9];
-			push @{ $allele{$splitLine[1]}{$tRNAname} }, $splitLine[12];
-			push @{ $seq{$splitLine[1]}{$tRNAname} }, $splitLine[13];
+	if($splitLine[3] == $splitLine[14]){
+		my $tRNAname = substr($splitLine[0],13);
+		$tRNAqueryLength{$tRNAname} = $splitLine[14];
+		push @{ $StartStop{$splitLine[1]}{$tRNAname} }, $splitLine[8].",".$splitLine[9];
+		push @{ $allele{$splitLine[1]}{$tRNAname} }, $splitLine[12];
+		push @{ $seq{$splitLine[1]}{$tRNAname} }, $splitLine[13];
         }
     }
 }
@@ -95,9 +95,6 @@ my %Chr;
 @Chr{@tRNARefname} = @tRNAchr;
 
 close(inp0); 
-#Finish reading in BLAST file
-#####################################################################################################
-
 
 #####Counts how many reads contain a full length tRNA and how many reads contain two 'duplicated'tRNAs
 #####################################################################################################
@@ -113,11 +110,8 @@ foreach my $readID (keys %StartStop){
 	}
 }
 
-
 #####Checks if readID are unique or are hits for multiple tRNAs
 ##############################################################################
-
-
 
 my $MultipleMappingReadsCounter = 0;
 my %confidentalleles;
@@ -1226,7 +1220,7 @@ foreach(@tRNARefname){
 }
 
 #Determines how many tRNAs in total have been identified, even those with low coverage (ie less than 10x)
-my $totallowcovtRNAs;
+my $totallowcovtRNAs = 0;
 
 foreach my $keys (keys %totaltRNAcoverage){
 	my @splitgrouptRNA = split(" ", $keys);
@@ -1236,7 +1230,7 @@ foreach my $keys (keys %totaltRNAcoverage){
 }
 
 print out1 "***** IDENTIFER No.: $PatientNo *****\n";
-print out1 "Coverage Cutoff: $coveragecutoff";
+print out1 "Coverage Cutoff: $coveragecutoff\n";
 print out1 "Total reads with full length tRNAs: $totalfulllength\n";
 print out1 "Total confident reads: $UniqueReadsCounter\n";
 print out1 "Total ambiguous reads: $MultipleMappingReadsCounter\n";

@@ -6,8 +6,8 @@ use warnings;
 #Department of Biochemistry, University of Western Ontario
 #February 8, 2019
 
-# Script to count how many genes for each isoacceptor and isodecoder
-# To run enter script.pl tRNA_sequences.fasta
+#Script to count how many genes for each isoacceptor and isodecoder are present in GtRNAdb file
+#To run enter script.pl GtRNAdb.txt
 
 #####Reads in input files
 ##############################################################################
@@ -16,10 +16,12 @@ my $tRNAsequence = $ARGV[0];
 
 #####OUTPUT FILES
 ##############################################################################
+system("rm genes_isoacceptor.txt");
 open(out1, ">genes_isoacceptor.txt") or die("Cannot open output1 file");
-open(out2, ">gene_isodecoder.txt") or die("Cannot open output2 file"); 
+system("rm genes_isodecoder.txt");
+open(out2, ">genes_isodecoder.txt") or die("Cannot open output2 file"); 
 
-#####Reads in BLAST_analysis file and prints out patient ID, # of tRNAs identified and a list of tRNAs missing
+#####Reads in GtRNAdb file and adds counts to each isoacceptor or isodecoder family
 ###############################################################################
 
 open(inp0, "$tRNAsequence") or die("Cannot open tRNA_sequence file");

@@ -6,8 +6,10 @@ use warnings;
 #Department of Biochemistry, University of Western Ontario
 #February 8, 2019
 
-# Script to count coverage for each tRNA targeted for sequence
-# To run enter script.pl all_coverage.txt
+#Script to count coverage for each tRNA targeted for sequencing
+#To run enter script.pl Total_Coverage.txt GtRNAdb_20bpflanking.txt
+#Total_Coverage.txt comes from BLAST_analysis.pl
+#GtRNAdb_20bpflanking.txt is the database file used as a query against the sequencing read BLAST database
 
 #####Reads in input files
 ##############################################################################
@@ -17,10 +19,10 @@ my $tRNAsequence = $ARGV[0];
 
 #####OUTPUT FILES
 ##############################################################################
+system("rm capturearray_coverage.txt");
 open(out1, ">capturearray_coverage.txt") or die("Cannot open output1 file");
 
-
-#####Reads in BLAST_analysis file and prints out patient ID, # of tRNAs identified and a list of tRNAs missing
+#####Reads in Total_Coverage file, initalizes hash for each tRNA name and then reads through file again to sum up total coverage
 ###############################################################################
 
 open(inp0, "$coverage") or die("Cannot open coverage file");
@@ -46,7 +48,6 @@ while(<inp0>){
 
 open(inp0, "$coverage") or die("Cannot open coverage file");
 
-
 while(<inp0>){
 	chomp;
 	my $check = substr($_, 0, 1);
@@ -69,8 +70,8 @@ close(inp0);
 
 print out1 "tRNA\tTotalCoverage\n";
 
-
-
+#####Reads in GtRNAdb file and stores names of all tRNA loci designed into capture array
+###############################################################################
 open(inp1, "$tRNAsequence") or die("Cannot open tRNA_sequence file");
 	my %tRNAgene;
 

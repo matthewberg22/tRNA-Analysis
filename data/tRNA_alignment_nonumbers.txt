@@ -1,0 +1,880 @@
+>>>>>>>..>>>>...........<<<<.>>>>>.......<<<<<................>>>>>.........<<<<<<<<<<<<....
+GGGGGTGTAGCTCAGT.GGT.A..GAGCGCGTGCTTAGCATGCACGAG...........GcCCCGGG.TTCAATC.CCCGGCACCTCCA... tRNA-Ala-AGC-2-2 Sc: 78.1  
+GGGGGTGTAGCTCAGT.GGT.A..GAGCGCGTGCTTAGCATGCACGAG...........GcCCCGGG.TTCAATC.CCCGGCACCTCCA... tRNA-Ala-AGC-2-1 Sc: 78.1  
+GGGGGTATAGCTCAGT.GGT.A..GAGCGCGTGCTTAGCATGCACGAG...........GtCCTGGG.TTCGATC.CCCAGTACCTCCA... tRNA-Ala-AGC-1-1 Sc: 78.0  
+GGGGGTGTAGCTCAGT.GGT.A..GAGCGCGTGCTTAGCATGCACGAG...........GcCCTGGG.TTCAATC.CCCAGCACCTCCA... tRNA-Ala-AGC-5-1 Sc: 77.3  
+GGGGGTGTAGCTCAGT.GGT.A..GAGCGCGTGCTTAGCATGTACGAG...........GtCCCGGG.TTCAATC.CCCGGCACCTCCA... tRNA-Ala-AGC-3-1 Sc: 74.2  
+GGGGGTGTAGCTCAGT.GGT.A..GAGCGCGTGCTTAGCATGCACGAG...........GcCCCGGG.TTCAATC.CCTGGCACCTCCA... tRNA-Ala-AGC-7-1 Sc: 70.7  
+>>>>>>>..>>>>...........<<<<.>>>>>.......<<<<<................>.>>>.........<<<.<<<<<<<<....
+GGGGATGTAGCTCAGT.GGT.A..GAGCGCATGCTTAGCATGCATGAG...........GtCCCGGG.TTCGATC.CCCAGCATCTCCA... tRNA-Ala-AGC-4-1 Sc: 68.7  
+>>>>>>>..>>>>...........<<<<.>>>>>.......<<<<<.................>>>>.........<<<<.<<<<<<<....
+GGGGGTATAGCTCAGC.GGT.A..GAGCGCGTGCTTAGCATGCACGAG...........GtCCTGGG.TTCAATC.CCCAATACCTCCA... tRNA-Ala-AGC-6-1 Sc: 67.7  
+>>>>>>>..>>>>...........<<<<.>>>>>.......<<<<<................>>>>>.........<<<<<<<<<<<<....
+GGGGGATTAGCTCAAATGGT.A..GAGCGCTCGCTTAGCATGCGAGAG...........GtAGCGGG.ATCGATG.CCCGCATCCTCCA... tRNA-Ala-AGC-8-2 Sc: 59.7  
+GGGGGATTAGCTCAAATGGT.A..GAGCGCTCGCTTAGCATGCGAGAG...........GtAGCGGG.ATCGATG.CCCGCATCCTCCA... tRNA-Ala-AGC-8-1 Sc: 59.7  
+GGGGAATTAGCTCAAGTGGT.A..GAGCGCTTGCTTAGCACGCAAGAG...........GtAGTGGG.ATCGATG.CCCACATTCTCCA... tRNA-Ala-AGC-10-1 Sc: 58.5  
+GGGGAATTAGCTCAAGTGGT.A..GAGCGCTTGCTTAGCATGCAAGAG...........GtAGTGGG.ATCGATG.CCCACATTCTCCA... tRNA-Ala-AGC-12-3 Sc: 58.3  
+GGGGAATTAGCTCAAGTGGT.A..GAGCGCTTGCTTAGCATGCAAGAG...........GtAGTGGG.ATCGATG.CCCACATTCTCCA... tRNA-Ala-AGC-12-2 Sc: 58.3  
+GGGGAATTAGCTCAAGTGGT.A..GAGCGCTTGCTTAGCATGCAAGAG...........GtAGTGGG.ATCGATG.CCCACATTCTCCA... tRNA-Ala-AGC-12-1 Sc: 58.3  
+GGGGAATTAGCTCAAATGGT.A..GAGCGCTCGCTTAGCATGCGAGAG...........GtAGCGGG.ATCGATG.CCCGCATTCTCCA... tRNA-Ala-AGC-11-1 Sc: 58.3  
+GGGGAATTAGCTCAGGCGGT.A..GAGCGCTCGCTTAGCATGCGAGAG...........GtAGCGGG.ATCGACG.CCCGCATTCTCCA... tRNA-Ala-AGC-9-2 Sc: 57.1  
+GGGGAATTAGCTCAGGCGGT.A..GAGCGCTCGCTTAGCATGCGAGAG...........GtAGCGGG.ATCGACG.CCCGCATTCTCCA... tRNA-Ala-AGC-9-1 Sc: 57.1  
+GGGGAATTAGCTCAAGTGGT.A..GAGCGCTTGCTTAGCATGCAAGAG...........GtAGTGGG.ATCAATG.CCCACATTCTCCA... tRNA-Ala-AGC-14-1 Sc: 57.1  
+GGGGAATTAGCTCAAGCGGT.A..GAGCGCTTGCTTAGCATGCAAGAG...........GtAGTGGG.ATCGATG.CCCACATTCTCCA... tRNA-Ala-AGC-13-2 Sc: 56.9  
+GGGGAATTAGCTCAAGCGGT.A..GAGCGCTTGCTTAGCATGCAAGAG...........GtAGTGGG.ATCGATG.CCCACATTCTCCA... tRNA-Ala-AGC-13-1 Sc: 56.9  
+GGGGAATTAGCTCAAGTGGT.A..GAGCGCTCGCTTAGCATGCGAGAG...........GtAGTGGG.ATCGATG.CCCGCATTCTCCA... tRNA-Ala-AGC-15-1 Sc: 53.9  
+>>>>>>>..>>.>...........<.<<.>>>>>.......<<<<<................>>>>>.........<<<<<<<<<<<<....
+GGGGAATTAGCCCAAGTGGT.A..GAGCGCTTGCTTAGCATGCAAGAG...........GtAGTGGG.ATCGATG.CCCACATTCTCCA... tRNA-Ala-AGC-16-1 Sc: 51.9  
+>>>>>.>..>>>>...........<<<<.>>>>>.......<<<<<................>>>>>.........<<<<<<.<<<<<....
+GGGGAATTGGCTCAAGCGGT.A..GAGCGCTTGCTTAGCATGCAAGAG...........GtAGCAGG.ATCGACG.CCTGCACTCTCCA... tRNA-Ala-AGC-18-2 Sc: 45.7  
+GGGGAATTGGCTCAAGCGGT.A..GAGCGCTTGCTTAGCATGCAAGAG...........GtAGCAGG.ATCGACG.CCTGCACTCTCCA... tRNA-Ala-AGC-18-1 Sc: 45.7  
+>>>>>>>..>>.>...........<.<<.>>>>>.......<<<<<................>>>>>.........<<<<<<<<<<<<....
+GGGGAATTAGCGCAAGTGGT.A..GAGTGCTTGCTTAGCATGCAAGAG...........GtAGTGGG.ATCGATG.CCCACATTCTCCA... tRNA-Ala-AGC-17-1 Sc: 45.6  
+>>>>>>>..>>>>...........<<<<.>.>>>.......<<<.<................>>>>>.........<<<<<<<<<<<<....
+GGGGGATTAGCTCAAGCGGT.A..GAGCGCCTGCTTAGCATGCAAGAG...........GtAGCAGG.ATCGATG.CCTGCATTCTCCA... tRNA-Ala-AGC-19-1 Sc: 45.4  
+GGGGGATTAGCTCAAGCGGT.A..GGGTGCCTGCTTAGCATGCAAGAG...........GtAGCAGG.ATCGACG.CCTGCATTCTCCA... tRNA-Ala-AGC-21-1 Sc: 37.3  
+>>>>>>>..>.>>...........<<.<.>>.>>.......<<.<<................>>>>>.........<<<<<<<<<<<<....
+GGGGGTGTAGATCAGT.GGT.A..GGGCGCACGCTTAGCATGCATGAG...........GcCCTGGG..TCAATC.CCCAGCACCTCCA... tRNA-Ala-AGC-20-1 Sc: 37.2  
+>>>>>>>..>>>>...........<<<<.>>>.>.......<.<<<................>.>>>.........<<<.<<<<<<<<....
+GGGGAATTAGCTCAAGCGGT.A..GAGCGCTCCCTTAGCATGCGAGAG...........GtAGCGGG.ATCGACG.CCCCCATTCTCTA... tRNA-Ala-AGC-22-1 Sc: 26.2  
+>>>>>>>..>>>>...........<<<<.>>>>.........<<<<................>>>.>.........<.<<<<<<<<<<....
+GGGGGTATAGCTCAG..GGAcA..GAGCACGTGGTTAGCATGCGTGAG...........GtCCTGCG.TTCAACT.TCCAGTATTTCCA... tRNA-Ala-AGC-23-1 Sc: 24.3  
+>.>>>>...>>>>...........<<<<.>>>>>.......<<<<<................>>>>>.........<<<<<.<<<<.<....
+GAAGAAGTAGCTCAAGTGGT.C..GAGTGCTCGCTTAGCATGTGAGAG...........GtAGTGGG.ATTGATG.CCCACATTCTCCA... tRNA-Ala-AGC-chr6-93 Sc: 21.2   
+>>>>>>>..>>>>...........<<<<.>>>>>.......<<<<<................>>>>...........<<<<<<<<<<<....
+GGCTCTGTGGCTTTGTGGGTtA..AAGTACTTGTCTGGCAAACAGGAG...........AtGCTGGAtTTCAATC..CCAGCAGGGCCT... tRNA-Ala-GGC-chr19-3 Sc: 31.8  
+>>>>>>>..>>>>...........<<<<.>>>>>.......<<<<<................>>>>>.........<<<<<<<<<<<<....
+GGGGATGTAGCTCAGT.GGT.A..GAGCGCATGCTTCGCATGTATGAG...........GtCCCGGG.TTCGATC.CCCGGCATCTCCA... tRNA-Ala-CGC-1-1 Sc: 75.7  
+GGGGATGTAGCTCAGT.GGT.A..GAGCGCATGCTTCGCATGTATGAG...........GcCCCGGG.TTCGATC.CCCGGCATCTCCA... tRNA-Ala-CGC-2-1 Sc: 75.7  
+>>>>>.>..>>>>...........<<<<.>>>>>.......<<<<<................>>>>>.........<<<<<<.<<<<<....
+GGGGGTGTAGCTCAGT.GGT.A..GAGCGCGTGCTTCGCATGTACGAG...........GcCCCGGG.TTCGACC.CCCGGCTCCTCCA... tRNA-Ala-CGC-4-1 Sc: 73.7  
+>>>>>>>..>>>>...........<<<<.>>>>>.......<<<<<................>>>>>.........<<<<<<<<<<<<....
+GGGGATGTAGCTCAGT.GGT.A..GAGCGCGCGCTTCGCATGTGTGAG...........GtCCCGGG.TTCAATC.CCCGGCATCTCCA... tRNA-Ala-CGC-3-1 Sc: 72.0  
+>>>>>>>..>.>>...........<<.<.>.>>>.......<<<.<................>>.>>.........<<.<<<<<<<<<....
+GGGGGTGTAGATCAGT.GGT.A..GAGCGCATGCTTCGCATGTACGAG...........GtCCCTGG.TTCAATC.CCTGGTACCTCCA... tRNA-Ala-CGC-5-1 Sc: 43.1  
+>>>>>>>..>>>>...........<<<<.>>>>>.......<<<<<................>>>>>.........<<<<<<<<<<<<....
+GGGGGTGTAGCTCAGT.GGT.A..GAGCGCATGCTTTGCATGTATGAG...........GtCCCGGG.TTCGATC.CCCGGCACCTCCA... tRNA-Ala-TGC-1-1 Sc: 77.3  
+GGGGATGTAGCTCAGT.GGT.A..GAGCGCATGCTTTGCATGTATGAG...........GtCCCGGG.TTCGATC.CCCGGCATCTCCA... tRNA-Ala-TGC-2-1 Sc: 75.8  
+GGGGATGTAGCTCAGT.GGT.A..GAGCGCATGCTTTGCATGTATGAG...........GcCCCGGG.TTCGATC.CCCGGCATCTCCA... tRNA-Ala-TGC-3-2 Sc: 75.8  
+GGGGATGTAGCTCAGT.GGT.A..GAGCGCATGCTTTGCATGTATGAG...........GcCCCGGG.TTCGATC.CCCGGCATCTCCA... tRNA-Ala-TGC-3-1 Sc: 75.8  
+GGGGATGTAGCTCAGT.GGT.A..GAGCGCATGCTTTGCACGTATGAG...........GcCCCGGG.TTCAATC.CCCGGCATCTCCA... tRNA-Ala-TGC-4-1 Sc: 74.7  
+GGGGGTGTAGCTCAGT.GGT.A..GAGCGCATGCTTTGCATGTATGAG...........GcCTCGGG.TTCGATC.CCCGACACCTCCA... tRNA-Ala-TGC-5-1 Sc: 73.6  
+GGGGGTGTAGCTCAGT.GGT.A..GAGCACATGCTTTGCATGTGTGAG...........GcCCCGGG.TTCGATC.CCCGGCACCTCCA... tRNA-Ala-TGC-6-1 Sc: 68.3  
+>>>>>>>..>>>>...........<<<<.>>>>>.......<<<<<.................>.>>.........<<.<.<<<<<<<....
+GGGGGTGTAGCTCAGT.GGT.A..GAGCGCATGCTTTGCATGTATGAG...........G.CCTCGG.TTCGATC.CCCGACACCTCCA... tRNA-Ala-TGC-7-1 Sc: 57.0  
+>>>>>>>..>>>>...........<<<<..>>>>.......<<<<.................>>>>>.........<<<<<<<<<<<<....
+GGGGGTGTAGCTCAGT.GGT.A..GAGCGGATGCTTTGCATGTATGAG...........AcTTTGGG.TTGGATC.CCCAGCACCTCCA... tRNA-Ala-TGC-8-1 Sc: 47.6  
+>.>>>>>..>>>>...........<<<<.>>.>>.......<<.<<................>>>>...........<<<<<<<<<.<....
+GTGGATGTAGTTTAGT.GGT.A..GAACGCGCGCTTTGCATGTATGAG...........GtCCCGGT.TTCGATC.CCTGGCGTTTCCA... tRNA-Ala-TGC-9-1 Sc: 27.3
+>>>>>>>..>>>............<<<.>>>>>.........................<<<<<................>>>>>.......<<<<<.<<<<<<<.
+GGGCCAGTGGCGCAATGGAt.A.ACGCGTCTGACTACGG..................ATCAGAAG...........AtTCCAGGTTCGACTCCTGG.CTGGCTCG tRNA-Arg-ACG-1-3 Sc: 65.8  
+GGGCCAGTGGCGCAATGGAt.A.ACGCGTCTGACTACGG..................ATCAGAAG...........AtTCCAGGTTCGACTCCTGG.CTGGCTCG tRNA-Arg-ACG-1-2 Sc: 65.8  
+GGGCCAGTGGCGCAATGGAt.A.ACGCGTCTGACTACGG..................ATCAGAAG...........AtTCCAGGTTCGACTCCTGG.CTGGCTCG tRNA-Arg-ACG-1-1 Sc: 65.8  
+GGGCCAGTGGCGCAATGGAt.A.ACGCGTCTGACTACGG..................ATCAGAAG...........AtTCTAGGTTCGACTCCTGG.CTGGCTCG tRNA-Arg-ACG-2-4 Sc: 60.9  
+GGGCCAGTGGCGCAATGGAt.A.ACGCGTCTGACTACGG..................ATCAGAAG...........AtTCTAGGTTCGACTCCTGG.CTGGCTCG tRNA-Arg-ACG-2-3 Sc: 60.9  
+GGGCCAGTGGCGCAATGGAt.A.ACGCGTCTGACTACGG..................ATCAGAAG...........AtTCTAGGTTCGACTCCTGG.CTGGCTCG tRNA-Arg-ACG-2-2 Sc: 60.9  
+GGGCCAGTGGCGCAATGGAt.A.ACGCGTCTGACTACGG..................ATCAGAAG...........AtTCTAGGTTCGACTCCTGG.CTGGCTCG tRNA-Arg-ACG-2-1 Sc: 60.9   
+>>>>>>>..>>>>..........<<<<.>>>>>.........................<<<<<................>>>>>.......<<<<<.<<<<<<<.
+GGCCGCGTGGCCTAATGGAt.A.AGGCGTCTGATTCCGG..................ATCAGAAG...........AtTGAGGGTTCGAGTCCCTT.CGTGGTCG tRNA-Arg-CCG-1-3 Sc: 64.7  
+GGCCGCGTGGCCTAATGGAt.A.AGGCGTCTGATTCCGG..................ATCAGAAG...........AtTGAGGGTTCGAGTCCCTT.CGTGGTCG tRNA-Arg-CCG-1-2 Sc: 64.7  
+GGCCGCGTGGCCTAATGGAt.A.AGGCGTCTGATTCCGG..................ATCAGAAG...........AtTGAGGGTTCGAGTCCCTT.CGTGGTCG tRNA-Arg-CCG-1-1 Sc: 64.7  
+GACCCAGTGGCCTAATGGAt.A.AGGCATCAGCCTCCGG..................AGCTGGGG...........AtTGTGGGTTCGAGTCCCAT.CTGGGTCG tRNA-Arg-CCG-2-1 Sc: 61.4  
+>>>>>>>..>>>>..........<<<<.>>>>>.........................<<<<<................>>>>>.......<<<<<.<<<<<<<.
+GGCCGCGTGGCCTAATGGAt.A.AGGCGTCTGACTTCGG..................ATCAGAAG...........AtTGCAGGTTCGAGTCCTGC.CGCGGTCG tRNA-Arg-TCG-1-1 Sc: 73.6  
+GACCACGTGGCCTAATGGAt.A.AGGCGTCTGACTTCGG..................ATCAGAAG...........AtTGAGGGTTCGAATCCCTC.CGTGGTTA tRNA-Arg-TCG-2-1 Sc: 69.6  
+GACCACGTGGCCTAATGGAt.A.AGGCGTCTGACTTCGG..................ATCAGAAG...........AtTGAGGGTTCGAATCCCTT.CGTGGTTA tRNA-Arg-TCG-4-1 Sc: 66.9  
+GACCGCGTGGCCTAATGGAt.A.AGGCGTCTGACTTCGG..................ATCAGAAG...........AtTGAGGGTTCGAGTCCCTT.CGTGGTCG tRNA-Arg-TCG-3-1 Sc: 66.6  
+GACCACGTGGCCTAATGGAt.A.AGGCGTCTGACTTCGG..................ATCAGAAG...........AtTGAGGGTTCGAATCCCTT.CGTGGTTG tRNA-Arg-TCG-5-1 Sc: 66.0  
+>>>>>>>..>>>>..........<<<<.>.>>>.........................<<<.<................>>>>>.......<<<<<.<<<<<<<.
+GGCCGTGTGGCCTAATGGAt.A.AGGCGTCTGACTTCGG..................ATCAAAAG...........AtTGCAGGTTTGAGTTCTGC.CACGGTCG tRNA-Arg-TCG-6-1 Sc: 49.3    
+>>>>>>>..>>>>..........<<<<.>>>>>.........................<<<<<................>>>>>.......<<<<<.<<<<<<<.
+GCCCCAGTGGCCTAATGGAt.A.AGGCACTGGCCTCCTA..................AGCCAGGG...........AtTGTGGGTTCGAGTCCCAC.CTGGGGTA tRNA-Arg-CCT-1-1 Sc: 68.1  
+GCCCCAGTGGCCTAATGGAt.A.AGGCACTGGCCTCCTA..................AGCCAGGG...........AtTGTGGGTTCGAGTCCCAC.CTGGGGTG tRNA-Arg-CCT-2-1 Sc: 67.2  
+GCCCCGGTGGCCTAATGGAt.A.AGGCATTGGCCTCCTA..................AGCCAGGG...........AtTGTGGGTTCGAGTCCCAC.CCGGGGTA tRNA-Arg-CCT-3-1 Sc: 66.7  
+GCCCCAGTGGCCTAATGGAt.A.AGGCATTGGCCTCCTA..................AGCCAGGG...........AtTGTGGGTTCGAGTCCCAT.CTGGGGTG tRNA-Arg-CCT-4-1 Sc: 62.0  
+GCCCCAGTGGCCTGATGGAt.A.AGGTACTGGCCTCCTA..................AGCCAGGG...........AtTGTGGGTTCGAGTTCCAC.CTGGGGTA tRNA-Arg-CCT-5-1 Sc: 54.5  
+>>>>>>>..>>>>..........<<<<.>>>>>.........................<<<<<................>>>>>.......<<<<<.<<<<<<<.
+GTCTCTGTGGCGCAATGGAcgA.GCGCGCTGGACTTCTA..................ATCCAGAG...........GtTCCGGGTTCGAGTCCCGG.CAGAGATG tRNA-Arg-TCT-4-1 Sc: 75.1  
+GGCTCTGTGGCGCAATGGAt.A.GCGCATTGGACTTCTAgtgacgaatagagca...ATTCAAAG...........GtTGTGGGTTCGAATCCCAC.CAGAGTCG tRNA-Arg-TCT-2-1 Sc: 69.8  
+GGCTCCGTGGCGCAATGGAt.A.GCGCATTGGACTTCTAgaggctgaaggc......ATTCAAAG...........GtTCCGGGTTCGAGTCCCGG.CGGAGTCG tRNA-Arg-TCT-1-1 Sc: 69.2  
+GGCTCTGTGGCGCAATGGAt.A.GCGCATTGGACTTCTAgatagttagagaa.....ATTCAAAG...........GtTGTGGGTTCGAGTCCCAC.CAGAGTCG tRNA-Arg-TCT-3-2 Sc: 67.6  
+GGCTCTGTGGCGCAATGGAt.A.GCGCATTGGACTTCTAgctgagcctagtgtggtcATTCAAAG...........GtTGTGGGTTCGAGTCCCAC.CAGAGTCG tRNA-Arg-TCT-3-1 Sc: 67.4  
+>>>>>>>..>>>>..........<<<<.>>>>>.........................<<<<<................>.>>>.......<<<.<.<<<<<<<.
+GGCTCTGTGGCGCAATGGAt.A.GCGCATTGGACTTCTAgcctaaatcaagag....ATTCAAAG...........GtTGCGGGTTCGAGTCCCTC.CAGAGTCG tRNA-Arg-TCT-5-1 Sc: 60.7  
+>>>>>.>..>>..............<<.>>>.............................<<<................>>>.>.......<.<<<.<.<<<<<.
+GGCAGCATAGCAGAGTGGTt.C.AGGTTACAGGTTCTAG..................A..TGTA............A.ACTGAGTTCAAATCCCAG.TTCTGCCA tRNA-Arg-TCT-chr5-4 Sc: 22.2
+>>>>>>>..>>.>..........<.<<.>>>>>.........<<<<<.................>>.>.......<.<<.<<<<<<<....
+GTCTCTGTGGCGCAATCGGTcA.GAGCGTTCGGCTATT..AACCGAACG...........GtGAGTAGTTCAAGACCACCCAGGGACG... tRNA-Asn-ATT-1-2 Sc: 42.0  
+GTCTCTGTGGCGCAATCGGTcA.GAGCGTTCGGCTATT..AACCGAACG...........GtGAGTAGTTCAAGACCACCCAGGGACG... tRNA-Asn-ATT-1-1 Sc: 42.0  
+>>>>>>>..>>>>..........<<<<.>>>>>.........<<<<<................>>>>>.......<<<<<<<<<<<<....
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTCGGCTGTT..AACCGAAAG...........GtTGGTGGTTCGATCCCACCCAGGGACG... tRNA-Asn-GTT-1-1 Sc: 78.5  
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTCGGCTGTT..AACCGAAAG...........GtTGGTGGTTCGAGCCCACCCAGGGACG... tRNA-Asn-GTT-2-6 Sc: 76.2  
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTCGGCTGTT..AACCGAAAG...........GtTGGTGGTTCGAGCCCACCCAGGGACG... tRNA-Asn-GTT-2-5 Sc: 76.2  
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTCGGCTGTT..AACCGAAAG...........GtTGGTGGTTCGAGCCCACCCAGGGACG... tRNA-Asn-GTT-2-4 Sc: 76.2  
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTCGGCTGTT..AACCGAAAG...........GtTGGTGGTTCGAGCCCACCCAGGGACG... tRNA-Asn-GTT-2-3 Sc: 76.2  
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTCGGCTGTT..AACCGAAAG...........GtTGGTGGTTCGAGCCCACCCAGGGACG... tRNA-Asn-GTT-2-2 Sc: 76.2  
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTCGGCTGTT..AACCGAAAG...........GtTGGTGGTTCGAGCCCACCCAGGGACG... tRNA-Asn-GTT-2-1 Sc: 76.2  
+GTCTCTGTGGCGCAATCGGTtA.GCGCATTCGGCTGTT..AACCGAAAG...........GtTGGTGGTTCGAGCCCACCCAGGGACG... tRNA-Asn-GTT-3-2 Sc: 74.1  
+GTCTCTGTGGCGCAATCGGTtA.GCGCATTCGGCTGTT..AACCGAAAG...........GtTGGTGGTTCGAGCCCACCCAGGGACG... tRNA-Asn-GTT-3-1 Sc: 74.1  
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTCGGCTGTT..AACCGAAAG...........AtTGGTGGTTCGAGCCCACCCAGGGACG... tRNA-Asn-GTT-4-1 Sc: 73.7  
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTCGGCTGTT..AACTGAAAG...........GtTGGTGGTTCGAGCCCACCCAGGGACG... tRNA-Asn-GTT-5-1 Sc: 72.3  
+GTCTCTGTGGCGCAATGGGTtA.GCGCGTTCGGCTGTT..AACCGAAAG...........GtTGGTGGTTCGAGCCCATCCAGGGACG... tRNA-Asn-GTT-6-1 Sc: 71.8  
+GTCTCTGTGGCGCAATCGGCtA.GCGCGTTTGGCTGTT..AACTAAAAG...........GtTGGTGGTTCGAACCCACCCAGAGGCG... tRNA-Asn-GTT-8-1 Sc: 66.1  
+>>>>>>>..>>>>..........<<<<.>>>>>.........<<<<<.................>>>>.......<<<<.<<<<<<<....
+GTCTCTGTGGCGTAGTCGGTtA.GCGCGTTCGGCTGTT..AACCGAAAA...........GtTGGTGGTTCGAGCCCACCCAGGAACG... tRNA-Asn-GTT-7-1 Sc: 63.1  
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTCGGCTGTT..AACTGAAAG...........GtTAGTGGTTCGAGCCCACCCGGGGACG... tRNA-Asn-GTT-9-2 Sc: 63.1  
+>>.>>>>..>>>>..........<<<<.>>>>>.........<<<<<................>>>>>.......<<<<<<<<<.<<....
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTCGGCTGTT..AACTGAAAG...........GtTAGTGGTTCGAGCCCACCCGGGGACG... tRNA-Asn-GTT-9-1 Sc: 63.1  
+>>>>>>>..>>>>..........<<<<.>>>>>.........<<<<<................>>.>>.......<<.<<<<<<<<<....
+GTCTCTGTGGCGCAATCGGCtA.GCGCGTTTGGCTGTT..AACTAAAAG...........GtTGGCGGTTCGAACCCACCCAGAGGCG... tRNA-Asn-GTT-10-1 Sc: 56.9  
+>>>>>>>..>>>>..........<<<<.>>>.>.........<.<<<................>>>>>.......<<<<<<<<<<<<....
+GTCTCTGTGGTGCAATCGGTtA.GCGCGTTCCGCTGTT..AACCGAAAG...........CtTGGTGGTTCGAGCCCACCCAGGGATG... tRNA-Asn-GTT-11-2 Sc: 49.7  
+GTCTCTGTGGTGCAATCGGTtA.GCGCGTTCCGCTGTT..AACCGAAAG...........CtTGGTGGTTCGAGCCCACCCAGGGATG... tRNA-Asn-GTT-11-1 Sc: 49.7  
+>>>>>>>..>>>>..........<<<<.>>>>>.........<<<<<................>>>>.........<<<<<<<<<<<....
+GTCTCTGTGGCGCAATCGGCtA.GCGCGTTTGGCTGTT..AACTAAAAA...........GtTGGTGGTTCGAACACACCCAGAGGCG... tRNA-Asn-GTT-12-1 Sc: 49.1  
+>>>>>>>..>>>>..........<<<<.>..>>.........<<..<................>>>>>.......<<<<<<<<<<<<....
+GTCTCTGTGGTGCAATCGGTtA.GCGCGTTCGGCTGTT..AACCATAAG...........GtTGGTGGTTAGAGACCACCCAGGGACG... tRNA-Asn-GTT-13-1 Sc: 43.4  
+>>>>>>>..>>>>..........<<<<.>>>.>.........<.<<<................>>>>>.......<<<<<<<<<<<<....
+GTCTCTGTGGTGCAATCGGTtA.GCGCGTTCCGCTGTT..AACCGAAAG...........CtTGGTGGTTTGAGCCCACCCAGGGATG... tRNA-Asn-GTT-14-1 Sc: 42.8  
+>>>>>>>..>>>>..........<<<<.>>>>>.........<<<<<................>>>>>.......<<<<<<<<<<<<....
+GTCTCTGTGGCGCCATCGGTtA.GTGCCTTCGGCTGTTtgAACCGAAAG...........GcTGGTGGTTCAAGCCCACCCAGAGATG... tRNA-Asn-GTT-20-1 Sc: 35.4  
+>>>>>.>..>>>>..........<<<<.>>>>...........<<<<................>>>>>.......<<<<<<.<<<<<....
+GTTTCTGTAGCGCGATCGGTtA.GCGCCTTCGGCTGTT..AAACGAAAG...........GtTGGTGGTTCGTTCCCACCCCGGGACA... tRNA-Asn-GTT-17-1 Sc: 34.8  
+>>>>>>>..>>>>..........<<<<.>>>>...........<<<<................>>>>>.......<<<<<<<<<<<<....
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTTGACTGTT..AACTGAAAG...........GtTGGTGGTGCAAGCCCATCCAGGGATG... tRNA-Asn-GTT-16-5 Sc: 34.8  
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTTGACTGTT..AACTGAAAG...........GtTGGTGGTGCAAGCCCATCCAGGGATG... tRNA-Asn-GTT-16-4 Sc: 34.8  
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTTGACTGTT..AACTGAAAG...........GtTGGTGGTGCAAGCCCATCCAGGGATG... tRNA-Asn-GTT-16-3 Sc: 34.8  
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTTGACTGTT..AACTGAAAG...........GtTGGTGGTGCAAGCCCATCCAGGGATG... tRNA-Asn-GTT-16-2 Sc: 34.8  
+GTCTCTGTGGCGCAATCGGTtA.GCGCGTTTGACTGTT..AACTGAAAG...........GtTGGTGGTGCAAGCCCATCCAGGGATG... tRNA-Asn-GTT-16-1 Sc: 34.8  
+>>>>>>>..>>>>..........<<<<.>..>>.........<<..<................>>>>>.......<<<<<<<<<<<<....
+GTCTCTGTGGTGCAATCGGTtA.GCGCGTTCGGCTGTT..AACCATAAG...........GtTGGTGGTTACAGACCACCCAGGGACG... tRNA-Asn-GTT-18-1 Sc: 33.8  
+.>>>>.>..>.>>..........<<.<.>>>>>.........<<<<<................>>>>>.......<<<<<<.<<<<.....
+ATCTCCGTGGAGCAATTGGTtA.GCGCGTTCGGCTGTT..AACCGGAAA...........GtTGGTGGTTCGAGCCTACCCAGGGACG... tRNA-Asn-GTT-15-1 Sc: 33.7  
+ATCTCCGTGGAGCAATTGGTtA.GCGCGTTCGGCCGTT..AACCGGAAA...........GtTGGTGGTTCGAGCCTACCCAGGGACG... tRNA-Asn-GTT-19-1 Sc: 29.2  
+>>>>>>...>>.>..........<.<<.>>.>>.........<<.<<................>>>>>.......<<<<<.<<<<<<....
+GTCTCTGTGGCACAATCGGTtA.GCGCGTTCGGCTGTT..AATCTAGAG...........GtTGGTGGTTAGAGCCCACTGAGGGATG... tRNA-Asn-GTT-21-1 Sc: 26.1  
+GTCTCTGTGGCACAATCGGTtA.GAGCGTTCGGCTGTT..AATCTAAAG...........GtTGGTGGCTAGAACCCACTGAGGGACG... tRNA-Asn-GTT-22-1 Sc: 20.8
+>>>>>>>...>>>.........<<<..>>>.>.......<.<<<................>>>>>.............<<<<<.<<<<<<<.
+GGGGGTATAGCTCAGTGGT.A.GAGAGTGTACTTATCATGCACGAG...........GtCTTGGG...ctGATTc...CCCAG.TACCTCCA tRNA-Asp-ATC-chr6-103 Sc: 25.5  
+>>>>>>>..>>>>.........<<<<.>>>>>.......<<<<<................>>>>>.............<<<<<.<<<<<<<.
+TCCTCGTTAGTATAGTGGTgA.GTATCCCCGCCTGTCACGCGGGAG...........A.CCGGGG..TTCGATT....CCCCG.ACGGGGAG tRNA-Asp-GTC-2-9 Sc: 68.2  
+TCCTCGTTAGTATAGTGGTgA.GTATCCCCGCCTGTCACGCGGGAG...........A.CCGGGG..TTCGATT....CCCCG.ACGGGGAG tRNA-Asp-GTC-2-8 Sc: 68.2  
+TCCTCGTTAGTATAGTGGTgA.GTATCCCCGCCTGTCACGCGGGAG...........A.CCGGGG..TTCGATT....CCCCG.ACGGGGAG tRNA-Asp-GTC-2-7 Sc: 68.2  
+TCCTCGTTAGTATAGTGGTgA.GTATCCCCGCCTGTCACGCGGGAG...........A.CCGGGG..TTCGATT....CCCCG.ACGGGGAG tRNA-Asp-GTC-2-6 Sc: 68.2  
+TCCTCGTTAGTATAGTGGTgA.GTATCCCCGCCTGTCACGCGGGAG...........A.CCGGGG..TTCGATT....CCCCG.ACGGGGAG tRNA-Asp-GTC-2-5 Sc: 68.2  
+TCCTCGTTAGTATAGTGGTgA.GTATCCCCGCCTGTCACGCGGGAG...........A.CCGGGG..TTCGATT....CCCCG.ACGGGGAG tRNA-Asp-GTC-2-4 Sc: 68.2  
+TCCTCGTTAGTATAGTGGTgA.GTATCCCCGCCTGTCACGCGGGAG...........A.CCGGGG..TTCGATT....CCCCG.ACGGGGAG tRNA-Asp-GTC-2-3 Sc: 68.2  
+TCCTCGTTAGTATAGTGGTgA.GTATCCCCGCCTGTCACGCGGGAG...........A.CCGGGG..TTCGATT....CCCCG.ACGGGGAG tRNA-Asp-GTC-2-2 Sc: 68.2  
+TCCTCGTTAGTATAGTGGTgA.GTATCCCCGCCTGTCACGCGGGAG...........A.CCGGGG..TTCGATT....CCCCG.ACGGGGAG tRNA-Asp-GTC-2-1 Sc: 68.2  
+TCCTCGTTAGTATAGTGGTgA.GTATCCCCGCCTGTCACGCGGGAG...........A.CCGGGG..TTCGATT....CCCCG.ACGGGGAG tRNA-Asp-GTC-2-11 Sc: 68.2  
+TCCTCGTTAGTATAGTGGTgA.GTATCCCCGCCTGTCACGCGGGAG...........A.CCGGGG..TTCGATT....CCCCG.ACGGGGAG tRNA-Asp-GTC-2-10 Sc: 68.2  
+TCCTCGTTAGTATAGTGGTtA.GTATCCCCGCCTGTCACGCGGGAG...........A.CCGGGG..TTCAATT....CCCCG.ACGGGGAG tRNA-Asp-GTC-1-1 Sc: 67.0  
+TCCTCGTTAGTATAGTGGTgA.GTGTCCCCGTCTGTCACGCGGGAG...........A.CCGGGG..TTCGATT....CCCCG.ACGGGGAG tRNA-Asp-GTC-3-1 Sc: 61.6  
+>>>>>>>..>>>>.........<<<<.>>>>>.......<<<<<.................>>>>.............<<<<..<<<<<<<.
+TCCTCGTTAGTATGGTGGTgA.GTATCCCTGCCTGTCACGCGGGAG...........A.CCGGGG..TTCGATT....CCCCA.ACGGGGAG tRNA-Asp-GTC-4-1 Sc: 49.3  
+>>>>>.>..>>>>.........<<<<.>>>>>.......<<<<<................>>>>>.............<<<<<.<.<<<<<.
+TCCTCATCAGTATAGTGGTgA.GTATCCCCGCCTGTCACGCGGGAG...........A.CTGGGG..TTCGATT....CCCTG.AGGAGGAG tRNA-Asp-GTC-5-1 Sc: 46.9  
+>>>>>>>..>>>>.........<<<<.>>>.>.......<.<<<................>>>>>.............<<<<<.<<<<<<<.
+TTCTTGTTAATATAGTGGTgA.GTATTCCCACCTGTCATGCGGGA............G.ACGGGG..TTCAATT....CCCTG.ATGGGGAG tRNA-Asp-GTC-6-1 Sc: 43.3  
+>>>>>>>..>>>>.........<<<<.>>>>>.......<<<<<................>>>.>.............<.<<<.<<<<<<<.
+TCCTTGTTAGTATAGTGGTgA.GTGTTTCTGCCTGTCATGTGGAG............A.CTGGAG..TTTGAGT....CCCCA.ACAGGGAG tRNA-Asp-GTC-8-1 Sc: 28.6  
+>>>.>.>..>>>>...............<<<<.>.>>>...............................................................................................................<<<.<...................>>.>>............<<.<<...<.<.<<<.
+GGCTGTATAGCTCAGT.GGT..A.....GAGCATTTGACTACAGaatcctatactcaggggaaggagaactgggggtttctcagtgggtcaaaggacttgtagtggtaaatcaaaagcaactctataagctatgtaacaaactttaaaGTCATAT...............GtAGCTGGgTTCAAAT....CCTGT...TTCTGCCA tRNA-Cys-ACA-1-1 Sc: 31.0  
+>>>>>>>..>>>>...............<<<<.>>>>>...............................................................................................................<<<<<...................>>>>>............<<<<<...<<<<<<<.
+GGGGGCATAGCTCAGT.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCTGG.TTCAAAT....CCAGG...TGCCCCCT tRNA-Cys-GCA-1-1 Sc: 80.2  
+GGGGGTATAGCTCAGT.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCTGG.TTCAAAT....CCGGG...TGCCCCCT tRNA-Cys-GCA-4-1 Sc: 78.9  
+GGGGGTATAGCTCAGT.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCGG.TTCAAAT....CCGGG...TGCCCCCT tRNA-Cys-GCA-2-4 Sc: 78.2  
+GGGGGTATAGCTCAGT.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCGG.TTCAAAT....CCGGG...TGCCCCCT tRNA-Cys-GCA-2-3 Sc: 78.2  
+GGGGGTATAGCTCAGT.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCGG.TTCAAAT....CCGGG...TGCCCCCT tRNA-Cys-GCA-2-2 Sc: 78.2  
+GGGGGTATAGCTCAGT.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCGG.TTCAAAT....CCGGG...TGCCCCCT tRNA-Cys-GCA-2-1 Sc: 78.2  
+GGGGGTATAGCTCAGG.GGT..A.....GAGCACTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCTGG.TTCAAAT....CCAGG...TGCCCCCT tRNA-Cys-GCA-3-1 Sc: 77.5  
+GGGGGTATAGCTCAGT.GGGt.A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCGG.TTCAAAT....CCGGG...TGCCCCCT tRNA-Cys-GCA-5-1 Sc: 75.2  
+GGGGGTGTAGCTCAGT.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCTGG.TTCAAAT....CCAGG...TGCCCCCT tRNA-Cys-GCA-6-1 Sc: 75.0  
+GGGGGTATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCTGG.TTCAAAT....CCAGG...TGCCCCCT tRNA-Cys-GCA-9-4 Sc: 74.9  
+GGGGGTATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCTGG.TTCAAAT....CCAGG...TGCCCCCT tRNA-Cys-GCA-9-3 Sc: 74.9  
+GGGGGTATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCTGG.TTCAAAT....CCAGG...TGCCCCCT tRNA-Cys-GCA-9-2 Sc: 74.9  
+GGGGGTATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCTGG.TTCAAAT....CCAGG...TGCCCCCT tRNA-Cys-GCA-9-1 Sc: 74.9  
+GGGGGTATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCTGG.TTCAAAT....CCAGG...TGCCCCCC tRNA-Cys-GCA-10-1 Sc: 74.6  
+GGGGGTATAGCTCAGGTGGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCGG.TTCAAAT....CCGGG...TGCCCCCT tRNA-Cys-GCA-7-1 Sc: 74.2  
+GGGGGTATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCGG.TTCAAAT....CCGGG...TGCCCCCT tRNA-Cys-GCA-8-1 Sc: 74.0  
+GGGGGTATAGCTTAGC.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCGG.TTCAAAT....CCGGG...TGCCCCCT tRNA-Cys-GCA-11-1 Sc: 73.7  
+GGGGGTATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCAG.TTCAAAT....CTGGG...TGCCCCCT tRNA-Cys-GCA-13-1 Sc: 71.0  
+GGGGGTATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAA..............GtCCCCGG.TTCAAAT....CCGGG...TGCCCCCT tRNA-Cys-GCA-14-1 Sc: 70.7  
+GGGGGTATAGCTTAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAAAG..............GtCCCTGG.TTCAAAT....CCAGG...TGCCCCTT tRNA-Cys-GCA-12-1 Sc: 70.6  
+GGGGGTATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCTCTGG.TTCAAAT....CCAGG...TGCCCCCT tRNA-Cys-GCA-15-1 Sc: 70.0  
+GGGGGTATAGTTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCTGG.TTCAAAT....CCAGG...TGCCCCCT tRNA-Cys-GCA-18-1 Sc: 69.7  
+GGGGGTATAGCTCAGG.GGT..A.....GAGCACTTGACTGCAG........................................................................................................ATCAAGAA..............GtCCTTGG.TTCAAAT....CCAGG...TGCCCCCT tRNA-Cys-GCA-16-1 Sc: 69.2  
+>>>>.>>..>>>>...............<<<<.>>>>>...............................................................................................................<<<<<...................>>>>>............<<<<<...<<.<<<<.
+GGGGATATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCGG.TTCAAAT....CCGGG...TGCCCCCC tRNA-Cys-GCA-17-1 Sc: 66.5  
+>>>>>>>..>>>>...............<<<<.>>>>>...............................................................................................................<<<<<...................>>>>..............<<<<...<<<<<<<.
+GGGGGTATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAA........................................................................................................ATCAAGAG..............GtCCCTGA.TTCAAAT....CCAGG...TGCCCCCT tRNA-Cys-GCA-19-1 Sc: 63.5  
+>>>.>>>..>>>>...............<<<<.>>>>>...............................................................................................................<<<<<...................>>>>>............<<<<<...<<<.<<<.
+GGGCGTATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCAG.TTCAAAT....CTGGG...TGCCCCCT tRNA-Cys-GCA-20-1 Sc: 61.1  
+>>>>..>..>>>>...............<<<<.>>>>>...............................................................................................................<<<<<...................>>>>>............<<<<<...<..<<<<.
+GGGCGTATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCAG.TTCAAAT....CTGGG...T..GCCCA tRNA-Cys-GCA-22-1 Sc: 58.6  
+>>>>>>>..>>>>...............<<<<.>>>>>...............................................................................................................<<<<<...................>>>>>............<<<<<...<<<<<<<.
+GGGGGTATAGCTCACA.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCGG.TTCAAAT....CTGGG...TGCCCCCT tRNA-Cys-GCA-21-1 Sc: 57.4  
+>>>>>>>..>>>>...............<<<<.>>>>>...............................................................................................................<<<<<....................>>>>............<<<<....<<<<<<<.
+GGGGGTATAGCTCACA.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCGG.TTCAAAT....CCGGT...TACTCCCT tRNA-Cys-GCA-23-1 Sc: 51.4  
+>>>>>>>..>>>>...............<<<<.>>>>>...............................................................................................................<<<<<...................>>.>>............<<.<<...<<<<<<<.
+GGGGGTAGGGCTCAG..GGAt.A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCGG.TTCGAAT....CTAGG...TGCCCCCT tRNA-Cys-GCA-24-1 Sc: 38.6  
+...>>>>...>>>...............<<<..>>>>>...............................................................................................................<<<<<...................>>>>>............<<<<<...<<<<....
+X..GGTATATCTCAGG.GGGc.A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGAG..............GtCCCCGG.TTGAAAT....CCGGG...TGCT.... tRNA-Cys-GCA-25-1 Sc: 30.8  
+.>>>>.>..>>>>...............<<<<.>>>>>...............................................................................................................<<<<<............................................<.<<<<..
+AGGGGTATAGCTCAGT.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAAAA..............A....AAA....AAGT............TTCCCCCG tRNA-Cys-GCA-chr5-2 Sc: 29.9  
+>>>>>.>..>>>>...............<<<<.>>>.>...............................................................................................................<.<<<...................>>>>..............<<<<...<.<<<<<.
+GTGGGTATAGCTCAGA.GGT..A.....GAGCATTCAACTGCAG........................................................................................................ATCGAAGT..............GgCTGTA....CCATT....TTGCA...TTCCCACC tRNA-Cys-GCA-chrX-3 Sc: 24.1  
+>>>>>>>..>.>.................<.<.>>>>>...............................................................................................................<<<<<...................>>>>>............<<<<<...<<<<<<<.
+GGTAAAATGGCTGAGT............AAACATTAGACTGCAA........................................................................................................ATCTGAAG..............A.TGGAGG.TT.AAGG....CCTCT...TTTTACCA tRNA-Cys-GCA-chr8-6 Sc: 24.0  
+>>>>>....>>>>...............<<<<.>>>>>...............................................................................................................<<<<<..............................................<<<<<.
+GAAGGTATAGCTCAGG.GGT..A.....GAGCATTTGACTGCAG........................................................................................................ATCAAGA...........................AAAT....A.......CTCCTTTG tRNA-Cys-GCA-chr11-21 Sc: 23.9  
+>>>>>>>..>.>.................<.<.>>>>>...............................................................................................................<<<<<...................>>>>..............<<<<...<<<<<<<.
+GGGGGTATAGCTGAGG.AGT..A.....AACCATTTGGCTGCAG........................................................................................................ATCAAGTG..............GtCCCTGG.TTCAAAT....ATGGG...TGCCCTCT tRNA-Cys-GCA-chr7-25 Sc: 21.7  
+>>>>>>>..>>>>...............<<<<.>>.>>...............................................................................................................<<.<<....................>.>..............<.<....<<<<<<<.
+GAGGGTATAGCTCAGA.GGT..A.....GAGCACTGGACTGCAG........................................................................................................ATCAAGA...............AtATCAGC.TTC.AGT....TCAGC...TGCCTTCA tRNA-Cys-GCA-chr12-14 Sc: 20.9  
+>>>>>>>....>>>>...........<<<<..>>>>>........<.<<<<..................>>>>>.......<<<<<....<<.<<<<<....
+GGTTCCA..TGGTGTAAT.GGTt.A.GCACT.CTGGACTCTGA.AT.CCAGCG.............A.TCCGAGTTCAAATCTCGG....TG.GAACCT... tRNA-Gln-CTG-1-5 Sc: 70.6  
+GGTTCCA..TGGTGTAAT.GGTt.A.GCACT.CTGGACTCTGA.AT.CCAGCG.............A.TCCGAGTTCAAATCTCGG....TG.GAACCT... tRNA-Gln-CTG-1-4 Sc: 70.6  
+GGTTCCA..TGGTGTAAT.GGTt.A.GCACT.CTGGACTCTGA.AT.CCAGCG.............A.TCCGAGTTCAAATCTCGG....TG.GAACCT... tRNA-Gln-CTG-1-3 Sc: 70.6  
+GGTTCCA..TGGTGTAAT.GGTt.A.GCACT.CTGGACTCTGA.AT.CCAGCG.............A.TCCGAGTTCAAATCTCGG....TG.GAACCT... tRNA-Gln-CTG-1-2 Sc: 70.6  
+GGTTCCA..TGGTGTAAT.GGTt.A.GCACT.CTGGACTCTGA.AT.CCAGCG.............A.TCCGAGTTCAAATCTCGG....TG.GAACCT... tRNA-Gln-CTG-1-1 Sc: 70.6  
+GGTTCCA..TGGTGTAAT.GGTg.A.GCACT.CTGGACTCTGA.AT.CCAGCG.............A.TCCGAGTTCGAGTCTCGG....TG.GAACCT... tRNA-Gln-CTG-3-2 Sc: 69.5  
+GGTTCCA..TGGTGTAAT.GGTg.A.GCACT.CTGGACTCTGA.AT.CCAGCG.............A.TCCGAGTTCGAGTCTCGG....TG.GAACCT... tRNA-Gln-CTG-3-1 Sc: 69.5  
+GGTTCCA..TGGTGTAAT.GGTa.A.GCACT.CTGGACTCTGA.AT.CCAGCG.............A.TCCGAGTTCGAGTCTCGG....TG.GAACCT... tRNA-Gln-CTG-4-2 Sc: 69.5  
+GGTTCCA..TGGTGTAAT.GGTa.A.GCACT.CTGGACTCTGA.AT.CCAGCG.............A.TCCGAGTTCGAGTCTCGG....TG.GAACCT... tRNA-Gln-CTG-4-1 Sc: 69.5  
+GGTTCCA..TGGTGTAAT.GGTt.A.GCACT.CTGGACTCTGA.AT.CCAGCG.............A.TCCGAGTTCAAGTCTCGG....TG.GAACCT... tRNA-Gln-CTG-2-1 Sc: 68.3  
+GGTTCCA..TGGTGTAAT.GGTt.A.GCACT.CTGGACTCTGA.AT.CCGGTA.............A.TCCGAGTTCAAATCTCGG....TG.GAACCT... tRNA-Gln-CTG-5-1 Sc: 65.1  
+>>.>>>>....>>>>...........<<<<..>>>>>........<.<<<<..................>>>>>.......<<<<<....<<.<<.<<....
+GGCCCCA..TGGTGTAAT.GGTc.A.GCACT.CTGGACTCTGA.AT.CCAGCG.............A.TCCGAGTTCAAATCTCGG....TG.GGACCC... tRNA-Gln-CTG-6-1 Sc: 62.0  
+>>>>>>>....>>>>...........<<<<..>>>>>........<.<<<<..................>.>>>.......<<<.<....<<.<<<<<....
+GGTTCCA..TGGTGTAAT.GGTa.A.GCACT.CTGGACTCTGA.AT.CCAGCC.............A.TCTGAGTTCGAGTCTCTG....TG.GAACCT... tRNA-Gln-CTG-7-1 Sc: 56.3  
+>>>>>>>....>>>>...........<<<<..>>>.>........<..<<<....................>>>.......<<<......<<.<<<<<....
+GGTTCCA..TGGTGTAAT.GGTg.A.GCACT.TTGGACTCTGA.AT.ACAGTG.............A.TCAGAGTTCAAGTCTCAC....TG.GGACCT... tRNA-Gln-CTG-8-2 Sc: 34.2  
+GGTTCCA..TGGTGTAAT.GGTg.A.GCACT.TTGGACTCTGA.AT.ACAGTG.............A.TCAGAGTTCAAGTCTCAC....TG.GGACCT... tRNA-Gln-CTG-8-1 Sc: 34.2  
+>>>.>>>....>..>...........<..<..>>.>>........<.<.<<..................>>>>>.......<<<<<....<<.<.<<<....
+GGTTCCA..TGGGTTAAT.GGTg.A.GCACC.CTGGACTCTGA.AT.CAAGCG.............A.TCCGAGTTCAAATCTCGG....TG.GTACCT... tRNA-Gln-CTG-9-1 Sc: 29.3  
+>>>>>>>....>>>.............<<<..>>>.>........<..<<<....................>>>.......<<<......<<.<<<<<....
+GGTTCCA..TGGTGTAAT.GGTg.A.CCACT.TTGGACTCTGA.AT.ACAGTG.............A.TCAGAGTTCAAGTCTCAC....TG.GAACCT... tRNA-Gln-CTG-10-1 Sc: 27.5  
+>>>>>>>....>>.>...........<.<<..>>>.>........<..<<<..................>.>>>.......<<<.<....<<.<<<<<....
+GGTTCCA..TGGTGTAAT.GGTg.A.GGGCT.TTGGACTCTGA.CT.ACAGTG.............A.TCAGAGTTCAAGTCTCAG....TG.GGACCT... tRNA-Gln-CTG-11-1 Sc: 26.8  
+>>>>>>.....>>>>...........<<<<..>>>>>........<.<<<<..................>.>>>.......<<<.<.....<.<<<<<....
+GGTTCCA..TGGTGTAAT.GGTa.A.GCACC.CTGGACTCTGA.AT.CCAGCA.............A.CCAGAGTTCCAGTCTCAG....CGtGGACCT... tRNA-Gln-CTG-12-1 Sc: 25.4  
+...........>>>>...........<<<<..>..>>........<.<..<..................>>>>>.......<<<<<................
+X..........GCCCAGT.GGTgcA.GGGCA.T..GGCTCTGAcAC.CTGGCG.............G.CCTGGGTTCAAATCCCAG................ tRNA-Gln-CTG-16-1 Sc: 23.9  
+...........>>>>...........<<<<..>>>>>........<.<<<<..................>>>>>.......<<<<<................
+X........TGGTGTAATAGGT..A.GCACA.GAGAATTCTGG.AT.TCTCAG.............G.GGTAGGTTCAATTCCTAT................ tRNA-Gln-CTG-1-1-nmt Sc: 22.8  
+>>>>>.>....>>.>...........<.<<..>>>>...........<<<<..................>>>>>.......<<<<<....<..<<<<<....
+GGTAGTG..TAGTCTACT.GGT..T.AAACGcTTGGGCTCTGA.CA.TTAAC..............GtCCTGGGTTCAAATCCCAG....CT.TTGTCA... tRNA-Gln-CTG-13-1 Sc: 21.1  
+>>>>..>....>>>>...........<<<<..>>>>>........<.<<<<..................>...............<....<...<<<<....
+GTTTCCA..TGGTGTAAT.GGTg.A.GCACT.CTGGACTCTGA.AT.CCAGAA.............A.TACA..TTCAAAGAA..T....TA.AGAACA... tRNA-Gln-CTG-chr19-4 Sc: 20.3  
+>>>>>>>....>>>>...........<<<<..>>>>>........<.<<<<..................>>>>>.......<<<<<....<<.<<<<<....
+GGTCCCA..TGGTGTAAT.GGTt.A.GCACT.CTGGACTTTGA.AT.CCAGCG.............A.TCCGAGTTCAAATCTCGG....TG.GGACCT... tRNA-Gln-TTG-1-1 Sc: 71.4  
+GGTCCCA..TGGTGTAAT.GGTt.A.GCACT.CTGGACTTTGA.AT.CCAGCA.............A.TCCGAGTTCGAATCTCGG....TG.GGACCT... tRNA-Gln-TTG-2-1 Sc: 69.8  
+>>.>>>>....>>>>...........<<<<..>>>>>........<.<<<<..................>>>>>.......<<<<<....<<.<<.<<....
+GGCCCCA..TGGTGTAAT.GGTt.A.GCACT.CTGGACTTTGA.AT.CCAGCG.............A.TCCGAGTTCAAATCTCGG....TG.GGACCT... tRNA-Gln-TTG-3-3 Sc: 62.4  
+GGCCCCA..TGGTGTAAT.GGTt.A.GCACT.CTGGACTTTGA.AT.CCAGCG.............A.TCCGAGTTCAAATCTCGG....TG.GGACCT... tRNA-Gln-TTG-3-2 Sc: 62.4  
+GGCCCCA..TGGTGTAAT.GGTt.A.GCACT.CTGGACTTTGA.AT.CCAGCG.............A.TCCGAGTTCAAATCTCGG....TG.GGACCT... tRNA-Gln-TTG-3-1 Sc: 62.4  
+>>>>>>>....>>>>...........<<<<..>>>>>........<.<<<<..................>>>>>.......<<<<<....<<.<<<<<....
+GGTCCCA..TGGTGTAAT.GGTt.A.GCACT.CTGGGCTTTGA.AT.CCAGCA.............A.TCCGAGTTCGAATCTTGG....TG.GGACCT... tRNA-Gln-TTG-4-1 Sc: 57.0  
+>>>>>.>....>>>.............<<<...>>>...........<<<...................>>>>>.......<<<<<....<..<<<<<....
+GGCTGTG..TACCTCAGT.GGGc.A.AGGGT.ATGGACTTTGA.AG.CCAGA.CT...........A.TTTGGGTTCAAATCCCAG....CT.TGGCCT... tRNA-Gln-TTG-5-1 Sc: 43.9  
+>>>>>>.....>>>>...........<<<<..>>>>>........<.<<<<..................>>>>>.......<<<<<.....<.<<<<<....
+TAGGACA..TGGTGTGATAGGT..A.GCATG.GAGAATTTTGG.AT.TCTCAG.............G.GGTAGGTTCAATTCCTAC....AG.TTCTAG... tRNA-Gln-TTG-1-1-nmt Sc: 31.6  
+>>>>>>>....>>>>...........<<<<..>>>>>........<.<<<<..................>>>>>.......<<<<<....<<.<<<<<....
+TCTAGGAtgTGGTGTGATAGGT..A.GCATG.GAGAATTTTGG.AT.TCTCAG.............G.GGTAGGTTCAATTCCTATa...TT.CTAGAA... tRNA-Gln-TTG-6-1-nmt Sc: 28.8  
+>>>>>>.....>>>>...........<<<<..>>>>>........<.<<<<..................>>>>>.......<<<<<.....<.<<<<<....
+TAGGATG..TGGTGTATTAGGT..A.GCACA.GAGAATTTTGG.AT.TCTCAG.............G.GGTAGGTTCGATTCCTAT....AA.TTCTAC... tRNA-Gln-TTG-4-1-nmt Sc: 26.9  
+TAGGACG..TGGTGTAGTAGGT..A.GCATG.GAGAATGTTGA.AT.TCTCAG.............G.GGTAGGTTCAATTCCTAT....AG.TTCTAG... tRNA-Gln-TTG-2-1-nmt Sc: 25.9  
+>>>>>>>....>.>>...........<<.<..>>>.>........<..<<<..................>>>>>.......<<<<<....<<.<<<<<....
+GACCATG..TGGCCTAAG.GGAa.A.AGACA.TCTCACTTTGG.GT.CAGAAG.............AtTGAGGGTTCAAGTCCTTT....CA.TGGTCA... tRNA-Gln-TTG-6-1 Sc: 25.5  
+>>>>>>.....>>.>...........<.<<..>>>>>........<.<<<<..................>>>>>.......<<<<<.....<.<<<<<....
+TAGGACA..TGGTGTAATAGGT..A.GAATG.GAGAATTTTGA.AT.TCTCAG.............G.GGTAGGTTCAATTCCTAT....AG.TTCTAG... tRNA-Gln-TTG-3-1-nmt Sc: 25.4  
+>>>>>>.....>>>>...........<<<<..>>>>>........<.<<<<..................>>>>>.......<<<<<.....<.<<<<<....
+TAGGACG..TGGTGTGATAGGT..A.GCATG.GAGAATTTTGG.AT.TCTCAG.............G.GATGGGTTCAATTCCTAT....AG.TCCTAG... tRNA-Gln-TTG-7-1-nmt Sc: 24.6  
+>>>>>>.....>>>>...........<<<<..>>>>>........<.<<<<..................>.>>>.......<<<.<.....<.<<<<<....
+TAGGACT..TGGTGTAAT.GGGt.A.GCACA.GAGAATTTTGG.AT.TCTCAG.............G.GGTGGGTTCAATTCCTTT....CG.TCCTAG... tRNA-Gln-TTG-5-1-nmt Sc: 22.8  
+>>>>>>.....>>>>...........<<<<..>>>>>........<.<<<<..................>>>>>.......<<<<<.....<.<<<<<....
+TAGGACG..TGGTGTGATAGGT..A.GCACG.GAGAATTTTGG.AT.TCTCAG.............G.GATGGGTTCAATTCCTGT....AG.TTCTAG... tRNA-Gln-TTG-9-1-nmt Sc: 21.6  
+TAGGACG..TGGTGTGATAGGT..A.GCATG.GGGAATTTTGG.AT.TCTCAG.............G.GGTGGGTTCAATTCCTAT....AG.TTCTAG... tRNA-Gln-TTG-13-1-nmt Sc: 20.6  
+>>>>.>>.....>...............<...>>>>>........<.<<<<..................>>>>>.......<<<<<....<<..<<<<....
+GGTACAG..TGTTAAAGG.GGAgaA.AAATT.GCTGACTTTGA.ATaCAGTAG.............A.CCTAGGTTTGAATCCTGG....CT.TTACCA... tRNA-Gln-TTG-chr8-10 Sc: 20.2  
+>>>>>>>..>>>>.........<<<<.>>>>>.......<<<<.<................>>>>>.......<<<<<..<<<<<<<....
+TCCCTGGTGGTCTAGTGGTtA.GGATTCGGCGCTCTCACCGCC.GCG...........G.CCCGGGTTCGATTCCCGG..TCAGGGAA... tRNA-Glu-CTC-1-7 Sc: 70.0  
+TCCCTGGTGGTCTAGTGGTtA.GGATTCGGCGCTCTCACCGCC.GCG...........G.CCCGGGTTCGATTCCCGG..TCAGGGAA... tRNA-Glu-CTC-1-6 Sc: 70.0  
+TCCCTGGTGGTCTAGTGGTtA.GGATTCGGCGCTCTCACCGCC.GCG...........G.CCCGGGTTCGATTCCCGG..TCAGGGAA... tRNA-Glu-CTC-1-5 Sc: 70.0  
+TCCCTGGTGGTCTAGTGGTtA.GGATTCGGCGCTCTCACCGCC.GCG...........G.CCCGGGTTCGATTCCCGG..TCAGGGAA... tRNA-Glu-CTC-1-4 Sc: 70.0  
+TCCCTGGTGGTCTAGTGGTtA.GGATTCGGCGCTCTCACCGCC.GCG...........G.CCCGGGTTCGATTCCCGG..TCAGGGAA... tRNA-Glu-CTC-1-3 Sc: 70.0  
+TCCCTGGTGGTCTAGTGGTtA.GGATTCGGCGCTCTCACCGCC.GCG...........G.CCCGGGTTCGATTCCCGG..TCAGGGAA... tRNA-Glu-CTC-1-2 Sc: 70.0  
+TCCCTGGTGGTCTAGTGGTtA.GGATTCGGCGCTCTCACCGCC.GCG...........G.CCCGGGTTCGATTCCCGG..TCAGGGAA... tRNA-Glu-CTC-1-1 Sc: 70.0  
+>.>>>>>..>>>>.........<<<<.>>>>>.......<<<<.<................>>>>>.......<<<<<..<<<<<.<....
+TCCCTGGTGGTCTAGTGGTtA.GGATTCGGCGCTCTCACCGCC.GCG...........G.CCCGGGTTCGATTCCCGG..TCAGGAAA... tRNA-Glu-CTC-2-1 Sc: 63.5  
+.>>>>>>..>>>>.........<<<<.>>>>>.......<<<<.<................>>>.>.......<.<<<..<<<<<<.....
+CCCCTGGTGGTCTAGTGCTtA.GGATTCGGTGCTCTCACCGCT.GCT...........G.CCTGCGTTCGATTCCCGG..TCAGGGAA... tRNA-Glu-CTC-3-1 Sc: 29.4  
+>>>>>>>..>>>>.........<<<<.>.>>>.......<<<..<................>>>>>.......<<<<<..<<<<<<<....
+TCCTTGAT.GTCTAGTGGTtA.GGATTTGGTGCTCTCACTGCA.GCA...........G.CCTGGGTTCATTTCTCAG..TCAGGGAA... tRNA-Glu-CTC-5-1 Sc: 25.0   
+>>>>>>>..>>>>.........<<<<.>>>>>.......<<<<.<................>>>>>.......<<<<<..<<<<<<<....
+TCCCACATGGTCTAGCGGTtA.GGATTCCTGGTTTTCACCCAG.GCG...........G.CCCGGGTTCGACTCCCGG..TGTGGGAA... tRNA-Glu-TTC-2-2 Sc: 72.0  
+TCCCACATGGTCTAGCGGTtA.GGATTCCTGGTTTTCACCCAG.GCG...........G.CCCGGGTTCGACTCCCGG..TGTGGGAA... tRNA-Glu-TTC-2-1 Sc: 72.0  
+TCCCATATGGTCTAGCGGTtA.GGATTCCTGGTTTTCACCCAG.GTG...........G.CCCGGGTTCGACTCCCGG..TATGGGAA... tRNA-Glu-TTC-1-2 Sc: 71.3  
+TCCCATATGGTCTAGCGGTtA.GGATTCCTGGTTTTCACCCAG.GTG...........G.CCCGGGTTCGACTCCCGG..TATGGGAA... tRNA-Glu-TTC-1-1 Sc: 71.3  
+TCCCTGGTGGTCTAGTGGCtA.GGATTCGGCGCTTTCACCGCC.GCG...........G.CCCGGGTTCGATTCCCGG..CCAGGGAA... tRNA-Glu-TTC-3-1 Sc: 69.8  
+TCCCTGGTGGTCTAGTGGCtA.GGATTCGGCGCTTTCACCGCC.GCG...........G.CCCGGGTTCGATTCCCGG..TCAGGGAA... tRNA-Glu-TTC-4-2 Sc: 65.3  
+TCCCTGGTGGTCTAGTGGCtA.GGATTCGGCGCTTTCACCGCC.GCG...........G.CCCGGGTTCGATTCCCGG..TCAGGGAA... tRNA-Glu-TTC-4-1 Sc: 65.3  
+.>>>>>...>>>>.........<<<<.>>>>>.......<<<<.<.................>>>>.......<<<<....<<<<<.....
+GCGTTGGTGGTGTAGTGGTgA.GCACAGCTGCCTTTCAAGCAG.TTA...........A.CGCGGGTTCGATTCCCGG..GTAACGAA... tRNA-Glu-TTC-5-1 Sc: 42.1  
+>>>>>>>..>>>>.........<<<<.>>>>>.......<<<<.<................>>>.>.......<.<<<..<<<<<<<....
+TCCCTGGTGGTCTAGTGGCtA.GGATTCGGCGCTTTCACCGCCtGCA...........G.CTCGAGTTCGATTCCTGG..TCAGGGAA... tRNA-Glu-TTC-8-1 Sc: 33.5  
+>.>>>>>..>>>...........<<<.>>>>>.......<<<<.<................>>>.>.......<.<<<..<<<<<.<....
+TGTCTGGTGGTCAAGTGGCtA.GGATTTGGCGCTTTCACTGCC.GCG...........G.CCCGCGTTCGATTCCCGG..TCAGGGAA... tRNA-Glu-TTC-7-1 Sc: 28.3  
+>>>>>.>..>>>>.........<<<<.>>..>.......<..<.<.................>>>>.......<<<<...<.<<<<<....
+TCCTTGGTGGTCTAGTGGCtA.GGATTCGGTGCTTTCACCTGT.GCG...........G.CCCGGGTTCAATTCCCGA..TGAAGGAA... tRNA-Glu-TTC-6-1 Sc: 27.6  
+>>>.>>>..>>>>.........<<<<.>>>>>.......<<<<.<................>>>.>.......<.<<<..<<<.<<<....
+TCCGTGGTGGTCTAGTGGCtA.GGATTCGGCGCTTTCACCGCCtGCA...........G.CTCGAGTTCGATTCCTGG..TCAGGGAA... tRNA-Glu-TTC-10-1 Sc: 26.4  
+>>>>>....>>>>.........<<<<.>.>>>.......<<<..<................>>.>>.......<<.<<....<<<<<....
+CCCTG..TGGTCTAGTGGCtA.AGACTTTGTGCTTTCATTGCT.GC............AtCCTAGGTTCAATTCCCAG..T.CAGGGA... tRNA-Glu-TTC-11-1 Sc: 22.7  
+>>>..>>..>>>>.........<<<<.>>.>.........<.<.<.................>>>>.......<<<<...<<..<<<....
+GCAATGGTGGTTCAGTGGT.A.GAATTCTCGCCTTTCACACAG.GAG...........A.CCCGGGTTCAATTCCTGA..CCCATGTA... tRNA-Glu-TTC-9-1 Sc: 21.3  
+>>>>>>>..>>>>..........<<<<.>>>>>.......<<<<<...............>>>>>.......<<<<<<<<<<<<....
+GCATGGGTGGTTC.AGTGGT.A.GAATTCTCGCCTGCCACGCGGGAG...........GCCCGGGTTCGATTCCCGGCCCATGCA... tRNA-Gly-GCC-1-5 Sc: 79.9  
+GCATGGGTGGTTC.AGTGGT.A.GAATTCTCGCCTGCCACGCGGGAG...........GCCCGGGTTCGATTCCCGGCCCATGCA... tRNA-Gly-GCC-1-4 Sc: 79.9  
+GCATGGGTGGTTC.AGTGGT.A.GAATTCTCGCCTGCCACGCGGGAG...........GCCCGGGTTCGATTCCCGGCCCATGCA... tRNA-Gly-GCC-1-3 Sc: 79.9  
+GCATGGGTGGTTC.AGTGGT.A.GAATTCTCGCCTGCCACGCGGGAG...........GCCCGGGTTCGATTCCCGGCCCATGCA... tRNA-Gly-GCC-1-2 Sc: 79.9  
+GCATGGGTGGTTC.AGTGGT.A.GAATTCTCGCCTGCCACGCGGGAG...........GCCCGGGTTCGATTCCCGGCCCATGCA... tRNA-Gly-GCC-1-1 Sc: 79.9  
+GCATTGGTGGTTC.AGTGGT.A.GAATTCTCGCCTGCCACGCGGGAG...........GCCCGGGTTCGATTCCCGGCCAATGCA... tRNA-Gly-GCC-2-6 Sc: 77.9  
+GCATTGGTGGTTC.AGTGGT.A.GAATTCTCGCCTGCCACGCGGGAG...........GCCCGGGTTCGATTCCCGGCCAATGCA... tRNA-Gly-GCC-2-5 Sc: 77.9  
+GCATTGGTGGTTC.AGTGGT.A.GAATTCTCGCCTGCCACGCGGGAG...........GCCCGGGTTCGATTCCCGGCCAATGCA... tRNA-Gly-GCC-2-4 Sc: 77.9  
+GCATTGGTGGTTC.AGTGGT.A.GAATTCTCGCCTGCCACGCGGGAG...........GCCCGGGTTCGATTCCCGGCCAATGCA... tRNA-Gly-GCC-2-3 Sc: 77.9  
+GCATTGGTGGTTC.AGTGGT.A.GAATTCTCGCCTGCCACGCGGGAG...........GCCCGGGTTCGATTCCCGGCCAATGCA... tRNA-Gly-GCC-2-2 Sc: 77.9  
+GCATTGGTGGTTC.AGTGGT.A.GAATTCTCGCCTGCCACGCGGGAG...........GCCCGGGTTCGATTCCCGGCCAATGCA... tRNA-Gly-GCC-2-1 Sc: 77.9  
+GCATTGGTGGTTC.AGTGGT.A.GAATTCTCGCCTGCCACGCGGGAG...........GCCCGGGTTTGATTCCCGGCCAGTGCA... tRNA-Gly-GCC-3-1 Sc: 69.9  
+>>>>.>>..>>>>..........<<<<.>>>>>.......<<<<<...............>>>>>.......<<<<<<<.<<<<....
+GCATAGGTGGTTC.AGTGGT.A.GAATTCTTGCCTGCCACGCAGGAG...........GCCCAGGTTTGATTCCTGGCCCATGCA... tRNA-Gly-GCC-4-1 Sc: 64.5  
+>>>>>>>..>>>>..........<<<<.>>>>>.......<<<<<...............>.>>.........<<.<<<<<<<<....
+GCATTGGTGGTTC.AGTGGT.A.GAATTCTCGCCTGCCATGCGGGCG...........GCCGGGCTTCGATTCCTGGCCAATGCA... tRNA-Gly-GCC-5-1 Sc: 50.7  
+>>>>>>>..>>>>..........<<<<.>>..>.......<..<<...............>>>>>.......<<<<<<<<<<<<....
+GCATGGGTGATTC.AGTGGT.A.GAATTTTCACCTGCCATGCAGGAG...........GTCCAGGTTCATTTCCTGGCCTATGCA... tRNA-Gly-GCC-6-1 Sc: 38.7     
+>>>>>>>..>>>>..........<<<<.>>>>>.......<<<<<...............>>>>>.......<<<<<<<<<<<<....
+GCATTGGTGGTTC.AGTGGT.A.GAATTCTCGCCTCCCACGCGGGAG...........ACCCGGGTTCAATTCCCGGCCAATGCA... tRNA-Gly-CCC-1-2 Sc: 75.5  
+GCATTGGTGGTTC.AGTGGT.A.GAATTCTCGCCTCCCACGCGGGAG...........ACCCGGGTTCAATTCCCGGCCAATGCA... tRNA-Gly-CCC-1-1 Sc: 75.5  
+>>>>>>>..>>>............<<<.>>>>>.......<<<<<...............>>>>>.......<<<<<<<<<<<<....
+GCGCCGCTGGTGT.AGTGGT.A.TCATGCAAGATTCCCATTCTTGCG...........ACCCGGGTTCGATTCCCGGGCGGCGCA... tRNA-Gly-CCC-2-2 Sc: 74.1  
+GCGCCGCTGGTGT.AGTGGT.A.TCATGCAAGATTCCCATTCTTGCG...........ACCCGGGTTCGATTCCCGGGCGGCGCA... tRNA-Gly-CCC-2-1 Sc: 74.1  
+>>>>>>>..>>>>..........<<<<.>>.>>.......<<.<<...............>>>>>.......<<<<<<<<<<<<....
+GCATTGGTGGTTC.AATGGT.A.GAATTCTCGCCTCCCACGCAGGAG...........ACCCAGGTTCGATTCCTGGCCAATGCA... tRNA-Gly-CCC-3-1 Sc: 63.3  
+>>>.>>>..>>>>..........<<<<.>>>>>.......<<<<<...............>>>>>.......<<<<<<<<.<<<....
+GCGTTGGTGGTTT.AGTGGT.A.GAATTCTCGCCTCCCATGCGGGAG...........ACCCGGGTTCAATTCCCGGCCACTGCA... tRNA-Gly-CCC-4-1 Sc: 62.1  
+>>.>>>>..>>.>..........<.<<.>>>>>.......<<<<<...............>>>>>.......<<<<<<<<<.<<....
+GCCTTGGTGGTGC.AGTGGT.A.GAATTCTCGCCTCCCACGTGGGAG...........ACCCGGGTTCAATTCCCGGCCAATGCA... tRNA-Gly-CCC-5-1 Sc: 52.3  
+>>.......>>>>..........<<<<.>>>>>.......<<<<<...............>>>>>.......<<<<<.....<<....
+GG.....TGGTTC.AGTGGT.A.GAATTCTCGCCTCCCACGCGGGAG...........ACCCGGGTTTAATTCCCGG.....TCA... tRNA-Gly-CCC-6-1 Sc: 42.1  
+>........>>>>..........<<<<.>.>>>.......<<<.<...............>>>>>.......<<<<<......<....
+G......TGGTCT.AGTGGTtA.GGATTCAGCGCTCCCACCGCCGCA...........GCCCGGGTTCGATTCCCGGT.....CA... tRNA-Gly-CCC-7-1 Sc: 34.6  
+>>>>>>>..>>>>..........<<<<.>.>>>.......<<<.<...............>>>.>.......<.<<<<<<<<<<....
+GCGTCAGTGGTTT.AGTGGT.G.GAATTCCTGCCTCCCATGCACGAG...........ATCCGTGTTCAACTCCTGGTTGGTGCA... tRNA-Gly-CCC-8-1 Sc: 30.7  
+>>>>>.>..>>>>..........<<<<.>>>>.........<<<<...............>>>>>.......<<<<<<.<<<<<....
+GCGTTGGCAGTTC.AGTGGT.A.GAATTCTCGCCTCCCACCCGGGAG...........ACCTGGATTCCATTTCCGGCAAATGCA... tRNA-Gly-CCC-chr1-19 Sc: 23.7  
+GCGTTGGCAGTTC.AGTGGT.A.GAATTCTCGCCTCCCACCCGGGAG...........ACCTGGATTCCATTTCCGGCAAATGCA... tRNA-Gly-CCC-chr1-16 Sc: 23.7  
+>>>>>>>..>>>>..........<<<<.>.>>>.......<<<.<...............>>>.>.......<.<<<<<<<<<<....
+GCGTCAGTGGTTTtAGTGGT.G.GAATTCCTGCCTCCCATGCACGAG...........ATCCGTGTTCAACTCCTGGTTGGTGCA... tRNA-Gly-CCC-chr1-102 Sc: 20.1 
+>>>>>>>..>>.>..........<.<<.>>>>>.......<<<<<...............>>>>>.......<<<<<<<<<<<<....
+GCGTTGGTGGTAT.AGTGGTtA.GCATAGCTGCCTTCCAAGCAGTTG...........ACCCGGGTTCGATTCCCGGCCAACGCA... tRNA-Gly-TCC-1-1 Sc: 71.6  
+GCGTTGGTGGTAT.AGTGGTgA.GCATAGCTGCCTTCCAAGCAGTTG...........ACCCGGGTTCGATTCCCGGCCAACGCA... tRNA-Gly-TCC-2-6 Sc: 71.6  
+GCGTTGGTGGTAT.AGTGGTgA.GCATAGCTGCCTTCCAAGCAGTTG...........ACCCGGGTTCGATTCCCGGCCAACGCA... tRNA-Gly-TCC-2-5 Sc: 71.6  
+GCGTTGGTGGTAT.AGTGGTgA.GCATAGCTGCCTTCCAAGCAGTTG...........ACCCGGGTTCGATTCCCGGCCAACGCA... tRNA-Gly-TCC-2-4 Sc: 71.6  
+GCGTTGGTGGTAT.AGTGGTgA.GCATAGCTGCCTTCCAAGCAGTTG...........ACCCGGGTTCGATTCCCGGCCAACGCA... tRNA-Gly-TCC-2-3 Sc: 71.6  
+GCGTTGGTGGTAT.AGTGGTgA.GCATAGCTGCCTTCCAAGCAGTTG...........ACCCGGGTTCGATTCCCGGCCAACGCA... tRNA-Gly-TCC-2-2 Sc: 71.6  
+GCGTTGGTGGTAT.AGTGGTgA.GCATAGCTGCCTTCCAAGCAGTTG...........ACCCGGGTTCGATTCCCGGCCAACGCA... tRNA-Gly-TCC-2-1 Sc: 71.6  
+GCGTTGGTGGTAT.AGTGGTaA.GCATAGCTGCCTTCCAAGCAGTTG...........ACCCGGGTTCGATTCCCGGCCAACGCA... tRNA-Gly-TCC-3-1 Sc: 71.6  
+>>>>>>>..>>.>..........<.<<.>>>>>.......<<<<<................>>>>.......<<<<.<<<<<<<....
+GCGTTGGTGGTAT.AGTGGTgA.GCATAGTTGCCTTCCAAGCAGTTG...........ACCCGGGCTCGATTCCCGCCCAACGCA... tRNA-Gly-TCC-4-1 Sc: 47.7  
+>>>>>>>..>>>>.........<<<<.>>>>>.......<<<<<...............>>>>>.......<<<<<<<<<<<<....
+GCCGTGATCGTATAGTGGTtA.GTACTCTGCGTTGTGGCCGCAGCA...........ACCTCGGTTCGAATCCGAGTCACGGCA... tRNA-His-GTG-1-9 Sc: 60.6  
+GCCGTGATCGTATAGTGGTtA.GTACTCTGCGTTGTGGCCGCAGCA...........ACCTCGGTTCGAATCCGAGTCACGGCA... tRNA-His-GTG-1-8 Sc: 60.6  
+GCCGTGATCGTATAGTGGTtA.GTACTCTGCGTTGTGGCCGCAGCA...........ACCTCGGTTCGAATCCGAGTCACGGCA... tRNA-His-GTG-1-7 Sc: 60.6  
+GCCGTGATCGTATAGTGGTtA.GTACTCTGCGTTGTGGCCGCAGCA...........ACCTCGGTTCGAATCCGAGTCACGGCA... tRNA-His-GTG-1-6 Sc: 60.6  
+GCCGTGATCGTATAGTGGTtA.GTACTCTGCGTTGTGGCCGCAGCA...........ACCTCGGTTCGAATCCGAGTCACGGCA... tRNA-His-GTG-1-5 Sc: 60.6  
+GCCGTGATCGTATAGTGGTtA.GTACTCTGCGTTGTGGCCGCAGCA...........ACCTCGGTTCGAATCCGAGTCACGGCA... tRNA-His-GTG-1-4 Sc: 60.6  
+GCCGTGATCGTATAGTGGTtA.GTACTCTGCGTTGTGGCCGCAGCA...........ACCTCGGTTCGAATCCGAGTCACGGCA... tRNA-His-GTG-1-3 Sc: 60.6  
+GCCGTGATCGTATAGTGGTtA.GTACTCTGCGTTGTGGCCGCAGCA...........ACCTCGGTTCGAATCCGAGTCACGGCA... tRNA-His-GTG-1-2 Sc: 60.6  
+GCCGTGATCGTATAGTGGTtA.GTACTCTGCGTTGTGGCCGCAGCA...........ACCTCGGTTCGAATCCGAGTCACGGCA... tRNA-His-GTG-1-1 Sc: 60.6  
+>>>.>>>..>>>>.........<<<<.>>>>>.......<<<<<...............>>>>>.......<<<<<<<<.<<<....
+GCCATGATCGTATAGTGGTtA.GTACTCTGCGCTGTGGCCGCAGCA...........ACCTCGGTTCGAATCCGAGTCACGGCA... tRNA-His-GTG-2-1 Sc: 53.9  
+>>>>>>>...>>>>.........<<<<.>>>>>...........................<<<.<<................>>>>>.......<<<<<<<<<<<<.
+GGCCGGTT.AGCTCAGTTGGTtAGAGCGTGGTGCTAATA....................ACGC.CAAG...........GtCGCGGGTTCGATCCCCGTACTGGCCA tRNA-Ile-AAT-2-1 Sc: 83.4  
+GGCCGGTT.AGCTCAGTTGGTtAGAGCGTGGTGCTAATA....................ACGC.TAAG...........GtCGCGGGTTCGATCCCCGTACTGGCCA tRNA-Ile-AAT-6-1 Sc: 82.0  
+GGCTGGTT.AGCTCAGTTGGTtAGAGCGTGGTGCTAATA....................ACGC.CAAG...........GtCGCGGGTTCGATCCCCGTACTGGCCA tRNA-Ile-AAT-3-1 Sc: 81.7  
+>>>>.>>...>>>>.........<<<<.>>>>>...........................<<<.<<................>>>>>.......<<<<<<<.<<<<.
+GGCCGGTT.AGCTCAGTTGGTtAGAGCGTGGCGCTAATA....................ACGC.CAAG...........GtCGCGGGTTCGATCCCCGTACGGGCCA tRNA-Ile-AAT-1-1 Sc: 80.5  
+GGCCGGTT.AGCTCAGTTGGTtAGAGCGTGGTGCTAATA....................ACGC.CAAG...........GtCGCGGGTTCGAACCCCGTACGGGCCA tRNA-Ile-AAT-4-1 Sc: 80.1  
+GGCCGGTT.AGCTCAGTTGGTtAGAGCGTGGTGCTAATA....................ACGC.CAAG...........GtCGCGGGTTCGATCCCCGTACGGGCCA tRNA-Ile-AAT-5-5 Sc: 80.0  
+GGCCGGTT.AGCTCAGTTGGTtAGAGCGTGGTGCTAATA....................ACGC.CAAG...........GtCGCGGGTTCGATCCCCGTACGGGCCA tRNA-Ile-AAT-5-4 Sc: 80.0  
+GGCCGGTT.AGCTCAGTTGGTtAGAGCGTGGTGCTAATA....................ACGC.CAAG...........GtCGCGGGTTCGATCCCCGTACGGGCCA tRNA-Ile-AAT-5-3 Sc: 80.0  
+GGCCGGTT.AGCTCAGTTGGTtAGAGCGTGGTGCTAATA....................ACGC.CAAG...........GtCGCGGGTTCGATCCCCGTACGGGCCA tRNA-Ile-AAT-5-2 Sc: 80.0  
+GGCCGGTT.AGCTCAGTTGGTtAGAGCGTGGTGCTAATA....................ACGC.CAAG...........GtCGCGGGTTCGATCCCCGTACGGGCCA tRNA-Ile-AAT-5-1 Sc: 80.0  
+GGCCGGTT.AGCTCAGTTGGTcAGAGCGTGGTGCTAATA....................ACGC.CAAG...........GtCGCGGGTTCGATCCCCGTACGGGCCA tRNA-Ile-AAT-7-2 Sc: 80.0  
+GGCCGGTT.AGCTCAGTTGGTcAGAGCGTGGTGCTAATA....................ACGC.CAAG...........GtCGCGGGTTCGATCCCCGTACGGGCCA tRNA-Ile-AAT-7-1 Sc: 80.0  
+>>>>>>>...>>>>.........<<<<.>>>>>...........................<<<.<<................>>>>>.......<<<<<<<<<<<<.
+GGCTGGTT.AGTTCAGTTGGTtAGAGCGTGGTGCTAATA....................ACGC.CAAG...........GtCGTGGGTTCGATCCCCATATCGGCCA tRNA-Ile-AAT-9-1 Sc: 78.0  
+>>>>.>>...>>>>.........<<<<.>>>>>...........................<<<.<<................>>>>>.......<<<<<<<.<<<<.
+GGCCGGTT.AGCTCAGTCGGCtAGAGCGTGGTGCTAATA....................ACGC.CAAG...........GtCGCGGGTTCGATCCCCGTACGGGCCA tRNA-Ile-AAT-8-1 Sc: 73.9  
+>>>>.>>....>>>.........<<<..>>>>>...........................<<<.<<.................>>>>.......<<<<.<<.<<<<.
+GGCCGGTT.AACTTAATTGGTtAGAGCGTGGTGCTAATA....................ATGT.CAAG...........GtTGCGGGTTGGATCCCCGAACGGGCCA tRNA-Ile-AAT-10-1 Sc: 33.6  
+>>>>>.....>>>>.........<<<<.>>>>.............................<<.<<................>>>>>.......<<<<<..<<<<<.
+TGGCTGATgAGCTCAGCTGGTgGGAGCATGGTGTTAATG....................AGGC.TGAG...........GtCGTGGGTTCAATCCCCACCGGGCTAT tRNA-Ile-AAT-11-1 Sc: 26.7  
+>>>>>>>...>>>>.........<<<<.>>>>>...........................<<<.<<................>.>>>.......<<<.<<<<<<<<.
+GGCCGGTT.AGCTCGGTTGCTtAGAGTGTTGTGTTAATT....................ACGCtAAAG...........GtCGTGGGTTTGATCCTCTTACCGGCCA tRNA-Ile-AAT-chr6-37 Sc: 20.7  
+>>........>>>>.........<<<<.>>.>>...........................<<..<<................>>>>.........<<<<.....<<.
+GT.....T.AGCTTAGCTGGTgAGAGCGTGCTGCTAATA....................ACAC.CAAG...........GtCGTGGTTTCTATC.CCATT....ACA tRNA-Ile-AAT-chr6-83 Sc: 20.1  
+>>>>>>>...>>>>.........<<<<.>>>>>...........................<<<.<<................>>>>>.......<<<<<<<<<<<<.
+GGCCGGTT.AGCTCAGTTGGTaAGAGCGTGGTGCTGATA....................ACAC.CAAG...........GtCGCGGGCTCGACTCCCGCACCGGCCA tRNA-Ile-GAT-1-3 Sc: 75.2  
+GGCCGGTT.AGCTCAGTTGGTaAGAGCGTGGTGCTGATA....................ACAC.CAAG...........GtCGCGGGCTCGACTCCCGCACCGGCCA tRNA-Ile-GAT-1-2 Sc: 75.2  
+GGCCGGTT.AGCTCAGTTGGTaAGAGCGTGGTGCTGATA....................ACAC.CAAG...........GtCGCGGGCTCGACTCCCGCACCGGCCA tRNA-Ile-GAT-1-1 Sc: 75.2  
+>>>>>>>....>.>.........<.<..>>>>>...........................<<<.<<................>>>>>.......<<<<<<<<<<<<.
+GGTCGGTT.ATCTCAGTTGGTgAGCGCGTGGTGCTGATA....................CCGC.CATG...........GtCGCGGGCTTGATCCCCGCACCGGCCC tRNA-Ile-GAT-chrX-7 Sc: 38.2  
+GGTCGGTT.ATCTCAGTTGGTgAGCGCGTGGTGCTGATA....................CCGC.CATG...........GtCGCGGGCTTGATCCCCGCACCGGCCC tRNA-Ile-GAT-chrX-5 Sc: 38.2  
+>>>>>>>....>.>.........<.<..>>>>>...........................<<<.<<................>>.>>.......<<.<<<<<<<<<.
+GGTCGGTT.ATCTCAGTTGGTgAGCGCGTGGTGCTGATA....................CCGC.CATG...........GtCGCAGGCTTGATCCCCGCACCGGCCC tRNA-Ile-GAT-chrX-9 Sc: 28.4  
+>>>>>>>...>>>>.........<<<<.>>>>>...........................<<<.<<................>>>>>.......<<<<<<<<<<<<.
+GCTCCAGT.GGCGCAATCGGTtAGCGCGCGGTACTTATAtgacagtgcgagcggagca.ATGC.CGAG...........GtTGTGAGTTCGATCCTCACCTGGAGCA tRNA-Ile-TAT-1-1 Sc: 72.4  
+GCTCCAGT.GGCGCAATCGGTtAGCGCGCGGTACTTATAtggcagtatgtgtgcgagtgATGC.CGAG...........GtTGTGAGTTCGAGCCTCACCTGGAGCA tRNA-Ile-TAT-2-2 Sc: 70.1  
+GCTCCAGT.GGCGCAATCGGTtAGCGCGCGGTACTTATAcagcagtacatgcagagca.ATGC.CGAG...........GtTGTGAGTTCGAGCCTCACCTGGAGCA tRNA-Ile-TAT-2-1 Sc: 70.1  
+GCTCCAGT.GGCGCAATCGGTtAGCGCGCGGTACTTATAcaacagtatatgtgcgggtgATGC.CGAG...........GtTGTGAGTTCGAGCCTCACCTGGAGCA tRNA-Ile-TAT-2-3 Sc: 70.1  
+GCTCCAGT.GGCGCAATCGGTtAGCGCGCGGTACTTATAagacagtgcacctgtgagcaATGC.CGAG...........GtTGTGAGTTCAAGCCTCACCTGGAGCA tRNA-Ile-TAT-3-1 Sc: 68.9  
+>>>>>>>...>>>.....................<<<..>>>>>.................................<<<<<....>>>>............<<<<...>>>>>...........<<<<<....<<<<<<<....
+GGTAGCGT.GGCCGAGC..GGTct.A.......AGGCG.CTGGA.TTAAGG........................C.TCCAGT...CTCT..TC........GGAGG.CGTGGGTTCGAAT....CCCAC....CGCTGCCA... tRNA-Leu-AAG-1-3 Sc: 76.4  
+GGTAGCGT.GGCCGAGC..GGTct.A.......AGGCG.CTGGA.TTAAGG........................C.TCCAGT...CTCT..TC........GGAGG.CGTGGGTTCGAAT....CCCAC....CGCTGCCA... tRNA-Leu-AAG-1-2 Sc: 76.4  
+GGTAGCGT.GGCCGAGC..GGTct.A.......AGGCG.CTGGA.TTAAGG........................C.TCCAGT...CTCT..TC........GGAGG.CGTGGGTTCGAAT....CCCAC....CGCTGCCA... tRNA-Leu-AAG-1-1 Sc: 76.4  
+GGTAGCGT.GGCCGAGC..GGTct.A.......AGGCG.CTGGA.TTAAGG........................C.TCCAGT...CTCT..TC........GGGGG.CGTGGGTTCGAAT....CCCAC....CGCTGCCA... tRNA-Leu-AAG-2-4 Sc: 74.4  
+GGTAGCGT.GGCCGAGC..GGTct.A.......AGGCG.CTGGA.TTAAGG........................C.TCCAGT...CTCT..TC........GGGGG.CGTGGGTTCGAAT....CCCAC....CGCTGCCA... tRNA-Leu-AAG-2-3 Sc: 74.4  
+GGTAGCGT.GGCCGAGC..GGTct.A.......AGGCG.CTGGA.TTAAGG........................C.TCCAGT...CTCT..TC........GGGGG.CGTGGGTTCGAAT....CCCAC....CGCTGCCA... tRNA-Leu-AAG-2-2 Sc: 74.4  
+GGTAGCGT.GGCCGAGC..GGTct.A.......AGGCG.CTGGA.TTAAGG........................C.TCCAGT...CTCT..TC........GGGGG.CGTGGGTTCGAAT....CCCAC....CGCTGCCA... tRNA-Leu-AAG-2-1 Sc: 74.4  
+GGTAGCGT.GGCCGAGC..GGTct.A.......AGGCG.CTGGA.TTAAGG........................C.TCCAGT...CTCT..TC........GGGGG.CGTGGGTTCAAAT....CCCAC....CGCTGCCA... tRNA-Leu-AAG-3-1 Sc: 73.2  
+>>>>>>>...>.>.....................<.<..>>>>>.................................<<<<<....>>>>............<<<<...>>>>>...........<<<<<....<<<<<<<....
+GGTAGCGT.GGCCGAGT..GGTct.A.......AGACG.CTGGA.TTAAGG........................C.TCCAGT...CTCT..TC........GGGGG.CGTGGGTTTGAAT....CCCAC....CGCTGCCA... tRNA-Leu-AAG-4-1 Sc: 62.5  
+>>>>>.>...>>>.....................<<<..>>>.>.................................<.<<<....>>>>............<<<<....>>>>...........<<<<.....<.<<<<<....
+GGTAGGGT.GGCCGAGC..GGTct.A.......AGGCA.CTGTA.TTAAGA........................C.TCCAGT...CTCT..TC........AGAGG.CATGGGTTTGAAT....CCCAC....TGCTGCCA... tRNA-Leu-AAG-6-1 Sc: 33.9  
+>>>>>>>...>>.......................<<..>>>>>.................................<<<<<...........................>>>>.............<<<<....<<<<<<<....
+GGGCCAGT.GGCTCAAT..GGAt..A.......ATGCG.TCTGA.CTAAGA........................A.TCAGAA.G.....................AtTCCAGCCTTGACT....CCTGG....CTGGCTCA... tRNA-Leu-AAG-5-1 Sc: 30.1  
+..........>>>.....................<<<..>>>>...................................<<<<....>>>>............<<<<....>>>>...........<<<<................
+X.........GCCGAGC..GGTct.A.......AGGCT.CCGGA.TTAAGG........................C.GCCGGT.GtCTTC............GGAGG.CATGGGTTCGAAT....TCCAC............... tRNA-Leu-AAG-7-1 Sc: 24.5   
+>>>>>>>...>>>.....................<<<..>>>>>.................................<<<<<....>>>>............<<<<...>>>>>...........<<<<<....<<<<<<<....
+GTCAGGAT.GGCCGAGC..GGTct.A.......AGGCG.CTGCG.TTCAGG........................T.CGCAGT...CTCC..CCT.......GGAGG.CGTGGGTTCGAAT....CCCAC....TCCTGACA... tRNA-Leu-CAG-1-7 Sc: 83.1  
+GTCAGGAT.GGCCGAGC..GGTct.A.......AGGCG.CTGCG.TTCAGG........................T.CGCAGT...CTCC..CCT.......GGAGG.CGTGGGTTCGAAT....CCCAC....TCCTGACA... tRNA-Leu-CAG-1-6 Sc: 83.1  
+GTCAGGAT.GGCCGAGC..GGTct.A.......AGGCG.CTGCG.TTCAGG........................T.CGCAGT...CTCC..CCT.......GGAGG.CGTGGGTTCGAAT....CCCAC....TCCTGACA... tRNA-Leu-CAG-1-5 Sc: 83.1  
+GTCAGGAT.GGCCGAGC..GGTct.A.......AGGCG.CTGCG.TTCAGG........................T.CGCAGT...CTCC..CCT.......GGAGG.CGTGGGTTCGAAT....CCCAC....TCCTGACA... tRNA-Leu-CAG-1-4 Sc: 83.1  
+GTCAGGAT.GGCCGAGC..GGTct.A.......AGGCG.CTGCG.TTCAGG........................T.CGCAGT...CTCC..CCT.......GGAGG.CGTGGGTTCGAAT....CCCAC....TCCTGACA... tRNA-Leu-CAG-1-3 Sc: 83.1  
+GTCAGGAT.GGCCGAGC..GGTct.A.......AGGCG.CTGCG.TTCAGG........................T.CGCAGT...CTCC..CCT.......GGAGG.CGTGGGTTCGAAT....CCCAC....TCCTGACA... tRNA-Leu-CAG-1-2 Sc: 83.1  
+GTCAGGAT.GGCCGAGC..GGTct.A.......AGGCG.CTGCG.TTCAGG........................T.CGCAGT...CTCC..CCT.......GGAGG.CGTGGGTTCGAAT....CCCAC....TCCTGACA... tRNA-Leu-CAG-1-1 Sc: 83.1  
+GTCAGGAT.GGCCGAGC..GGTct.A.......AGGCG.CTGCG.TTCAGG........................T.CGCAGT...CTCC..CCT.......GGAGG.CGTGGGTTCGAAT....CCCAC....TTCTGACA... tRNA-Leu-CAG-2-2 Sc: 82.4  
+GTCAGGAT.GGCCGAGC..GGTct.A.......AGGCG.CTGCG.TTCAGG........................T.CGCAGT...CTCC..CCT.......GGAGG.CGTGGGTTCGAAT....CCCAC....TTCTGACA... tRNA-Leu-CAG-2-1 Sc: 82.4  
+.>>>>>>....>>.....................<<...>>>>>.................................<<<<<....>>.>............<.<<...>>>>>...........<<<<<....<<<<<<.....
+GTCAGGGT.GGCTGAGC..AGTct.G.......AGGGG.CTGCG.TTCAGG........................T.CGCAGT...CTGC..CCT.......GGAGG.CGTGGGTTCGAAT....CCCAC....TCCTGAAA... tRNA-Leu-CAG-chr9-7 Sc: 28.4  
+.>>>>>>...>>>>...................<<<<..>>>>>.................................<<<<<....................................................<<<<<<.....
+GGTTCCAT.GGTGTAAT..GGTg..A.......GCACT.CTGGA.CTCAGA........................A.TCCAGA.A.....................Gt..........AGT....GC.......TGGAACAA... tRNA-Leu-CAG-chr9-3 Sc: 25.7  
+>>>>>>>...>>>.....................<<<..>>>>>.................................<<<<<....>>>>............<<<<...>>>>>...........<<<<<....<<<<<<<....
+GGTAGCGT.GGCCGAGC..GGTct.A.......AGGCG.CTGGA.TTTAGG........................C.TCCAGT...CTCT..TC........GGAGG.CGTGGGTTCGAAT....CCCAC....CGCTGCCA... tRNA-Leu-TAG-1-1 Sc: 77.5  
+GGTAGCGT.GGCCGAGT..GGTct.A.......AGGCG.CTGGA.TTTAGG........................C.TCCAGT...CATT..TC........GATGG.CGTGGGTTCGAAT....CCCAC....CGCTGCCA... tRNA-Leu-TAG-3-1 Sc: 75.5  
+GGTAGTGT.GGCCGAGC..GGTct.A.......AGGCG.CTGGA.TTTAGG........................C.TCCAGT...CTCT..TC........GGGGG.CGTGGGTTCGAAT....CCCAC....CACTGCCA... tRNA-Leu-TAG-2-1 Sc: 74.0  
+.>>>>>>...>>>.....................<<<..>>>.>.................................<.<<<....>>>..............<<<...>>>>>...........<<<<<....<<<<<<.....
+GGTAGTGT.GGTTGAAT..GGTct.A.......AGGCA.CTGAA.TTTAGG........................C.TCCAGT...CTC...TTTG.......GGGA.CGTGGGTTTAAAT....CCCAC....TGCTGCAA... tRNA-Leu-TAG-4-1 Sc: 35.7  
+>>>>>>>...>>>.....................<<<..>>>>>.................................<<<<<....>>>>............<<<<...>>>>>...........<<<<<....<<<<<<<....
+GTCAGGAT.GGCCGAGT..GGTct.A.......AGGCG.CCAGA.CTCAAGcttactgcttcctgtgttcgggtcT.TCTGGT...CTCC..GTAT......GGAGG.CGTGGGTTCGAAT....CCCAC....TTCTGACA... tRNA-Leu-CAA-2-1 Sc: 84.0  
+GTCAGGAT.GGCCGAGT..GGTct.A.......AGGCG.CCAGA.CTCAAGttgctacttcccaggtttggggc.T.TCTGGT...CTCC..GCAT......GGAGG.CGTGGGTTCGAAT....CCCAC....TTCTGACA... tRNA-Leu-CAA-3-1 Sc: 83.4  
+GTCAGGAT.GGCCGAGT..GGTct.A.......AGGCG.CCAGA.CTCAAGcttggcttcctcgtgttgagga..T.TCTGGT...CTCC..AAT.......GGAGG.CGTGGGTTCGAAT....CCCAC....TTCTGACA... tRNA-Leu-CAA-1-2 Sc: 82.9  
+GTCAGGAT.GGCCGAGT..GGTct.A.......AGGCG.CCAGA.CTCAAGctaagcttcctccgcggtgggga.T.TCTGGT...CTCC..AAT.......GGAGG.CGTGGGTTCGAAT....CCCAC....TTCTGACA... tRNA-Leu-CAA-1-1 Sc: 82.8  
+>>>>>>>...>>>.....................<<<..>>>>>.................................<<<<<....>>>>>..........<<<<<...>>>>>...........<<<<<....<<<<<<<....
+GTCAGGAT.GGCCGAGT..GGTct.A.......AGGCG.CCAGA.CTCAAGgtaagcaccttgcctgcgggct..T.TCTGGT...CTCCGG........ATGGAGG.CGTGGGTTCGAAT....CCCAC....TTCTGACA... tRNA-Leu-CAA-4-1 Sc: 79.6  
+>>>>>>>...>>>.....................<<<...>>>>.................................<<<<.....>>>>............<<<<...>>>>>...........<<<<<....<<<<<<<....
+GTCAGGAT.GGCCGAGC..AGTcttA.......AGGCG.CTGCG.TTCAAA........................T.CGCACC...CTCC..GCT.......GGAGG.CGTGGGTTCGAAT....CCCAC....TTTTGACA... tRNA-Leu-CAA-6-1 Sc: 61.9  
+>>>>>>>...>>>>...................<<<<..>>>>...................................<<<<...........................>>>>>...........<<<<<....<<<<<<<....
+GCCTCCTT.AGTGCAGTA.GGT...A.......GCGCA.TCAGT.CTCAAA........................A.TCTGAAtG.....................GtCCTGAGTTCAAGC....CTCAG....AGGGGGCA... tRNA-Leu-CAA-5-1 Sc: 60.2  
+>>>>>.>....>>.....................<<...>>.>>.................................<<.<<...........................>>.>>...........<<.<<....<.<<<<<....
+GGCAGTGT.AGCCAAGA..GGC...C.......AGGAA.GGTGCaCCCTGG........................A.GCCCCA.........CT............G.CCTAGGTTCAAAT....CCCAG....CTCTGCCA... tRNA-Leu-CAA-chr14-11 Sc: 24.3  
+>>>>>.>.................................>>>...................................<<<.............................>>>>...........<<<<.....<.<<<<<....
+GGCAGTGT.CA........GGT...A.......GGG.C.ATGGA.TTTGGG........................A.GCCAGA.A.....................AgCCCAGGTTCAAAT....CCTGA....CTCTGCCA... tRNA-Leu-CAA-chr1-1 Sc: 21.6  
+>>>>.>>................................>>>>>.................................<<<<<...........................>>>.>...........<.<<<....<<.<<<<....
+CATAGGGT.A.....GT..GGCt..A.......AGAAC.CTAAA.CTCTAA........................A.TTTAGA.T.....................GtCCTGAGTTCAAAT....CCCAG....CTGTATGC... tRNA-Leu-CAA-7-1 Sc: 20.9  
+>>>>>>>...>>>.....................<<<..>>>>>.................................<<<<<....>>>>............<<<<...>>>>>...........<<<<<....<<<<<<<....
+ACCAGGAT.GGCCGAGT..GGTt..A.......AGGCG.TTGGA.CTTAAG........................A.TCCAAT...GGAC..ATAT......GTCCG.CGTGGGTTCGAAC....CCCAC....TCCTGGTA... tRNA-Leu-TAA-1-1 Sc: 92.1  
+ACCAGAAT.GGCCGAGT..GGTt..A.......AGGCG.TTGGA.CTTAAG........................A.TCCAAT...GGAT..TCAT......ATCCG.CGTGGGTTCGAAC....CCCAC....TTCTGGTA... tRNA-Leu-TAA-3-1 Sc: 89.3  
+ACCGGGAT.GGCCGAGT..GGTt..A.......AGGCG.TTGGA.CTTAAG........................A.TCCAAT...GGGCTG........GTGCCCG.CGTGGGTTCGAAC....CCCAC....TCTCGGTA... tRNA-Leu-TAA-2-1 Sc: 85.0  
+>>>>>>>...>>>.....................<<<..>>>>>.................................<<<<<....>>>>>..........<<<<<...>>>>>...........<<<<<....<<<<<<<....
+ACCGGGAT.GGCTGAGT..GGTt..A.......AGGCG.TTGGA.CTTAAG........................A.TCCAAT...GGACAG........GTGTCCG.CGTGGGTTCGAGC....CCCAC....TCCCGGTA... tRNA-Leu-TAA-4-1 Sc: 83.3  
+>>>>>>>...>>>>...................<<<<..>>>>>.................................<<<<<...........................>>>>>...........<<<<<....<<<<<<<....
+GTTAAGAT.GGCAGAGCCtGGTa..A.......TTGCA.TAAAA.CTTAAA........................A.TTTTAT.A.....................AtCAGAGGTTCAACT....CCTCT....TCTTAACA... tRNA-Leu-TAA-1-1-nmt Sc: 55.7  
+>>>>>>>...>>>.....................<<<...>>>...................................<<<.....>>>>............<<<<...>>>>>...........<<<<<....<<<<<<<....
+ACCAGGAT.GGCCAAGT..AGTta.A.......AGGCA.CTGGA.CTTAAG........................A.GCCAAT...GGAC..ATAT......GTCTG.TGTGGGTTTGAAC....CCCAC....TCCTGGTG... tRNA-Leu-TAA-chr11-12 Sc: 50.7  
+>>>..>....>>>.....................<<<..>>>>>.................................<<<<<....>..>............<..<...>>>>>...........<<<<<.....<..<<<....
+ACTCATTT.GGCTGAGT..GGTt..A.......AGGCA.TTGGA.CTTAAG........................A.TCCAAT.G.GAGT..AGT.......GGCTG.TGTGGGTTTAAAC....CCCAC....TACTGGTA... tRNA-Leu-TAA-5-1 Sc: 37.2  
+>>>>>.....>>>>...................<<<<..>>>>...................................<<<<...........................>>>>>...........<<<<<......<<<<<....
+GTTAAGAT.GGCAGAGCCcGGCa..A.......TTGCA.TAAGA.CTTAAA........................A.CTTTAT.A.....................AtCAGAGGTTCAACT....CCTCT....CATTAACA... tRNA-Leu-TAA-4-1-nmt Sc: 30.0  
+>>>>>>>...>>>>...................<<<<..>>>>>.................................<<<<<...........................>>>>>...........<<<<<....<<<<<<<....
+GAGAAAGTcATCGTAGTT...............ACGAA.GTTGG.CTTAAA........................C.CCAGTT.......................TtGGGAGGTTCAATT....CCTTC....CTTTCTCT... tRNA-Leu-TAA-chr1-9 Sc: 27.3  
+>>>>>>>..>>>>..........<<<<....>>>>>.......<<<<<.................>>>>>.......<<<<<..<<<<<<<.
+GCCCGGCTAGCTCAGTCGGT.A.GAGCA...TGGGACTCTTAATCCCAGG...........GtC.GTGGGTTCGAGCCCCAC..GTTGGGCG tRNA-Lys-CTT-1-2 Sc: 78.5  
+GCCCGGCTAGCTCAGTCGGT.A.GAGCA...TGGGACTCTTAATCCCAGG...........GtC.GTGGGTTCGAGCCCCAC..GTTGGGCG tRNA-Lys-CTT-1-1 Sc: 78.5  
+GCCCGGCTAGCTCAGTCGGT.A.GAGCA...TGAGACTCTTAATCTCAGG...........GtC.GTGGGTTCGAGCCCCAC..GTTGGGCG tRNA-Lys-CTT-2-5 Sc: 78.0  
+GCCCGGCTAGCTCAGTCGGT.A.GAGCA...TGAGACTCTTAATCTCAGG...........GtC.GTGGGTTCGAGCCCCAC..GTTGGGCG tRNA-Lys-CTT-2-4 Sc: 78.0  
+GCCCGGCTAGCTCAGTCGGT.A.GAGCA...TGAGACTCTTAATCTCAGG...........GtC.GTGGGTTCGAGCCCCAC..GTTGGGCG tRNA-Lys-CTT-2-3 Sc: 78.0  
+GCCCGGCTAGCTCAGTCGGT.A.GAGCA...TGAGACTCTTAATCTCAGG...........GtC.GTGGGTTCGAGCCCCAC..GTTGGGCG tRNA-Lys-CTT-2-2 Sc: 78.0  
+GCCCGGCTAGCTCAGTCGGT.A.GAGCA...TGAGACTCTTAATCTCAGG...........GtC.GTGGGTTCGAGCCCCAC..GTTGGGCG tRNA-Lys-CTT-2-1 Sc: 78.0  
+GCCCGGCTAGCTCAGTCGGT.A.GAGCA...TGAGACCCTTAATCTCAGG...........GtC.GTGGGTTCGAGCCCCAC..GTTGGGCG tRNA-Lys-CTT-3-1 Sc: 73.5  
+GCCCGGCTAGCTCAGTCGGT.A.GAGCA...TGGGACTCTTAATCTCAGG...........GtC.GTGGGTTCGAGCCCCAC..GTTGGGCG tRNA-Lys-CTT-4-1 Sc: 71.4  
+>>>>>>>..>>>>..........<<<<....>>>>>.......<<<<<.................>>>.>.......<.<<<..<<<<<<<.
+GCCCGGCTAGCTCAGTCGAT.A.GAGCA...TGAGACTCTTAATCTCAGG...........GtC.GTGGGTTCGAGCCGCAC..GTTGGGCG tRNA-Lys-CTT-5-1 Sc: 55.6  
+>>>.>>>..>>>>..........<<<<....>>>>>.......<<<<<..................>>>>.......<<<<...<<<.<<<.
+GCCCAGCTAGCTCAGTCGGT.A.GAGCA...TGAGACTCTTAATCTCAGG...........GtC.ATGGGTTTGAGCCCCAC..GTTTGGTG tRNA-Lys-CTT-7-1 Sc: 53.4  
+>.>.>>>..>>>>..........<<<<....>>>>>.......<<<<<.................>>>>>.......<<<<<..<<<.<.<.
+GACGAGCTAGCTCAGTCGGT.A.GAGCA...TGGGACTCTTAATCCCAGG...........GtC.GTGGGTTTGAGCCCCAT..GTTGGGCA tRNA-Lys-CTT-6-1 Sc: 53.1  
+>>>>>>>..>>>............<<<....>>>>>.......<<<<<.................>>>>>.......<<<<<..<<<<<<<.
+GCCTGGCTAGCTCAGTCGGC.A.AAGCA...TGAGACTCTTAATCTCAGG...........GtC.GTGGGCTCGAGCTCCAT..GTTGGGCG tRNA-Lys-CTT-8-1 Sc: 47.9  
+>..>>>>..>>>>..........<<<<....>>>>>.......<<<<<.................>>>>>.......<<<<<..<<<<..<.
+CTGCAGCTAGCTCAGTCGGT.A.GAGCA...TGAGACTCTTAATCTCAGG...........GtC.ATGGGTTCGTGCCCCAT..GTTG..GG tRNA-Lys-CTT-11-1 Sc: 42.8  
+>>>>>>....>>>..........<<<.....>>>>>.......<<<<<.................>>>>>.......<<<<<...<<<<<<.
+GCCCGACTACCTCAGTCGGT.G.GAGCA...TGGGACTCTTCATCCCAGG...........GtT.GTGGGTTCGAGCCCCAC..ATTGGGCA tRNA-Lys-CTT-9-1 Sc: 40.7  
+>>>>>>>..>>>>..........<<<<....>.>>>.......<<<.<.................>>>>.........<<<<..<<<<<<<.
+GCCCAGCTAGCTCAGTCGGT.A.GAGCA...TAAGACTCTTAATCTCAGG...........GtT.GTGGATTCGTGCCCCAT..GCTGGGTG tRNA-Lys-CTT-10-1 Sc: 38.4  
+>>>>......>>............<<.....>>>>>.......<<<<<.................>>>>>.......<<<<<.....<<<<.
+CCAGCA.TGTCTCAGTCGGT.A.TAGTG...TGAGACTCTTAATCTCAGG...........GtC.GTGGGTTCAAGCCCCAC..A..TTGGG tRNA-Lys-CTT-12-1 Sc: 36.3  
+>>.>>>>..>>>>..........<<<<......>>>.......<<<...................>>>>>.......<<<<<..<<<<.<<.
+GCCCAGCTAGCTCAGCCGGT.A.GAGCA...CAAGACTCTTAATCTCAGG...........GtC.GTGGGTTTGAGCCCTGT..GTTGAGCA tRNA-Lys-CTT-14-1 Sc: 30.9  
+..>>>>...>>>>..........<<<<....>>>>>.......<<<<<.................>>>>>.......<<<<<...<<<<...
+X.CCGAATAGCTTAGTTGAT.G.AAGCG...TGAGACTCTTAATCTCAGG...........GtA.GTGGGTTCAAGCCCCAC..ATTGG..A tRNA-Lys-CTT-15-1 Sc: 29.8  
+>>>>>>>..>.>>..........<<.<....>.>>>.......<<<.<..................>>>>.......<<<<...<<<<<<<.
+GTCTAGCTAGATCAGTTGGT.A.GAGCA...TAAGACTCTTAATCTCAGG...........GtC.ATGGGTTTGAGCCCTAC..GTTGGGCG tRNA-Lys-CTT-13-1 Sc: 26.9  
+>>.......>>>............<<<....>>>>>.......<<<<<.................>>>>>.......<<<<<.......<<.
+GC.......GCT.AGTCAGT.A.GAGCA...TGAGACTCTTAATCTCAGG...........GtC.GTGGGTTCGAGCCCCAC..ATCGGGCG tRNA-Lys-CTT-chr7-30 Sc: 25.1  
+>>.>>>....>>>..........<<<.....>>>>>.......<<<<<.................>>>>>.......<<<<<...<<<.<<.
+GCCTGGCTACCTCAGTTGGT.A.GAGCA...TGGGACTCTTAATCCCAGA...........GtCaGTGGGTTCAAGCCTCAC..ATTGAGTG tRNA-Lys-CTT-16-1 Sc: 23.1  
+.........>.>>..........<<.<....>>>>>.......<<<<<.................>>>>>.......<<<<<..........
+X..GCAC.AG.TCAGTCAGT.A.GAGCA...TGGGACTCTTAATCCCAGG...........GtC.GTGGGTTCAAGCCCCAC.......... tRNA-Lys-CTT-chr15-5 Sc: 22.3  
+.>>>>>...>.>>..........<<.<....>>>>>.......<<<<<.................>>>>>.......<<<<<...<<<<<..
+CCCCGGCTGGCTCAGTCAGT.A.GATCA...TGAGACTCTTAATCTCAGG...........GtC.GTGGGTTCACGCCCCAC..ACTGGGCG tRNA-Lys-CTT-chr16-1 Sc: 21.9   
+>>>>>>>..>>>>..........<<<<....>>>>>.......<<<<<.................>>>>>.......<<<<<..<<<<<<<.
+GCCTGGATAGCTCAGTTGGT.A.GAGCA...TCAGACTTTTAATCTGAGG...........GtC.CAGGGTTCAAGTCCCTG..TTCAGGCA tRNA-Lys-TTT-1-1 Sc: 85.6  
+GCCTGGATAGCTCAGTTGGT.A.GAGCA...TCAGACTTTTAATCTGAGG...........GtC.CAGGGTTCAAGTCCCTG..TTCAGGCG tRNA-Lys-TTT-2-1 Sc: 84.7  
+GCCCGGATAGCTCAGTCGGT.A.GAGCA...TCAGACTTTTAATCTGAGG...........GtC.CAGGGTTCAAGTCCCTG..TTCGGGCG tRNA-Lys-TTT-3-5 Sc: 84.0  
+GCCCGGATAGCTCAGTCGGT.A.GAGCA...TCAGACTTTTAATCTGAGG...........GtC.CAGGGTTCAAGTCCCTG..TTCGGGCG tRNA-Lys-TTT-3-4 Sc: 84.0  
+GCCCGGATAGCTCAGTCGGT.A.GAGCA...TCAGACTTTTAATCTGAGG...........GtC.CAGGGTTCAAGTCCCTG..TTCGGGCG tRNA-Lys-TTT-3-3 Sc: 84.0  
+GCCCGGATAGCTCAGTCGGT.A.GAGCA...TCAGACTTTTAATCTGAGG...........GtC.CAGGGTTCAAGTCCCTG..TTCGGGCG tRNA-Lys-TTT-3-2 Sc: 84.0  
+GCCCGGATAGCTCAGTCGGT.A.GAGCA...TCAGACTTTTAATCTGAGG...........GtC.CAGGGTTCAAGTCCCTG..TTCGGGCG tRNA-Lys-TTT-3-1 Sc: 84.0  
+GCCTGGATAGCTCAGTCGGT.A.GAGCA...TCAGACTTTTAATCTGAGG...........GtC.CAGGGTTCAAGTCCCTG..TTCAGGCG tRNA-Lys-TTT-4-1 Sc: 83.3  
+GCCCGGATAGCTCAGTCGGT.A.GAGCA...TCAGACTTTTAATCTGAGG...........GtC.CGGGGTTCAAGTCCCTG..TTCGGGCG tRNA-Lys-TTT-5-1 Sc: 82.6  
+GCCTGGGTAGCTCAGTCGGT.A.GAGCA...TCAGACTTTTAATCTGAGG...........GtC.CAGGGTTCAAGTCCCTG..TCCAGGCG tRNA-Lys-TTT-6-1 Sc: 80.0  
+>>>>>>>..>.>>..........<<.<....>>>>>.......<<<<<.................>>>>>.......<<<<<..<<<<<<<.
+GCCTGGATAGCTCAGTTGGT.A.GAACA...TCAGACTTTTAATCTGACG...........GtG.CAGGGTTCAAGTCCCTG..TTCAGGCG tRNA-Lys-TTT-7-1 Sc: 73.9  
+.>>>>>>..>.>>..........<<.<....>>>>>.......<<<<<.................>>>>>.......<<<<<..<<<<<<..
+ACCTGGGTAGCTCAGTAGGT.A.GAACA...TCAGACTTTTAATCTGAGG...........GtC.TAGGGTTCAAGTCCCTG..TCCAGGCG tRNA-Lys-TTT-9-1 Sc: 54.2  
+>>>>>>>..>>>>..........<<<<....>>>>>.......<<<<<.................>.>>>.......<<<.<..<<<<<<<.
+GCCCGGAGAGCTCAGT.GGGtA.GAGCA...TCAGACTTTTAATCTGAGG...........GtC.CAGGGTTCAAGTCCTCG..TTCGGGCA tRNA-Lys-TTT-8-1 Sc: 53.2  
+>>>.>>>..>>>>..........<<<<....>>>>.........<<<<.................>>>>>.......<<<<<..<<<.<<<.
+GCCAGGATAGTTCAGGTGGT.A.GAGCA...TCAGACTTTTAACCTGAGG...........GtT.CAGGGTTCAAGTCTCTG..TTTGGGCG tRNA-Lys-TTT-10-1 Sc: 44.7  
+>>>>>>>..>>>>..........<<<<....>>>>>.......<<<<<.................>>>>.........<<<<..<<<<<<<.
+ACCTGGGTAGCTTAGTTGGT.A.GAGCA...TTGGACTTTTAATTTGAGG...........GcC.CAGGTTTCAAGTCCCTG..TTTGGGTG tRNA-Lys-TTT-12-1 Sc: 41.9  
+>>>>>>>..>>>>..........<<<<....>>>>>.......<<<<<..................>.>>.......<<.<...<<<<<<<.
+ACCCAGATAGCTCAGTCAGT.A.GAGCA...TCAGACTTTTAATCTGAGG...........GtC.CAAGGTTCATGTCCCTT..TTTGGGTG tRNA-Lys-TTT-11-1 Sc: 36.9  
+>>>>.>>..>>>>..........<<<<....>>>>.........<<<<.................>>>>>.......<<<<<..<<.<<<<.
+GCCTGGGTAGCTCAGTCGGT.A.GAGCTa..TCAGACTTTTAGCCTGAGG...........AtT.CAGGGTTCAATCCCTTG..CTGGGGCG tRNA-Lys-TTT-13-1 Sc: 34.6  
+.....>>..>>>>..........<<<<....>>>>>.......<<<<<.................>>>>>.......<<<<<..<<......
+X....GATAGCTCAGTTGAT.A.GAGCA...TCAGACTTTTAATCTGAGG...........GtC.CAGGGTTCATGTCCCTG..TT...... tRNA-Lys-TTT-14-1 Sc: 34.0  
+>>>>>>>..>>>>..........<<<<....>>>.>.......<.<<<.................>>>>>.......<<<<<..<<<<<<<.
+GCCTGGATAGCTCCTTCGGT.A.GAGCAtcaTCAGACTTTTAATGTGAGG...........GtC.CAGGGTTCAAGTTCCTG..TTTGGGCG tRNA-Lys-TTT-chr3-2 Sc: 33.1  
+>>>.>>>..>>>>..........<<<<.....>>>>.......<<<<..................>>.>>.......<<.<<..<<<.<<<.
+GTTGGGGTAACTCAGTTGGT.A.GAGTA...GCAGACTTTTCATCTGAGG...........GtC.CAGGGTTTAAGTCCATG..TCCAGGCA tRNA-Lys-TTT-15-1 Sc: 20.5
+>>>>>>>..>>>>..........<<<<.>...>>>.........<<<<................>>>>>.......<<<<<<<<<<<<....
+GCCTCGTTAGCGCAGTAGGT.A.GCGCGT...CAGTCTCATAATCTGAAG...........GtCGTGAGTTCGATCCTCACACGGGGCA... tRNA-Met-CAT-1-1 Sc: 79.4  
+GCCCTCTTAGCGCAGT.GGGcA.GCGCGT...CAGTCTCATAATCTGAAG...........GtCCTGAGTTCGAGCCTCAGAGAGGGCA... tRNA-Met-CAT-2-1 Sc: 76.9  
+GCCCTCTTAGCGCAGC.GGGcA.GCGCGT...CAGTCTCATAATCTGAAG...........GtCCTGAGTTCGAGCCTCAGAGAGGGCA... tRNA-Met-CAT-4-3 Sc: 74.9  
+GCCCTCTTAGCGCAGC.GGGcA.GCGCGT...CAGTCTCATAATCTGAAG...........GtCCTGAGTTCGAGCCTCAGAGAGGGCA... tRNA-Met-CAT-4-2 Sc: 74.9  
+GCCCTCTTAGCGCAGC.GGGcA.GCGCGT...CAGTCTCATAATCTGAAG...........GtCCTGAGTTCGAGCCTCAGAGAGGGCA... tRNA-Met-CAT-4-1 Sc: 74.9  
+GCCTCCTTAGCGCAGTAGGC.A.GCGCGT...CAGTCTCATAATCTGAAG...........GtCCTGAGTTCGAACCTCAGAGGGGGCA... tRNA-Met-CAT-3-2 Sc: 74.0  
+GCCTCCTTAGCGCAGTAGGC.A.GCGCGT...CAGTCTCATAATCTGAAG...........GtCCTGAGTTCGAACCTCAGAGGGGGCA... tRNA-Met-CAT-3-1 Sc: 74.0  
+GCCCTCTTAGCGCAGCTGGC.A.GCGCGT...CAGTCTCATAATCTGAAG...........GtCCTGAGTTCAAGCCTCAGAGAGGGCA... tRNA-Met-CAT-5-1 Sc: 73.2  
+GCCTCGTTAGCGCAGTAGGC.A.GCGCGT...CAGTCTCATAATCTGAAG...........GtCGTGAGTTCGAGCCTCACACGGGGCA... tRNA-Met-CAT-6-1 Sc: 72.3  
+>>>>>>>..>>>>..........<<<<.>...>>>>.......<<<<<................>>>>>.......<<<<<<<<<<<<....
+AGCAGAGTGGCGCAGC.GGA.A.GCGTGC...TGGGCCCATAACCCAGAG...........GtCGATGGATCGAAACCATCCTCTGCTA... tRNA-iMet-CAT-1-8 Sc: 67.7  
+AGCAGAGTGGCGCAGC.GGA.A.GCGTGC...TGGGCCCATAACCCAGAG...........GtCGATGGATCGAAACCATCCTCTGCTA... tRNA-iMet-CAT-1-7 Sc: 67.7  
+AGCAGAGTGGCGCAGC.GGA.A.GCGTGC...TGGGCCCATAACCCAGAG...........GtCGATGGATCGAAACCATCCTCTGCTA... tRNA-iMet-CAT-1-6 Sc: 67.7  
+AGCAGAGTGGCGCAGC.GGA.A.GCGTGC...TGGGCCCATAACCCAGAG...........GtCGATGGATCGAAACCATCCTCTGCTA... tRNA-iMet-CAT-1-5 Sc: 67.7  
+AGCAGAGTGGCGCAGC.GGA.A.GCGTGC...TGGGCCCATAACCCAGAG...........GtCGATGGATCGAAACCATCCTCTGCTA... tRNA-iMet-CAT-1-4 Sc: 67.7  
+AGCAGAGTGGCGCAGC.GGA.A.GCGTGC...TGGGCCCATAACCCAGAG...........GtCGATGGATCGAAACCATCCTCTGCTA... tRNA-iMet-CAT-1-3 Sc: 67.7  
+AGCAGAGTGGCGCAGC.GGA.A.GCGTGC...TGGGCCCATAACCCAGAG...........GtCGATGGATCGAAACCATCCTCTGCTA... tRNA-iMet-CAT-1-2 Sc: 67.7  
+AGCAGAGTGGCGCAGC.GGA.A.GCGTGC...TGGGCCCATAACCCAGAG...........GtCGATGGATCGAAACCATCCTCTGCTA... tRNA-iMet-CAT-1-1 Sc: 67.7  
+>>>>>>>..>>>>..........<<<<.>...>>>.........<<<<................>>>>>.......<<<<<<<<<<<<....
+GCCCTCTTAGTGCAGCTGGC.A.GCGCGT...CAGTTTCATAATCTGAAA...........GtCCTGAGTTCAAGCCTCAGAGAGGGCA... tRNA-Met-CAT-7-1 Sc: 62.6  
+>>>>>>>..>>>>..........<<<<.>...>>>>.......<<<<<................>>>>>.......<<<<<<<<<<<<....
+AGCAGAGTGGCGCAGC.GGA.A.GCGTGC...TGGGCCCATAACCCAGAG...........GtCGATGGATCTAAACCATCCTCTGCTA... tRNA-iMet-CAT-2-1 Sc: 61.0  
+AGCAGAGTGGTGCAGT.GGA.A.GCATACctaTGGGCCCATAACCCAGAG...........GtTGATGGATGGAAACCATCCTCTGCTA... tRNA-iMet-CAT-3-1 Sc: 36.1 
+>>>>>>>..>>>>..........<<<<.>>>>>..........<<<.<<.................>>>>>.......<<<<<..<<<<<<<....
+GCCGAAATAGCTCAGTTGGG.A.GAGCGTTAGACTGAAG...ATCT.AAAG...........Gt.CCCTGGTTCGATCCCGGG..TTTCGGCA... tRNA-Phe-GAA-1-6 Sc: 85.2  
+GCCGAAATAGCTCAGTTGGG.A.GAGCGTTAGACTGAAG...ATCT.AAAG...........Gt.CCCTGGTTCGATCCCGGG..TTTCGGCA... tRNA-Phe-GAA-1-5 Sc: 85.2  
+GCCGAAATAGCTCAGTTGGG.A.GAGCGTTAGACTGAAG...ATCT.AAAG...........Gt.CCCTGGTTCGATCCCGGG..TTTCGGCA... tRNA-Phe-GAA-1-4 Sc: 85.2  
+GCCGAAATAGCTCAGTTGGG.A.GAGCGTTAGACTGAAG...ATCT.AAAG...........Gt.CCCTGGTTCGATCCCGGG..TTTCGGCA... tRNA-Phe-GAA-1-3 Sc: 85.2  
+GCCGAAATAGCTCAGTTGGG.A.GAGCGTTAGACTGAAG...ATCT.AAAG...........Gt.CCCTGGTTCGATCCCGGG..TTTCGGCA... tRNA-Phe-GAA-1-2 Sc: 85.2  
+GCCGAAATAGCTCAGTTGGG.A.GAGCGTTAGACTGAAG...ATCT.AAAG...........Gt.CCCTGGTTCGATCCCGGG..TTTCGGCA... tRNA-Phe-GAA-1-1 Sc: 85.2  
+GCCGAGATAGCTCAGTTGGG.A.GAGCGTTAGACTGAAG...ATCT.AAAG...........Gt.CCCTGGTTCAATCCCGGG..TTTCGGCA... tRNA-Phe-GAA-3-1 Sc: 84.4  
+GCCGAAATAGCTCAGTTGGG.A.GAGCGTTAGACTGAAG...ATCT.AAAG...........Gt.CCCTGGTTCAATCCCGGG..TTTCGGCA... tRNA-Phe-GAA-2-1 Sc: 83.9  
+GCCGAAATAGCTCAGTTGGG.A.GAGCGTTAGACCGAAG...ATCTtAAAG...........Gt.CCCTGGTTCAATCCCGGG..TTTCGGCA... tRNA-Phe-GAA-4-1 Sc: 66.5  
+>...>>>..>>>>..........<<<<.>>>>>..........<<<.<<.................>>>>>.......<<<<<..<<<...<....
+GCCAAAATTGCTCAGTTGGG.A.GAGCGTTAGACTGAAG...ATCT.AAAG...........Gt.CCCTGGTTCGATCCCGGG..TTT...CA... tRNA-Phe-GAA-5-1 Sc: 56.1  
+>>>>>>>..>>>>..........<<<<.>.>>>..........<<<..<.................>>>>>.......<<<<<..<<<<<<<....
+GCTGAAATAGCTCAGTTGGG.A.GAGCGTTAGACTGAAG...ATCT.TAAA...........GttCCCTGGTTCAACCCTGGG..TTTCAGCC... tRNA-Phe-GAA-6-1 Sc: 55.8  
+>.>>>>>..>>>>..........<<<<..>>>>..........<<<.<..................>>>>>.......<<<<<..<<<<<.<....
+GCCGAAATAGCTCAATTGGG.A.GAGTGTTAGACTGAAGatcTTCT.GCAG...........Gt.CTCTGGTTCAATTCCGGG..TTTCGACA... tRNA-Phe-GAA-7-1 Sc: 52.7  
+>...>>>..>>>>..........<<<<.>>>>>..........<<<.<<.................>>>>>.......<<<<<..<<<...<....
+GCCAAAATAGCTCAGCTGGG.A.GAGCATTAGACTGAAG...ATCT.AAAG...........Gt.CTCTGGTTTGATCCTGGG..TTT...CA... tRNA-Phe-GAA-8-1 Sc: 40.3  
+>>>>>>>..>>>>..........<<<<.>.>>............<<..<..................>>>>.......<<<<...<<<<<<<....
+GCTGAGATAGCTCGGTTGGG.A.GGGCATCAGCCTGAAG...ATCT.AAAG...........Ga.GACTGGTTCAATTCTGGG..TTTTGGCA... tRNA-Phe-GAA-11-1 Sc: 28.4  
+>>.......>>>>..........<<<<..>>>>..........<<<.<..................>>>>>.......<<<<<.......<<....
+GG...TT..GTCTAGT.GGCtA.GGATTCGGTGCTGAAA...GCGT.CACG...........G..CCCGGGTTCGATTCCCGG.......TCA... tRNA-Phe-GAA-10-1 Sc: 20.2  
+>>>>>>>..>>>...............<<<.>.>>>>.......................<<<<<....................>>>>>.......<<<<<.<<<<<<<.
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTAGGA................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-AGG-1-1 Sc: 68.6  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTAGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-AGG-2-8 Sc: 67.7  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTAGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-AGG-2-7 Sc: 67.7  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTAGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-AGG-2-6 Sc: 67.7  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTAGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-AGG-2-5 Sc: 67.7  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTAGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-AGG-2-4 Sc: 67.7  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTAGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-AGG-2-3 Sc: 67.7  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTAGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-AGG-2-2 Sc: 67.7  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTAGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-AGG-2-1 Sc: 67.7  
+>>>>>>>..>>>...............<<<.>.>>.>.......................<.<<<..>.>.........<.<...>>>>>.......<<<<<.<<<<<<<.
+GGCTCGTTGGTCTAGG.GGT.G....TGGTTC.TCGCTTAGGGaccacagggacaagccCGGGAGA.CCCA.......AGAGGtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-AGG-3-1 Sc: 33.9   
+>>>>>>>..>>>>.............<<<<....>>.........................<<......................>>>>>.......<<<<<.<<<<<<<.
+GGCAGTGTGGCATAGT.GGTtAgaa.ATGTGC..GCTCTGGGG................CTGC..TG...............AtCCCAGGCTCAAACCCTGG.CGCTGTCA tRNA-Pro-GGG-1-1 Sc: 31.4  
+>>>>>>>..>>>...............<<<.>.>>>>.......................<<<<<....................>>>>>.......<<<<<.<<<<<<<.
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTCGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-CGG-1-3 Sc: 68.6  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTCGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-CGG-1-2 Sc: 68.6  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTCGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-CGG-1-1 Sc: 68.6  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTCGGG................TGTGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-CGG-2-1 Sc: 64.7  
+>>>>>>>..>>>...............<<<.>.>>>>.......................<<<<<....................>>>>>.......<<<<<.<<<<<<<.
+GGCTCGTTGGTCTAGT.GGT.A....TGATTC.TCGCTTTGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-TGG-1-1 Sc: 72.9  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGGTTTGGG................TCCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-TGG-2-1 Sc: 69.7  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTTGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-TGG-3-5 Sc: 68.7  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTTGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-TGG-3-4 Sc: 68.7  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTTGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-TGG-3-3 Sc: 68.7  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTTGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-TGG-3-2 Sc: 68.7  
+GGCTCGTTGGTCTAGG.GGT.A....TGATTC.TCGCTTTGGG................TGCGAGAG...............GtCCCGGGTTCAAATCCCGG.ACGAGCCC tRNA-Pro-TGG-3-1 Sc: 68.7  
+>>>>>>>..>>>>.............<<<<...>>>>.......................<<<<.....................>>>>>.......<<<<<.<<<<<<<.
+TAGGACTTGGTGTAATAGGT.A....GCACGAaGAGATTTGGA................TTCTC.AG...............G.GGTAGGTTCAATTCCTAT.AGTTCTGG tRNA-Pro-TGG-1-1-nmt Sc: 26.1
+>>>>>>>....>>>>..........<<<<.>>>>>.......<<<<<..>.>>..............<<.<...>>>>>.......<<<<.<..<<<<<<<....
+GCCCGGATGatCCTC.AGTGGTcT.GGGGTGCAGGCTTCAAACCTGTA.GCTG...TCTAg......CGACA.GAGTGGTTCAATTCCACcT..TTCGGGC.... tRNA-SeC-TCA-1-1 Sc: 155.8  
+...>>>>....>>>>..........<<<<.>>>>>.......<<<<<..>>>>>............<<<<<....>>>>.......<<<<....<<<<.......
+GCTCGGATGatCCTC.AGTGGTcT.GGGGTGCAGGCTTCAAACCTGTAGCTGTCTA........GTGACAGA...GTGGTTCAATTCCACc...TTTGTAGG... tRNA-SeC-TCA-2-1 Sc: 137.1  
+>>>>>>>....>>>>..........<<<<.>>>>>.......<<<<<...........................>>>>>.......<<<<.<..<<<<<<<....
+GACCGTGTG..GCCTtAATGGAtA.AGGTGTCTGACTTCAGATCAGAAG......................AtTGAGGGTTTGAGTCCCT.T..TGTGGTCA... tRNA-SeC-TCA-3-1 Sc: 43.3 
+>>>>>>>..>>>.............<<<.>>>>>.......<<<<<..>>>>.............<<<<...>>>>>.............<<<<<...<<<<<<<....
+GTAGTCGTGGCCGAGT..GGTtA.AGGCGATGGACTAGAAATCCATT.GGGG...TTT.......CCCCG.CGCAGGTTCGAAT......CCTGC...CGACTACG... tRNA-Ser-AGA-1-1 Sc: 90.3  
+GTAGTCGTGGCCGAGT..GGTtA.AGGCGATGGACTAGAAATCCATT.GGGG...TCT.......CCCCG.CGCAGGTTCGAAT......CCTGC...CGACTACG... tRNA-Ser-AGA-2-6 Sc: 89.6  
+GTAGTCGTGGCCGAGT..GGTtA.AGGCGATGGACTAGAAATCCATT.GGGG...TCT.......CCCCG.CGCAGGTTCGAAT......CCTGC...CGACTACG... tRNA-Ser-AGA-2-5 Sc: 89.6  
+GTAGTCGTGGCCGAGT..GGTtA.AGGCGATGGACTAGAAATCCATT.GGGG...TCT.......CCCCG.CGCAGGTTCGAAT......CCTGC...CGACTACG... tRNA-Ser-AGA-2-4 Sc: 89.6  
+GTAGTCGTGGCCGAGT..GGTtA.AGGCGATGGACTAGAAATCCATT.GGGG...TCT.......CCCCG.CGCAGGTTCGAAT......CCTGC...CGACTACG... tRNA-Ser-AGA-2-3 Sc: 89.6  
+GTAGTCGTGGCCGAGT..GGTtA.AGGCGATGGACTAGAAATCCATT.GGGG...TCT.......CCCCG.CGCAGGTTCGAAT......CCTGC...CGACTACG... tRNA-Ser-AGA-2-2 Sc: 89.6  
+GTAGTCGTGGCCGAGT..GGTtA.AGGCGATGGACTAGAAATCCATT.GGGG...TCT.......CCCCG.CGCAGGTTCGAAT......CCTGC...CGACTACG... tRNA-Ser-AGA-2-1 Sc: 89.6  
+GTAGTCGTGGCCGAGT..GGTtA.AGGCGATGGACTAGAAATCCATT.GGGG...TTT.......CCCCA.CGCAGGTTCGAAT......CCTGC...CGACTACG... tRNA-Ser-AGA-3-1 Sc: 87.8  
+>>>>>>>..>>>.............<<<.>>>>.........<<<<..>>>>.............<<<<...>>>>>.............<<<<<...<<<<<<<....
+GTAGTCGTGGCCGAGT..GGTtA.AGGTGATGGACTAGAAACCCATT.GGGG...TCT.......CCCCG.CGCAGGTTCGAAT......CCTGC...CGACTACG... tRNA-Ser-AGA-4-1 Sc: 78.2  
+>>>.>>>...>>>...........<<<..>>>>>.......<<<<<..........................>>>>>.............<<<<<...<<<.<<<....
+GGGTGTATGGCTCAGG..GGT.A.GAGAATTTGACTAGAGATCAAGAG.....................GtCCCTGGTTCAAAT......CCAGG...TGCCCCCT... tRNA-Ser-AGA-5-1 Sc: 53.2  
+>>>>>....>>>.............<<<.>>>>>.......<<<<<..>>.................<<...>>>>>.............<<<<<.....<<<<<....
+AGTTG..TAGCTGAGT..GGTtA.AGGCAACGAGCTAGAAATTCGTT.GGTT...TCT.......CTCTG.TGCAGGTTTGAAT......CCTGC.....TAATTA... tRNA-Ser-AGA-6-1 Sc: 24.5  
+>>>>>>....>...............<..>>>>>.......<<<<<..........................>>>>>.............<<<<<....<<<<<<....
+CAAGAAATT.CATAGA..GGTtA.TGG.GATTGGCTAGAAACCAGTTT.....................C.AGGAGGTTCGATT......CCTTC...CTTTTTGG... tRNA-Ser-AGA-chr11-8 Sc: 20.4   
+>>>>>>>..>>>>...........<<<<.>>>>>.......<<<<<....................................................<<<<<<<....
+GGCCTCATGGTCCAGT..GGGcA.GGGCATCAGACTGGACATCTGGAG.....................G.C...........C..............TGGGGCCC... tRNA-Ser-GGA-chr2-22-nmt Sc: 24.3  
+>>>>>>>..>>>.............<<<.>>>>>.......<<<<<..>>>>.............<<<<...>>>>>.............<<<<<...<<<<<<<....
+GCTGTGATGGCCGAGT..GGTtA.AGGCGTTGGACTCGAAATCCAAT.GGGG...TCT.......CCCCG.CGCAGGTTCGAAT......CCTGC...TCACAGCG... tRNA-Ser-CGA-1-1 Sc: 94.5  
+GCTGTGATGGCCGAGT..GGTtA.AGGCGTTGGACTCGAAATCCAAT.GGGG...TCT.......CCCCG.CGCAGGTTCAAAT......CCTGC...TCACAGCG... tRNA-Ser-CGA-2-1 Sc: 93.3  
+GTCACGGTGGCCGAGT..GGTtA.AGGCGTTGGACTCGAAATCCAAT.GGGG...TTT.......CCCCG.CACAGGTTCGAAT......CCTGT...TCGTGACG... tRNA-Ser-CGA-4-1 Sc: 91.5  
+GCTGTGATGGCCGAGT..GGTtA.AGGTGTTGGACTCGAAATCCAATGGGGG...TT........CCCCG.CGCAGGTTCAAAT......CCTGC...TCACAGCG... tRNA-Ser-CGA-3-1 Sc: 91.1    
+>>>>>>>..>>>.............<<<.>>>>>.......<<<<<..>>>>.............<<<<...>>>>>.............<<<<<...<<<<<<<....
+GCAGCGATGGCCGAGT..GGTtA.AGGCGTTGGACTTGAAATCCAAT.GGGG...TCT.......CCCCG.CGCAGGTTCGAAC......CCTGC...TCGCTGCG... tRNA-Ser-TGA-1-1 Sc: 94.3  
+GTAGTCGTGGCCGAGT..GGTtA.AGGCGATGGACTTGAAATCCATT.GGGG...TTT.......CCCCG.CGCAGGTTCGAAT......CCTGC...CGACTACG... tRNA-Ser-TGA-2-1 Sc: 91.4  
+GTAGTCGTGGCCGAGT..GGTtA.AGGCGATGGACTTGAAATCCATT.GGGG...TCT.......CCCCG.CGCAGGTTCGAAT......CCTGC...CGACTACG... tRNA-Ser-TGA-3-1 Sc: 90.7  
+GTAGTCGTGGCCGAGT..GGTtA.AGGCGATGGACTTGAAATCCATT.GGGG...TTT.......CCCCG.CGCAGGTTCGAAT......CCTGT...CGGCTACG... tRNA-Ser-TGA-4-1 Sc: 87.9  
+>>>>>>>...>...............<..>>>>>.......<<<<<..........................>>>>>.............<<<<<...<<<<<<<....
+GAGAAGGTCAC..AGA..GGTtA.T.GGGATTGGCTTGAAACCAGTCT.....................GtGGGGGGTTCGATT......CCCTC...CTTTTTCA... tRNA-Ser-TGA-1-1-nmt Sc: 31.9  
+GAGAAGGT..CATAGA..GGTtA.TGG.GATTGGCTTGAAACCAGTCT.....................CtGGGGGGTTCGATT......CCCTC...CTTTTTCA... tRNA-Ser-TGA-2-1-nmt Sc: 29.0  
+>>>>>>>..>>>>...........<<<<.>>>>>.......<<<<<..........................>>>>>.............<<<<<...<<<<<<<....
+GAAAAAG..TCATAGG..GGT.T.ATGAGGCTGGCTTGAAACCAGCC......................TtAGGAGGTTCAATT......CCTTC...CTTTTTTG... tRNA-Ser-TGA-3-1-nmt Sc: 28.1   
+>>>>.>>..>>>>...........<<<<.>>.>>.......<<.<<..........................>.>>...............<<.<...<<.<<<<....
+GGCCGGTTAGCTCAGTT.GGTtA.GAGCGTGCTGCTACTAATGCCAGG.....................GtCGAGGTTTCGATC......CCCGT...ACGGGCCT... tRNA-Ser-ACT-1-1 Sc: 37.8  
+>>>>>>>..>>>.............<<<.>>>>>.......<<<<<..>>>>.............<<<<...>>>>>.............<<<<<...<<<<<<<....
+GACGAGGTGGCCGAGT..GGTtA.AGGCGATGGACTGCTAATCCATT.GTGC...TCT.......GCACG.CGTGGGTTCGAAT......CCCAC...CCTCGTCG... tRNA-Ser-GCT-1-1 Sc: 90.8  
+GACGAGGTGGCCGAGT..GGTtA.AGGCGATGGACTGCTAATCCATT.GTGC...TCT.......GCACG.CGTGGGTTCGAAT......CCCAC...CTTCGTCG... tRNA-Ser-GCT-2-1 Sc: 90.1  
+GACGAGGTGGCCGAGT..GGTtA.AGGCGATGGACTGCTAATCCATT.GTGC...TTT.......GCACG.CGTGGGTTCGAAT......CCCAT...CCTCGTCG... tRNA-Ser-GCT-3-1 Sc: 88.8  
+GACGAGGTGGCCGAGT..GGTtA.AGGCGATGGACTGCTAATCCATT.GTGC...TCT.......GCACG.CGTGGGTTCGAAT......CCCAT...CCTCGTCG... tRNA-Ser-GCT-4-3 Sc: 88.1  
+GACGAGGTGGCCGAGT..GGTtA.AGGCGATGGACTGCTAATCCATT.GTGC...TCT.......GCACG.CGTGGGTTCGAAT......CCCAT...CCTCGTCG... tRNA-Ser-GCT-4-2 Sc: 88.1  
+GACGAGGTGGCCGAGT..GGTtA.AGGCGATGGACTGCTAATCCATT.GTGC...TCT.......GCACG.CGTGGGTTCGAAT......CCCAT...CCTCGTCG... tRNA-Ser-GCT-4-1 Sc: 88.1  
+GACGAGGTGGCCGAGT..GGTtA.AGGCGATGGACTGCTAATCCATT.GTGC...TCT.......GCACA.CGTGGGTTCGAAT......CCCAT...CCTCGTCG... tRNA-Ser-GCT-5-1 Sc: 85.6  
+>>>>.....>>>.............<<<.>>>>>.......<<<<<..>>>>.............<<<<...>>>>>.............<<<<<......<<<<....
+GAGG.CCTGGCCGAGT..GGTtA.AGGCGATGGACTGCTAATCCATT.GTGC...TCT.......GCACG.CGTGGGTTCGAAT......CCCAT......CCTCG... tRNA-Ser-GCT-6-1 Sc: 62.4 
+>>>>>>>..>..>..........<..<...>>>......................<<<....................>>>>.......<<<<....<<<<<<<.
+GGCAGGGTAGGGTAGA.GGTtA.AAACCA.TGGA.TTCTAG.........A...GCCA..GA................TGGGTTCAAATCCCGG...CTCTGCCG tRNA-Sup-CTA-2-1 Sc: 20.7  
+>>>>>.>...>.>..........<.<..>.>>.>....................<.<<..<................>>>>>.......<<<<<...<.<<<<<.
+GGCAGTGTGATGTGGA.GGA.A.GGGAGCaTGTA.CTCTACaggctttagC...TTCAgaGGG...........G.CTTGGGTTCAAATCCCAG...CTCTGCCA tRNA-Sup-CTA-chr5-1 Sc: 20.2  
+>>>>>>>..>>>>..........<<<<.>.>.>>....................<<.<..<................>>>>>.......<<<<<...<<<<<<<.
+GCCCGGATAGTTCAGTTGGT.A.GAGCAT.CAGA.CT..TA.........A...TCAG..AGG...........GtCCAGGGTTCAAGTCCCTG...TTTGGGTG tRNA-Sup-TTA-1-1 Sc: 53.5  
+>>>>>>>..>>>>..........<<<<.>>>>>.............................................................................................<<<.<<...................>>>>>............<<<<<.<<<<<<<.
+GGCGCCGTGGCTTAGTTGGTtA.AAGCGCCTGTCTAGTA......................................................................................AACA.GGAG..............AtCCTGGG..TTCGAAT...CCCAG.CGGTGCCT tRNA-Thr-AGT-1-3 Sc: 80.0  
+GGCGCCGTGGCTTAGTTGGTtA.AAGCGCCTGTCTAGTA......................................................................................AACA.GGAG..............AtCCTGGG..TTCGAAT...CCCAG.CGGTGCCT tRNA-Thr-AGT-1-2 Sc: 80.0  
+GGCGCCGTGGCTTAGTTGGTtA.AAGCGCCTGTCTAGTA......................................................................................AACA.GGAG..............AtCCTGGG..TTCGAAT...CCCAG.CGGTGCCT tRNA-Thr-AGT-1-1 Sc: 80.0  
+GGCCCTGTGGCTTAGCTGGTcA.AAGCGCCTGTCTAGTA......................................................................................AACA.GGAG..............AtCCTGGG..TTCGAAT...CCCAG.CGGGGCCT tRNA-Thr-AGT-6-1 Sc: 79.0  
+GGCTCCGTGGCTTAGCTGGTtA.AAGCGCCTGTCTAGTA......................................................................................AACA.GGAG..............AtCCTGGG..TTCGAAT...CCCAG.CGGGGCCT tRNA-Thr-AGT-2-2 Sc: 78.4  
+GGCTCCGTGGCTTAGCTGGTtA.AAGCGCCTGTCTAGTA......................................................................................AACA.GGAG..............AtCCTGGG..TTCGAAT...CCCAG.CGGGGCCT tRNA-Thr-AGT-2-1 Sc: 78.4  
+GGCGCCGTGGCTTAGCTGGTtA.AAGCGCCTGTCTAGTA......................................................................................AACA.GGAG..............AtCCTGGG..TTCGAAT...CCCAG.CGGTGCCT tRNA-Thr-AGT-5-1 Sc: 78.0  
+GGCTCCGTAGCTTAGTTGGTtA.AAGCGCCTGTCTAGTA......................................................................................AACA.GGAG..............AtCCTGGG..TTCGACT...CCCAG.CGGGGCCT tRNA-Thr-AGT-3-1 Sc: 77.3  
+GGCTTCGTGGCTTAGCTGGTtA.AAGCGCCTGTCTAGTA......................................................................................AACA.GGAG..............AtCCTGGG..TTCGAAT...CCCAG.CGAGGCCT tRNA-Thr-AGT-4-1 Sc: 76.5  
+.>>>>>>..>>>>..........<<<<.>>>>>.............................................................................................<<<.<<....................>>................<<..<<<<<<..
+AGCACCATGGCTTAGCTGGTtA.AAGCACCTGTCTAGTA......................................................................................AACA.GGAG..............AtCCTGAGt.TTCAATT....CCAA.TGGTGCCT tRNA-Thr-AGT-7-1 Sc: 31.9    
+>>>>>>>..>>>............<<<.>>>>>.............................................................................................<<<.<<...................>>>>>............<<<<<.<<<<<<<.
+GGCGCGGTGGCCAAGT.GGT.A.AGGCGTCGGTCTCGTA......................................................................................AACC.GAAG..............AtCACGGG..TTCGAAC...CCCGT.CCGTGCCT tRNA-Thr-CGT-2-1 Sc: 79.3  
+GGCGCGGTGGCCAAGT.GGT.A.AGGCGTCGGTCTCGTA......................................................................................AACC.GAAG..............AtCGCGGG..TTCGAAC...CCCGT.CCGTGCCT tRNA-Thr-CGT-4-1 Sc: 78.5  
+>>>>>>>..>>>>..........<<<<.>>>>>.............................................................................................<<<.<<...................>>>>>............<<<<<.<<<<<<<.
+GGCTCTATGGCTTAGTTGGTtA.AAGCGCCTGTCTCGTA......................................................................................AACA.GGAG..............AtCCTGGG..TTCGACT...CCCAG.TGGGGCCT tRNA-Thr-CGT-1-1 Sc: 76.7  
+GGCTCTGTGGCTTAGTTGGCtA.AAGCGCCTGTCTCGTA......................................................................................AACA.GGAG..............AtCCTGGG..TTCGAAT...CCCAG.CGGGGCCT tRNA-Thr-CGT-3-1 Sc: 75.5  
+GGCCCTGTAGCTCAGC.GGTtG.GAGCGCTGGTCTCGTA......................................................................................AACCtAGGG..............GtCGTGAG..TTCAAAT...CTCAC.CAGGGCCT tRNA-Thr-CGT-5-1 Sc: 57.1  
+>>>.>>>..>>>>..........<<<<.>>>>>.............................................................................................<<<.<<....................>>>>............<<<<..<<<.<<<.
+GGCAGAGTGGTGCAGC.GGA.A.GCGTGCTGGGCCCGTA......................................................................................ACCC.AGAG..............GtCAATGG..ATCGAAG...CCATC.CTTGGCTA tRNA-Thr-CGT-6-1 Sc: 35.7  
+>>>>>.>..>>>>..........<<<<.>>>>...............................................................................................<<.<<...................>>..................<<.<.<<<<<.
+GGCTCTATGGCTTAGTTGGTtA.AAGCGCCTGTCTCGTAaaaaatgtcagcctgagcaacatttctacaaattattatttttttaattagctgggaatggtggcacactcctgtagtcccagctaCTCA.GGAGACTG..........A.AGCAGGag...GATC......GC.TTGAGCCC tRNA-Thr-CGT-chr1-118 Sc: 26.2  
+>>>>>>>..>>>>..........<<<<.>>>>>.............................................................................................<<<.<<...................>>>>>............<<<<<.<<<<<<<.
+GGCTCTATGGCTTAGTTGGTtA.AAGCGCCTGTCTTGTA......................................................................................AACA.GGAG..............AtCCTGGG..TTCGAAT...CCCAG.TAGAGCCT tRNA-Thr-TGT-1-1 Sc: 80.6  
+GGCTCCATAGCTCAGT.GGTtA.GAGCACTGGTCTTGTA......................................................................................AACC.AGGG..............GtCGCGAG..TTCGATC...CTCGC.TGGGGCCT tRNA-Thr-TGT-2-1 Sc: 79.9  
+GGCTCCATAGCTCAGG.GGTtA.GAGCGCTGGTCTTGTA......................................................................................AACC.AGGG..............GtCGCGAG..TTCAATT...CTCGC.TGGGGCCT tRNA-Thr-TGT-3-1 Sc: 78.1  
+GGCCCTATAGCTCAGG.GGTtA.GAGCACTGGTCTTGTA......................................................................................AACC.AGGG..............GtCGCGAG..TTCAAAT...CTCGC.TGGGGCCT tRNA-Thr-TGT-5-1 Sc: 76.6  
+GGCTCCATAGCTCAGG.GGTtA.GAGCACTGGTCTTGTA......................................................................................AACC.AGGG..............GtCGCGAG..TTCAAAT...CTCGC.TGGGGCCT tRNA-Thr-TGT-4-1 Sc: 76.0  
+GGCTCCATAGCTCAGG.GGTtA.GAGCACTGGTCTTGTA......................................................................................AACC.AGG...............GtCGCGAG..TTCAAAT...CTCGC.TGGGGCCT tRNA-Thr-TGT-6-1 Sc: 73.5 
+>>>>>>>..>>>>........<<<<.>>>>>.......<<<<<................>>>>>.......<<<<<<<<<<<<.
+GACCTCGTGGCGCAACGGTA.GCGCGTCTGACTCCAGATCAGAAG...........GcTGCGTGTTCGAATCACGTCGGGGTCA tRNA-Trp-CCA-4-1 Sc: 77.2  
+GGCCTCGTGGCGCAACGGTA.GCGCGTCTGACTCCAGATCAGAAG...........GtTGCGTGTTCAAATCACGTCGGGGTCA tRNA-Trp-CCA-1-1 Sc: 76.4  
+GACCTCGTGGCGCAACGGTA.GCGCGTCTGACTCCAGATCAGAAG...........GtTGCGTGTTCAAATCACGTCGGGGTCA tRNA-Trp-CCA-3-3 Sc: 75.9  
+GACCTCGTGGCGCAACGGTA.GCGCGTCTGACTCCAGATCAGAAG...........GtTGCGTGTTCAAATCACGTCGGGGTCA tRNA-Trp-CCA-3-2 Sc: 75.9  
+GACCTCGTGGCGCAACGGTA.GCGCGTCTGACTCCAGATCAGAAG...........GtTGCGTGTTCAAATCACGTCGGGGTCA tRNA-Trp-CCA-3-1 Sc: 75.9  
+GACCTCGTGGCGCAATGGTA.GCGCGTCTGACTCCAGATCAGAAG...........GtTGCGTGTTCAAGTCACGTCGGGGTCA tRNA-Trp-CCA-2-1 Sc: 75.6  
+GACCTCGTGGCGCAACGGCA.GCGCGTCTGACTCCAGATCAGAAG...........GtTGCGTGTTCAAATCACGTCGGGGTCA tRNA-Trp-CCA-5-1 Sc: 71.2  
+>>>>>>...>>>>........<<<<.>>>>>.......<<<<<................>>.>>.......<<.<<.<<<<<<.
+GGCCTCATGGTGCAACAGTA.GTGTGTCTGACTCCAGATCAGAAG...........GtTGTATGTTCAAATCACGTAGGGGTCA tRNA-Trp-CCA-chr7-31 Sc: 26.0  
+>>>>>>>..>>>>...............<<<<..>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<<<....
+CCTTCAATAGTTCAGCTGGT..A.....GAGCA.GAGGACTATAGctacttcctcagtaggagac.GTCCTTAG..............GtTGCTGGTTCGATT.....CCAGC...TTGAAGGA... tRNA-Tyr-ATA-1-1 Sc: 59.2  
+>>>>>>>..>>>.................<<<..>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<<<....
+GGTAAAATGGCTGAGT............AAGCA.TTAGACTATAA.....................ATCTAAAG..............A.CAGAGG.TCAAGG.....CCTCT...TTTTACCA... tRNA-Tyr-ATA-chr11-9 Sc: 39.5  
+>>>>>>>...>>.................<<...>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<<<....
+GGTAAAATGACTGAGT............AAGCA.TTAGACTATAA.....................ATCTAAAG..............A.CAGAGG.TCAAGA.....CCTCT...TTTTACCA... tRNA-Tyr-ATA-chr1-52 Sc: 32.5  
+>>>>>>>..>>>.................<<<..>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<<<....
+GGTAAAATGGCTGAGT............AAGCT.TTAGACTATAA.....................ATCTAAAG.................AGAGATT.GAGC.....TCTCT...TTTTACCA... tRNA-Tyr-ATA-chr1-11 Sc: 28.5  
+>>>>>>>..>>>.................<<<..>>>>>............................<<<<<.....................>>>............<<<.....<<<<<<<....
+GGTAAAATGGCTGAGT............AAGCA.TTAGACTATAA.....................ATCTAAAG..............A.CAGAGG.TCAAGG.....CCT.....TTTTACCA... tRNA-Tyr-ATA-chr9-2 Sc: 25.0  
+>>>>>>>..>>>>...............<<<<..>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<<<....
+CCTTCGATAGCTCAGTTGGT..A.....GAGCG.GAGGACTGTAGtggatagggcgtggca.....ATCCTTAG..............GtCGCTGGTTCGATT.....CCGGC...TCGAAGGA... tRNA-Tyr-GTA-2-1 Sc: 81.6  
+CCTTCGATAGCTCAGTTGGT..A.....GAGCG.GAGGACTGTAGttggctgtgtccttagac...ATCCTTAG..............GtCGCTGGTTCGAAT.....CCGGC...TCGAAGGA... tRNA-Tyr-GTA-1-1 Sc: 81.5  
+CCTTCGATAGCTCAGTTGGT..A.....GAGCG.GAGGACTGTAGgctcattaagcaaggt.....ATCCTTAG..............GtCGCTGGTTCGAAT.....CCGGC...TCGGAGGA... tRNA-Tyr-GTA-3-1 Sc: 80.5  
+CCTTCGATAGCTCAGCTGGT..A.....GAGCG.GAGGACTGTAGtacttaatgtgtggtc.....ATCCTTAG..............GtCGCTGGTTCGATT.....CCGGC...TCGAAGGA... tRNA-Tyr-GTA-5-5 Sc: 79.6  
+CCTTCGATAGCTCAGCTGGT..A.....GAGCG.GAGGACTGTAGgcgcgcgcccgtggcc.....ATCCTTAG..............GtCGCTGGTTCGATT.....CCGGC...TCGAAGGA... tRNA-Tyr-GTA-5-2 Sc: 79.6  
+CCTTCGATAGCTCAGCTGGT..A.....GAGCG.GAGGACTGTAGattgtatagacatttgcggacATCCTTAG..............GtCGCTGGTTCGATT.....CCAGC...TCGAAGGA... tRNA-Tyr-GTA-4-1 Sc: 79.5  
+CCTTCGATAGCTCAGCTGGT..A.....GAGCG.GAGGACTGTAGctacttcctcagcaggagac.ATCCTTAG..............GtCGCTGGTTCGATT.....CCGGC...TCGAAGGA... tRNA-Tyr-GTA-5-1 Sc: 79.4  
+CCTTCGATAGCTCAGCTGGT..A.....GAGCG.GAGGACTGTAGcctgtagaaacatttgtggacATCCTTAG..............GtCGCTGGTTCGATT.....CCGGC...TCGAAGGA... tRNA-Tyr-GTA-5-3 Sc: 79.3  
+CCTTCGATAGCTCAGCTGGT..A.....GAGCG.GAGGACTGTAGattgtacagacatttgcggacATCCTTAG..............GtCGCTGGTTCGATT.....CCGGC...TCGAAGGA... tRNA-Tyr-GTA-5-4 Sc: 79.3  
+CCTTCGATAGCTCAGCTGGT..A.....GAGCG.GAGGACTGTAGgggtttgaatgtggtc.....ATCCTTAG..............GtCGCTGGTTCGAAT.....CCGGC...TCGGAGGA... tRNA-Tyr-GTA-6-1 Sc: 78.5  
+CCTTCGATAGCTCAGCTGGT..A.....GAGCG.GAGGACTGTAGactgcggaaacgtttgtggacATCCTTAG..............GtCGCTGGTTCAATT.....CCGGC...TCGAAGGA... tRNA-Tyr-GTA-7-1 Sc: 78.1  
+CTTTCGATAGCTCAGTTGGT..A.....GAGCG.GAGGACTGTAGgttcattaaactaaggc....ATCCTTAG..............GtCGCTGGTTCGAAT.....CCGGC...TCGAAGGA... tRNA-Tyr-GTA-8-1 Sc: 75.2  
+>>>>>>>..>>>>...............<<<<..>>>>>............................<<<<<...................>.>>>............<<<.<...<<<<<<<....
+TCTTCAATAGCTCAGCTGGT..A.....GAGCG.GAGGACTGTAGgtgcacgcccgtggcc.....ATTCTTAG..............G.TGCTGGTTTGATT.....CCGAC...TTGGAGAG... tRNA-Tyr-GTA-9-1 Sc: 52.2  
+>>>>>.>..>>>>...............<<<<..>>>>..............................<<<<...................>>>>>............<<<<<...<.<<<<<....
+GGGGGTATAGCTCAG..GGCt.A.....GAGCTtTTTGACTGTAG.....................AGCAAGAG..............GtCCCTGGTTCAAAT.....CCAGG...TTCTCCCT... tRNA-Tyr-GTA-10-1 Sc: 49.8  
+>>>>>>>..>>>.................<<<..>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<<<....
+GGTAAAATGGCTGAGT............AAGCA.TTAGACTGTAA.....................ATCTAAAG..............A.CAGAGG.TCAAGG.....CCTCT...TTTTACCA... tRNA-Tyr-GTA-chr7-6 Sc: 40.0  
+.....>>..>>>>...............<<<<..>>>.>............................<.<<<...................>>>>>............<<<<<...<<.........
+X....TATAGCTCAGT.GGT..A.....GAGCA.TTTAACTGTAG.....................ATCAAGAG..............GtCCCTGGATCAACT.....CTGGG...TG......... tRNA-Tyr-GTA-11-1 Sc: 38.1  
+>>>>>>>..>>>.................<<<..>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<<<....
+GGTAAAATGGCTGAGT............AAGCA.TTGGACTGTAA.....................ATCTAAAG..............A.CAGAGG.TCAAGA.....CCTCT...TTTTACCA... tRNA-Tyr-GTA-chr9-10 Sc: 37.1  
+GGTAAAATGGCTGAGC............AAGCA.TTAGACTGTAA.....................ATCTAAAG..............A.CAGAGGTT.AAGG.....CCTCT...TTTTACCA... tRNA-Tyr-GTA-chr2-12 Sc: 36.5  
+GGTAAAATGGCTGAGT......A.....AAGCA.TTAGACTGTAA.....................ATCTAAGG..............A.CAGAGG..CTAAA.....CCTCT...TTTTACCA... tRNA-Tyr-GTA-chr9-4 Sc: 35.9  
+>>>>>>>..>>>.................<<<..>.>>>............................<<<.<...................>>>>>............<<<<<...<<<<<<<....
+GGTAAAATGGCTGAGT............AAGCA.TGAGACTGTAA.....................ATCTAAAG..............A.CAGAGG.TCAAGA.....CCTCT...TTTTACCA... tRNA-Tyr-GTA-chr17-33-nmt Sc: 33.3  
+>>.>>>>..>>>.................<<<..>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<.<<....
+GGTAAAATGGCTGAGT............AAGCA.TTAGACTGTAA.....................ATCTAAAG..............A.CAGAGG.TCAAGG.....CCTCT...TTTTTCCT... tRNA-Tyr-GTA-chr7-1 Sc: 28.0  
+>>>>>>>..>>>.................<<<..>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<<<....
+GGTAAAATGGCTGAGT.G..........AAGCA.TTGGACTGTAA.....................ATCTAAAG..............A.CAGGGGTT..AAG.....CCTCT...TTTTACCA... tRNA-Tyr-GTA-chr21-2 Sc: 26.8  
+GGTAAAATGGCTGAGT.G..........AAGCA.TTGGACTGTAA.....................ATCTAAAG..............A.CAGGGGTT..AAG.....CCTCT...TTTTACCA... tRNA-Tyr-GTA-chr1-127 Sc: 26.8  
+>>>>>>>...>>.................<<...>>.>>............................<<.<<...................>>>>>............<<<<<...<<<<<<<....
+GGTAAAATGACTGAGT............AAGCG.TTAGACTGTAA.....................ATCAAAAG..............A.TGGAGG.TCAAGG.....CCTCC...TTTTACCA... tRNA-Tyr-GTA-chr2-23-nmt Sc: 23.8  
+.>>>>>>..>>>.................<<<..>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<<.....
+CGTAAAATGGCTGAGT......A.....AGGCA.TTAGACTGTAA.....................ATCTAAAG..............A.CAGAGG..CTAAA.....CCTCT...TTTTACCA... tRNA-Tyr-GTA-chr2-10-nmt Sc: 23.3  
+>.>>>>>..>>>.................<<<..>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<.<....
+GGTAAAGTGGCTGAAT............AAGCA.TTAGACTGTAA.....................ATCTAAAG..............A.CAGAGG.TCAAGG.....CCTCT...TTTTAGCA... tRNA-Tyr-GTA-chr4-1-nmt Sc: 23.0  
+>>>>>>>..>>>.................<<<..>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<<<....
+GGTAAAATGGCTGAGC............AAGCA.TTAGACTGTAA.....................ATCTGAAA..............A.CAGAGG.TCAAAG.g...TCTCT...TTTTACCA... tRNA-Tyr-GTA-chr7-2 Sc: 22.5  
+>.>>>>>..>>>.................<<<..>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<.<....
+GGTAAAATGGCTGAGC............AAGCA.TTGGACTGTAA.....................ATCTAAAG..............A.CAGATGTT.GAGC.....CATCT...TTTTAGCA... tRNA-Tyr-GTA-chr10-3 Sc: 22.1  
+>>>>>>>..>>>.................<<<..>>>>>............................<<<<<............................................<<<<<<<....
+GGTAAGATGGCTGAGC......A.....AAGCA.TTAGACTGTAA.....................ATCTAAA...........................AAC.....TCTCT...TTTTACCA... tRNA-Tyr-GTA-chr17-32-nmt Sc: 21.8  
+>.>>>.>...>>>...............<<<...>..>>............................<<..<...................>>>>>............<<<<<...<.<<<.<....
+GTCAGTGTTGCACAAC.GGTtaA.....GTGAA.G.AGGCTGTAA.....................ACC..CAGACT...........G.GATGGGTTCAATT.....CCCAT...CTCTGCCG... tRNA-Tyr-GTA-12-1 Sc: 21.1  
+>>>>>>>..>>>.................<<<..>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<<<....
+GGTAAAATGGCTGAGT.G..........AAGCA.TTGGACTGTAA.....................ATCTAAAG..............A.CAGGGG..CTAAG.....CCTCT...TTTTACCA... tRNA-Tyr-GTA-chr14-8 Sc: 20.9  
+>>>>>>>...>>.................<<...>>>>>............................<<<<<...................>>>>>............<<<<<...<<<<<<<....
+GGTAAAATGACTGAAT............AAGCC.TTAGACTGTAA.....................ATCTGAAG..............A.CAGAGG.TCAAGG.....CCTCT...TTTTACCA... tRNA-Tyr-GTA-chr8-7 Sc: 20.6  
+>>>>>>>..>>>..............<<<.>>>>>........<<<.<<................>>>>>.......<<<<<.<<<<<<<....
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTAA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-AAC-1-5 Sc: 77.9  
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTAA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-AAC-1-4 Sc: 77.9  
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTAA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-AAC-1-3 Sc: 77.9  
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTAA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-AAC-1-2 Sc: 77.9  
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTAA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-AAC-1-1 Sc: 77.9  
+GTTTCCGTAGTGTAGT..GGTcA..TCACGTTCGCCTAA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-AAC-2-1 Sc: 77.9  
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTAA.CACGCG.AAAG...........GtCCCTGGATCAAAACCAGG.CGGAAACA... tRNA-Val-AAC-3-1 Sc: 73.9  
+>>>>>>>..>>>..............<<<.>>>>>........<<<.<<................>.>>>.......<<<.<.<<<<<<<....
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTAA.CACGCG.AAAG...........GtCCGCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-AAC-4-1 Sc: 66.4  
+>>>>>>>..>>>>............<<<<.>>>>..........<<.<<................>>>>>.......<<<<<.<<<<<<<....
+GGGGGTGTAGCTCAGT..GGT.A..GAGCGTATGCTTAA.CATTCA.TGAG...........GcTCTGGGTTCGATCCCCAG.CACTTCCA... tRNA-Val-AAC-6-1 Sc: 63.8  
+>>>>>.>..>>>..............<<<.>>>>>........<<<.<<................>>>>>.......<<<<<.<.<<<<<....
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTTGCCTAA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CAGAAACA... tRNA-Val-AAC-5-1 Sc: 62.7  
+>>>>>....>>>..............<<<.>>>.>........<.<.<<................>>>>>.......<<<<<...<<<<<....
+GTTTCCATAGTGTACT..GGTtA..TCACATTCACCTAA.CACGCG.AAAG...........GtCCTTGGTTTGAAACCAGG.CAGAAACA... tRNA-Val-AAC-7-1 Sc: 35.0  
+>>>>>>.....>..............<...>>>>>........<<<.<<................>>>>>.......<<<<<..<<<<<<....
+GTTTCCATAGCGTAGT..AATtA..TCAAGTTTGCCTAA.CACGCG.AAAT...........GtCCCCGGTTCAAAACCGGG.CGGAAACA... tRNA-Val-AAC-chr6-84 Sc: 24.6    
+>>>>>>>..>>>..............<<<.>>>>>........<<<.<<................>>>>>.......<<<<<.<<<<<<<....
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTCA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-CAC-1-6 Sc: 78.8  
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTCA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-CAC-1-5 Sc: 78.8  
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTCA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-CAC-1-4 Sc: 78.8  
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTCA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-CAC-1-3 Sc: 78.8  
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTCA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-CAC-1-2 Sc: 78.8  
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTCA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-CAC-1-1 Sc: 78.8  
+GCTTCTGTAGTGTAGT..GGTtA..TCACGTTCGCCTCA.CACGCG.AAAG...........GtCCCCGGTTCGAAACCGGG.CAGAAGCA... tRNA-Val-CAC-2-1 Sc: 78.7  
+GTTTCCGTAGTGTAGC..GGTtA..TCACATTCGCCTCA.CACGCG.AAAG...........GtCCCCGGTTCGATCCCGGG.CGGAAACA... tRNA-Val-CAC-3-1 Sc: 76.4  
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTCA.CACGCG.AAAG...........GtCCCCGGTTCGAAACTGGG.CGGAAACA... tRNA-Val-CAC-4-1 Sc: 72.9  
+GTTTCCGTAGTGTAGT..GGTtA..TCACGTTCGCCTCA.CACGCGtAAAG...........GtCCCCGGTTCGAAACCGGG.CGGAAACA... tRNA-Val-CAC-5-1 Sc: 65.2  
+>>>>>>>..>>>>............<<<<.>>>>>........<<<.<<................>>.>>.......<<.<<.<<<<<<<....
+GTTTCCGTAGTGGAGT..GGTtA..TCACGTTCGCCTCA.CACGCG.AAAG...........GtCCCCGGTTTGAAACCAGG.CGGAAACA... tRNA-Val-CAC-6-1 Sc: 61.8  
+>>..>>>..>>>>............<<<<.>>>>>........<<<.<<................>>>>>.......<<<<<.<<<..<<....
+GCACTGGTGGTTCAGT..GGT.A..GAATTCTCGCCTCA.CACGCG.GGAC...........A.CCCGGGTTCAATTCCCGG.TCAAGGCA... tRNA-Val-CAC-8-1 Sc: 52.7  
+>>>>>>>..>>>..............<<<.>>>>>........<<<.<<................>>.>>.......<<.<<.<<<<<<<....
+GTTTCCGTAGTGTAGT..GGTtA..TTATGTTCGCCTCA.CACGCG.AAAA...........GtCCCCGGTTCGAAATCAGG.CGGGAACA... tRNA-Val-CAC-7-1 Sc: 50.7  
+>>>>>>>..>>................<<.>>.>>........<<..<<................>>>>>.......<<<<<.<<<<<<<....
+GTTTCTGTAGTATGGT..GGTtA..TCACGTTAGTCTCA.CACGTG.AAAG...........GtCCCTGGTTCGAAACCAGG.TGGAAACA... tRNA-Val-CAC-9-1 Sc: 47.1  
+>>>>>>>..>>>..............<<<.>>>.>........<.<.<<................>>>>.........<<<<.<<<<<<<....
+GTTTCTGTGGTGTAGT..GGTtA..TCATGTTCGCCTCA.CACGAG.AAAA...........GtCCCTGATTCGAGACTGGG.TGGGAACG... tRNA-Val-CAC-10-1 Sc: 34.1  
+>>>>>>>..>>>..............<<<.>>>>..........<<.<<................>.>>>.......<<<.<.<<<<<<<....
+GTTTCTGTGGTGTAGT..GGTtA..TTATGTTCGCTTCA.CATATG.AAAG...........GtCTCTGGTTCGAGACTGCG.TGGGAACA... tRNA-Val-CAC-11-2 Sc: 22.6  
+GTTTCTGTGGTGTAGT..GGTtA..TTATGTTCGCTTCA.CATATG.AAAG...........GtCTCTGGTTCGAGACTGCG.TGGGAACA... tRNA-Val-CAC-11-1 Sc: 22.6   
+>>>>>>>..>>>..............<<<.>>>>>........<<<.<<................>>>>>.......<<<<<.<<<<<<<....
+GGTTCCATAGTGTAGT..GGTtA..TCACGTCTGCTTTA.CACGCA.GAAG...........GtCCTGGGTTCGAGCCCCAG.TGGAACCA... tRNA-Val-TAC-1-2 Sc: 78.8  
+GGTTCCATAGTGTAGT..GGTtA..TCACGTCTGCTTTA.CACGCA.GAAG...........GtCCTGGGTTCGAGCCCCAG.TGGAACCA... tRNA-Val-TAC-1-1 Sc: 78.8  
+GGTTCCATAGTGTAGC..GGTtA..TCACGTCTGCTTTA.CACGCA.GAAG...........GtCCTGGGTTCGAGCCCCAG.TGGAACCA... tRNA-Val-TAC-2-1 Sc: 76.8  
+GGTTCCATAGTGTAGT..GGTtA..TCACATCTGCTTTA.CACGCA.GAAG...........GtCCTGGGTTCAAGCCCCAG.TGGAACCA... tRNA-Val-TAC-3-1 Sc: 75.5  
+GTTTCCGTGGTGTAGT..GGTtA..TCACATTCGCCTTA.CACGCG.AAAG...........GtCCTCGGGTCGAAACCGAG.CGGAAACA... tRNA-Val-TAC-4-1 Sc: 65.4  
+>>>>>>>..>>>..............<<<.>>.>..........<..<<................>>>>>.......<<<<<.<<<<<<<....
+GGTTCCATAGTGTAAC..AGTtA..TCATGTCTGCTTTA.CACACT.GAAG...........GtCCTGGGTTCAAACTCCAG.TGGAACCA... tRNA-Val-TAC-chr2-6 Sc: 43.5  
+>>>>>>>..>>>>............<<<<.>>>>..........<<.<<................>>>>>.......<<<<<.<<<<<<<....
+GTTAAGACGGCAGAGCCcGGCaA..TTGCGTAAAATTTA.CAACTT.TATG...........GgCAGAGGTTCAATTCCTCT.TCTTAACA... tRNA-Val-TAC-1-1-nmt Sc: 36.9  
+>.>>>>>..>>>..............<<<.>>>>>........<<<.<<................>>..>.......<..<<.<<<<<.<....
+GATTCTATAGTGTAGC..AGTtA..TCACATCTGCTTTA.CATGCA.GAAG...........GtCCTAGGTTTGAGCCGCGG.TGGAACCA... tRNA-Val-TAC-chr17-24 Sc: 21.2
+...........................................................................
+GGCAGTGTAGCTTAGTGGTtgGGAGCACAGACccaTTTCAGACCACCTGGATTCAAATTCCAGCTTTGCCA.... tRNA-Und-NNN-10-1 Sc: 26.9
+GGTCTTGTGCTCAGTGGAAGCCTCTGTCTGACCaTACAGATGaTCCAGGTTCGAATCCTGGCAAGGCCA...... tRNA-Und-NNN-2-1 Sc: 29.3
+TCCCTGGTGGTCTAGTGGCtAGGATTCTaGTGCTTTAACTGCcAGCGCCCAGGTTCAATTCCCGGTTAGGAAA.. tRNA-Und-NNN-3-1 Sc: 25.9
+TCCCTGGTAGTCTAGTGGTtAGGATTCCGCGCTCGCCATCACGaCCCGGGTTCGATTCCTGGTCAGGGAA..... tRNA-Und-NNN-4-1 Sc: 34.2
+GGCAGAATGGTGCAGCGGTtcAGCACCCAGgCTCTGCAGcCAGCTGTTGCCTGGGCTCAAATCCCAGCTCTGCCA tRNA-Und-NNN-5-1 Sc: 32.9
+GTCAGTATGGCATAGCAGTgaatAGTGTGGATTCTGAGGCTAAACTGCCTGGGTTCAAATCCCAGTTCTGCCA.. tRNA-Und-NNN-chr11-14 Sc: 20.2
+GGTAAAATGGCTGAGTAAGCATTAGACTGTAATCTAAAAaCAGAGATCAAGACCTCTTTTTACCA.......... tRNA-Und-NNN-chr2-20 Sc: 22.1
+GGTAAAATGGCTGAGTAAGCATTAGACTGTAATCTGAAAaCAGAGGTCAAGACCTCTTTTTACCA.......... tRNA-Und-NNN-chr2-8 Sc: 25.2
+GGCAGAATGGTTTAGTGGAcAAGGCACAGAACTGTACTTGGGTTCAAGTCCCACCTCTGC............... tRNA-Und-NNN-chr4-5 Sc: 20.3

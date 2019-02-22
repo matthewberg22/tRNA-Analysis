@@ -6,8 +6,9 @@ use warnings;
 #Department of Biochemistry, University of Western Ontario
 #February 6, 2019
 
-# Script to trim count the allele frequency in our sample and the frequency of each mutant tRNA
-# To run enter script.pl total_allele_count.txt (from trimming script) mutant_list.txt
+#Script to count the allele frequency in our sample and the frequency of each mutant tRNA
+#To run enter: Allele_Frequencies.pl total_alleles.txt mutant_list.txt
+#Both arguments come from tRNA_trimming.pl
 
 #####Reads in input files
 ##############################################################################
@@ -18,12 +19,15 @@ my $mutants = $ARGV[1];
 #####OUTPUT FILES
 ##############################################################################
 
-system("rm total_counts.txt"); #for Windows computers use del and for UNIX use rm -f
+system("rm total_counts.txt");
 open(out1, ">total_counts.txt") or die("Cannot open output1 file");
-system("rm allmutants_AF.txt"); #for Windows computers use del and for UNIX use rm -f
+system("rm allmutants_AF.txt");
 open(out2, ">allmutants_AF.txt") or die("Cannot open output2 file"); 
-system("rm nonredundant_mutants.txt"); #for Windows computers use del and for UNIX use rm -f
-open(out3, ">nonredundant_mutants.txt") or die("Cannot open output3 file");  
+system("rm nonredundant_mutants.txt");
+open(out3, ">nonredundant_mutants.txt") or die("Cannot open output3 file");
+system("rm fasta_nonredundant_mutants.fasta"); 
+open(out4, ">fasta_nonredundant_mutants.fasta") or die("Cannot open output4 file");
+  
 
 #####Reads in counts file and sums up totals
 ###############################################################################
@@ -64,11 +68,11 @@ close(inp0);
 
 print out1 "tRNA\tTotalAlleles\n";
 
+#Prints the total allele counts for each loci (or group of loci if they cannot be uniquely identified) from all samples
 foreach my $keys (sort keys %tRNAtotalcounts){
 	print out1 "$keys\t$tRNAtotalcounts{$keys}\n";
 }
 
-print "There were $samplecounter individuals in this sample";
 
 #####Reads in mutant file and counts up the number of times each mutation occurs
 ###############################################################################
@@ -103,22 +107,21 @@ while(<inp1>){
 }
 close(inp1);
 
-# foreach my $keys (sort keys %MutantFreq){
-	# print "$keys \t $MutantFreq{$keys}\n";
-# }
-
 open(inp1, "$mutants") or die("Cannot open allele_counts file");
 	my %tRNAID;
 	my %AFall;
 	my %sequence;
 	my $mutation;
 
+print out2 "Sample\ttRNA\tMutation\tCoverage\tCount\tAF\n";
+	
 while(<inp1>){
 	chomp;
 	my $check = substr($_, 0, 1);
 	
 	if($check eq "#"){
-		print out2 "$_\n";
+		print out2 substr($_, 2);
+		print out2 "\t";
 	}
 	
 	elsif($check eq ">"){
@@ -126,19 +129,37 @@ while(<inp1>){
 		my $tRNAname = substr($splitLine[0], 1);
 		$mutation = $splitLine[1];
 		my $AF = $MutantFreq{$mutation}/$tRNAtotalcounts{$tRNAname};
-		print out2 "$_\tAF=$AF\n";
+		print out2 "$_\t$AF\n";
 		$tRNAID{$mutation} = $tRNAname;
 		$AFall{$mutation} = $AF;
 	}
 	
-	elsif($check eq "A"|$check eq "C"|$check eq "G"|$check eq "T"){
-		print out2 "$_\n";
+	elsif($check eq "A"|$check eq "C"|$check eq "G"|$check eq "T"|$check eq "-"){
 		$sequence{$mutation} = $_;
 	}
 }
 close(inp1);
 
+print out3 "Header-tRNA\tMutation\tAF\tSeq\n";
+
 foreach my $keys (sort keys %tRNAID){
-	print out3 ">$tRNAID{$keys}\t$keys\tAF=$AFall{$keys}\n";
+	print out3 "$tRNAID{$keys}\t$keys\t$AFall{$keys}\t";
 	print out3 "$sequence{$keys}\n";
+	
+	my @splitkey = split(" ", $keys);
+	
+	print out4 ">$tRNAID{$keys}.";
+	foreach(@splitkey){
+		print out4 "$_.";
+	}
+	print out4 "$AFall{$keys}\n";
+	if(index($sequence{$keys}, "-") != -1){
+		$sequence{$keys} =~ tr/-//d;
+		}	
+		
+	print out4 "$sequence{$keys}\n";
 }
+
+
+
+		
