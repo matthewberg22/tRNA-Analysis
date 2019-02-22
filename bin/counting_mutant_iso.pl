@@ -6,8 +6,9 @@ use warnings;
 #Department of Biochemistry, University of Western Ontario
 #February 8, 2019
 
-# Script to count how many genes for each isoacceptor and isodecoder in the variant set and also counts how many total copies of each gene we see in the sample set
-# To run enter script.pl tRNA_sequences.fasta
+#Script to count how many variants for each isoacceptor and isodecoder in the non-redundant variant tRNA set and also counts how many total copies of each gene we see in the sample set
+#To run enter: counting_mutant_iso.pl nonredundant_mutants.txt total_counts.txt
+#nonredundant_mutants.txt and total_counts.txt come from Allele_Frequencies.pl script
 
 #####Reads in input files
 ##############################################################################
@@ -17,14 +18,20 @@ my $totalcounts = $ARGV[1];
 
 #####OUTPUT FILES
 ##############################################################################
+system("rm All_mutants_isoacceptor.txt");
 open(out1, ">All_mutants_isoacceptor.txt") or die("Cannot open output1 file");
+system("rm All_mutants_isodecoder.txt");
 open(out2, ">All_mutants_isodecoder.txt") or die("Cannot open output2 file");
+system("rm Uncommon_mutants_isoacceptor.txt");
 open(out3, ">Uncommon_mutants_isoacceptor.txt") or die("Cannot open output3 file");
-open(out4, ">Uncommon_mutants_isodecoder.txt") or die("Cannot open output4 file"); 
+system("rm Uncommon_mutants_isodecoder.txt");
+open(out4, ">Uncommon_mutants_isodecoder.txt") or die("Cannot open output4 file");
+system("rm TotalCounts_isoacceptor.txt");
 open(out5, ">TotalCounts_isoacceptor.txt") or die("Cannot open output5 file");
-open(out6, ">TotalCounts_isodecoder.txt") or die("Cannot open output5 file"); 
+system("rm TotalCounts_isodecoder.txt");
+open(out6, ">TotalCounts_isodecoder.txt") or die("Cannot open output6 file"); 
  
-#####Reads in BLAST_analysis file and prints out patient ID, # of tRNAs identified and a list of tRNAs missing
+#####Reads in nonredundant tRNA variant list and adds counts to isoacceptor and isodecoder families
 ###############################################################################
 
 open(inp0, "$nonredundant") or die("Cannot open tRNA_sequence file");
@@ -38,13 +45,12 @@ while(<inp0>){
 	chomp;
 	my $check = substr($_, 0, 1);
 	
-	if($check eq ">"){
+	if($check ne "#"){
 		my @splitLine = split("\t", $_);
 		my @tRNA = split("-", $splitLine[0]);
-		my @AF1 = split("=", $splitLine[2]);
-		$AF = $AF1[1];
+		$AF = $splitLine[2];
 		
-		my $check2 = substr($tRNA[0], 1, 1);
+		my $check2 = substr($tRNA[0], 0, 1);
 		
 		if($check2 eq "t"){
 			$Isoacceptor{$tRNA[1]}++;
@@ -58,15 +64,6 @@ while(<inp0>){
 		}
 		
 		else{
-			my $name = substr($tRNA[0], 1)."-".$tRNA[2];
-			$Isoacceptor{$name}++;
-			my $name2 = substr($tRNA[0], 1)."-".$tRNA[3];
-			$Isodecoder{$name2}++;
-			
-			if($AF < 0.05){
-			$UncommonIsoacceptor{$name}++;
-			$UncommonIsodecoder{$name2}++;;
-			}
 		}
 	}
 }
