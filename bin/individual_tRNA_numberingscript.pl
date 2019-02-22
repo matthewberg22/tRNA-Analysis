@@ -10,6 +10,10 @@ my $numbering = $ARGV[1];
 #Date: October 2017
 #Deparment of Biochemistry, University of Western Ontario
 
+#Script to number all tRNA genes in GtRNAdb with canonical tRNA numbering, based off alignments and structure information in GtRNAdb
+#Usage is: individual_tRNA_numberingscript.pl tRNA_numbering_isoacceptor.txt
+#tRNA_numbering_isoacceptor.txt was created manually from the structure/alignment information on GtRNAdb and can be found in the data folder
+
 #OUTPUT FILES
 system("del tRNAstructurenumber.txt"); #for Windows computers use del and for UNIX use rm -f
 open(out1, ">tRNAstructurenumber.txt") or die("Cannot open output file: tRNAref_andvariants.fasta, USAGE: tRNAvariantScript.pl GtRNAdb.txt variants.txt");
