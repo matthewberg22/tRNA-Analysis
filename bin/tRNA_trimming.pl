@@ -6,8 +6,9 @@ use warnings;
 #Department of Biochemistry, University of Western Ontario
 #February 4, 2019
 
-# Script to trim off flanking tRNA sequence, count allele frequency, and output mutant sequence
-# To run enter script.pl tRNA_sequences.fasta
+#Script to trim off flanking tRNA sequence, count allele frequency, and output mutant sequence
+#To run enter tRNA_trimming.pl tRNA_variant_sequence.fasta
+#tRNA_variant_sequence.fasta comes from BLAST_analysis.pl and there is one file for every sample (run with tRNA_trimming_run.sh to analyze and merge all files)
 
 #####Reads in input files
 ##############################################################################
@@ -21,7 +22,7 @@ open(out1, ">>total_alleles.txt") or die("Cannot open output1 file");
 open(out2, ">>tRNAmutants.txt") or die("Cannot open output2 file");
 open(out3, ">>problem_loci.txt") or die("Cannot open output3 file");  
 
-#####Reads in BLAST_analysis file and prints out patient ID, # of tRNAs identified and a list of tRNAs missing
+#####Reads in tRNA variant sequences
 ###############################################################################
 
 print out1 "# $identifier \n";
@@ -159,6 +160,24 @@ foreach(@tRNA){
 	$counter++;
 }
 
+#Determines if there is one copy of the allele or two (assumes if we only see one allele at a loci it is present in two copies)
+my %copynumber;
+
+foreach my $tRNA (sort keys %tRNAs){
+	if((scalar %{$tRNAs{$tRNA}}) == 1){
+		foreach my $names (sort keys %{$tRNAs{$tRNA}}){
+		$copynumber{$tRNA}{$names} = 2;
+		}
+	}
+	
+	else{
+		foreach my $names (sort keys %{$tRNAs{$tRNA}}){
+		$copynumber{$tRNA}{$names} = 1;
+		}
+	}
+}
+
+
 #Counts the number of alleles
 foreach my $tRNA (sort keys %tRNAs){
 	foreach my $names (sort keys %{$tRNAs{$tRNA}}){
@@ -171,7 +190,7 @@ foreach my $tRNA (sort keys %tRNAs){
 	
 	print out2 "# $identifier\n";
 	print out2 ">$tRNA\t";
-	print out2 "$names\tCOV:$tRNAs{$tRNA}{$names}\n$seq{$tRNA}{$names}\n\n";
+	print out2 "$names\tCOV:$tRNAs{$tRNA}{$names}\t$copynumber{$tRNA}{$names}\n$seq{$tRNA}{$names}\n\n";
 	}
 	
 	}
