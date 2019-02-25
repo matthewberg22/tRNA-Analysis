@@ -1,7 +1,6 @@
 # Workflow for processing tRNA reads
 Daniel Giguere and Matthew Berg
-
-Last updated Februrary 21 2019.
+Last updated Februrary 8 2019.
 
 **Summary:**
 
@@ -15,6 +14,100 @@ READS='/Volumes/data/trna/reads/'
 # output in fastqc_output
 $FASTQC $READS -o .
 ```
+
+# Merge overlapped read pairs with USEARCH
+
+```
+usearch='/Volumes/data/bin/usearch'
+READS='/Volumes/data/trna/reads'
+
+#test
+#$usearch -report usearch_output/GL13.report -fastq_mergepairs $READS/GL13_S1_L001_R1_001.fastq -reverse $READS/GL13_S1_L001_R2_001.fastq -fastqout usearch_output/GL13.fastq -fastaout usearch_output/GL13.fasta
+
+
+# merge all paired reads with a loop
+for f in $READS/*.gz; do
+
+B=`basename $f`
+NAME=`echo $B | cut -d "." -f1`
+
+zcat -v $f > $READS/$NAME.fastq
+
+done
+
+for f in $READS/*R1*.fastq; do
+
+#get basename
+B=`basename $f`
+NAME=`echo $B | cut -d "." -f1`
+SAMPLE=`echo $B | cut -d "_" -f1`
+
+R='R2'
+# replace R1 with R2 to specify reverse read file
+REV=`echo ${B/R1/$R}`
+REVNAME=`echo ${NAME/R1/$R}`
+
+$usearch -report usearch_output/$SAMPLE.report -fastq_mergepairs $READS/$NAME.fastq -reverse $READS/$REVNAME.fastq -fastqout usearch_output/$SAMPLE.fastq -fastaout usearch_output/$SAMPLE.fasta
+
+echo $SAMPLE.done
+
+done
+```
+
+# Get % of reads merging for each sample
+
+```
+#create file
+echo sample$'\t'merged_reads$'\t'total_reads > usearch_output/stats.txt
+
+#extract info from each output file
+for f in usearch_output/*.report; do
+
+#get sample name
+B=`basename $f`
+NAME=`echo $B | cut -d "." -f1`
+
+#get merged and total reads number, add to stats file
+echo $NAME$'\t'"`sed -n 6p $f | awk '/[0-9]/ {print $1, "\t", $3}'`" >> usearch_output/stats.txt
+
+done
+
+#plot stats in R
+
+R
+
+d <- read.table("usearch_output/stats.txt", sep = "\t", header=TRUE, stringsAsFactors=FALSE)
+d$percent <- (d$merged_reads/d$total_reads * 100)
+
+pdf("percent_reads_mapped.pdf")
+plot(1:96, d$percent, ylim = c(0,100), main = "Percentage of paired reads merged with USEARCH", xlab = "Sample number", ylab = "Percentage")
+dev.off()
+
+#get sample names to be thrown out, write to table
+thrown <- d$sample[which(d$percent < 5)]
+write.table(as.matrix(thrown), "usearch_output/samples_not_merged.txt", sep = "\n", quote = FALSE, col.names=FALSE, row.names=FALSE)
+
+```
+
+#trouble shoot reads that don't merge
+
+
+```
+#eg GL12471
+
+# get sub sample
+$usearch -fastx_subsample GL12471_S6_L001_R1_001.fastq -reverse GL12471_S6_L001_R2_001.fastq -fastqout GL12471_subf.fq -output2 GL12471_subr.fq -sample_size 100
+
+#troubleshooging report
+$usearch -fastq_mergepairs GL12471_subf.fq -reverse GL12471_subr.fq -tabbedout out.txt -report report.txt -alnout aln.txt
+
+
+
+
+```
+
+
+
 
 # Merge overlapped read pairs with Pandaseq
 
@@ -40,6 +133,46 @@ grep -B 9 "FINISHED" nohup.out > pandaseq_stats.out
 # print READS, number of reads stored in x
 # print OK, number of reads that passed stored in y.
 awk '$3 ~ "READS" {x = x$4"\t"} $3 ~ "OK" {y = y$4"\t"} $1 ~ "FINISHED" {name = substr($0, 10); header = header name"\t"} END {print "SAMPLE\t"header"\nREADS\t"x"\nOK\t"y}' pandaseq_stats.out > passed_merging.txt
+
+
+################################################################################
+
+# plot statistics for each sample
+
+R
+
+d <- read.table("data/passed_merging.txt", sep = "\t", row.names= 1, header = TRUE)
+# remove last column that shouldn't really be there.
+d$X <- NULL
+d.t <- data.frame(t(d))
+
+# calculate proportion of reads that passed merging
+d.t$prop <- (d.t$OK / d.t$READS) * 100
+
+#Librarys to make the graphs and clean the data
+library(ggplot2)
+library(tidyr)
+library(cowplot)
+library(ggrepel)
+
+#A list of sample groups
+Groups <- read.table("data/Samplegroup.txt"), sep = "\t", header = TRUE)
+
+#Shortens the identifiers to just the GL number
+d.t$Sample <- rownames(d.t)
+Split <- d.t %>% separate(Sample, c("Sample", NA, NA, NA, NA), "_")
+d.t$Sample <- Split$Sample
+
+#Adds which group corresponds to which GL number
+d.t$group <- ordered(d.t$Sample, levels = Groups$Sample, labels = Groups$Group)
+d.t <- d.t[order(d.t$group),]
+
+#Graphs the percent merged
+PercentMerged <- ggplot(d.t, aes(order(d.t$group), prop, col = group, label = Sample)) + geom_point() + theme(axis.text.x=element_blank(), axis.ticks=element_blank()) + xlab('') + ylab('Percent Merged') + geom_text_repel(aes(label=ifelse(prop<80,as.character(Sample),'')), force =50) + coord_cartesian(ylim = c(30,100))
+svg("percentage_reads_merged_all_samples.svg")
+PercentMerged
+dev.off()
+
 
 # plot length of overlaps for each sample now
 awk '$3 ~ "OVERLAPS" {$1=$2=$3=""; x = $0} $1 ~ "FINISHED" {name = substr($0, 10); print name x} END {exit}' pandaseq_stats.out > overlaps.txt
@@ -73,10 +206,10 @@ For each sample, a BLAST database of the merged reads needs to be made.
 Before making blastdb, you need to remove the long string that is common to each of the sample. eg. M00388:388:000000000-BGJ2L from M00388:388:000000000-BGJ2L:1:1101:15326:1913:2. BLAST will cut the identifier to a limited number of characters.
 
 ```
-for sample in ./*merged.fasta; do
+for sample in ./*.fasta; do
 
 # get the sample name (i.e., GL141 from GL141_001_R1...)
-NAME=`basename $sample | cut -d "_" -f1`
+NAME=`basename $sample | cut -d "." -f1`
 
 # the regex is required since difference samples have different values
 sed 's/M00388:[0-9]*:000000000-[a-zA-Z0-9]*//' $sample > $NAME-merged-edited.fasta
@@ -165,17 +298,19 @@ After looking at the cutoff graphs, cutoff was selected as 10x coverage. Ran per
 nohup ./bin/tRNA_sequences_cutoff10.sh &
 ```
 
-Ran coverage analysis script to determine coverage of each tRNA (or family of tRNAs) across the capture array. Also extracted summary information for each individual sample (how many tRNAs were identified per individual, how many reads per individual contained full lenght tRNAs).
+*NEW*
+
+Ran coverage analysis script to determine coverage of each tRNA (or family of tRNAs) across the capture array.
 
 ```
-perl ./bin/capturearray_coverage.pl ./data/TotalCoverage_Cut10.txt ./data/GtRNAdb_20bpflankingtrimmed.fasta
-./bin/extract_summary.sh
-# mv output files to data folder
+perl capturearray_coverage.pl all_coverage.txt
 ```
 
-Ran tRNA trimming perl script on all samples to get tRNA mutant sequences without 20 bp 5' flanking, concatenates all individual samples into one file.
+Ran tRNA trimming perl script on all samples to get tRNA mutant sequences without 20 bp 5' flanking, concatenates all individual samples into one file
 
 ```
+
+# change tRNA_trimming.pl to the corerct name
 ./bin/tRNA_trimming_run.sh
 # mv output files to data folder
 # add sanity check that output exists and looks correct
@@ -184,10 +319,10 @@ Ran tRNA trimming perl script on all samples to get tRNA mutant sequences withou
 Ran tRNA allele frequency counting script to get count of how many alleles we see for each tRNA total across all individuals and how many times we see each variant tRNA in our sample. Also outputs non-redundant list of mutant tRNA sequences with allele frequencies
 
 ```
-perl ./bin/Allele_Frequencies.pl ./data/total_alleles.txt ./data/tRNAmutants.txt
+perl ./bin/Allele_Frequencies.pl total_alleles.txt tRNAmutants.txt
 # mv output files to data folder
 # add sanity check that output exists and looks correct
-# lots of things call from the outputs, "master file"
+# lots of things call from the output, "master file"
 ```
 
 ### Analysis of tRNA Variants
@@ -195,43 +330,9 @@ perl ./bin/Allele_Frequencies.pl ./data/total_alleles.txt ./data/tRNAmutants.txt
 Ran perl script to extract information on how many overall mutations per tRNA, how many uncommon ( AF < 5%) mutations per tRNA and how many mutations per allele.
 
 ```
-perl ./bin/nonredundant_tRNA_analysis.pl ./data/nonredundant_mutants.txt
+perl ./bin/nonredundant_tRNA_analysis.pl nonredundant_mutants.txt
 # mv output files to data folder
 # add sanity check that output exists and looks correct
-```
-
-Extract information about how many genes for each isoacceptor and isodecoder family there are in the reference tRNA dataset and how many variants we see for each isoacceptor/isodecoder family.
-
-```
-perl ./bin/counting_total_iso.pl ./data/UCSC_tRNAsequences.fasta
-perl ./bin/counting_mutant_iso.pl ./data/nonredundant_mutants.txt ./data/total_counts.txt
-# mv output files to data folder
-```
-
-Some tRNA loci have more than two alleles. Extract information on how many of such loci each individual has and which loci overall samples have more than two alleles.
-
-```
-perl ./bin/problem_analysis.pl ./data/problem_loci.txt
-# mv output files to data folder
-```
-
-Convert the genomic coordinate numbering of the variants into canonical tRNA numbering.
-
-```
-#First script numbers all tRNAs in a string based on isoacceptor family alignments
-perl ./bin/individual_tRNA_numberscript.pl ./data/tRNA_alignment_nonumbers.txt ./data/tRNA_numbering_isoacceptor.txt
-
-#Second script uses numbering of all tRNAs to convert genomic coordinates into tRNA numbering
-perl ./bin/tRNA_variant_annotation.pl ./data/UCSC_tRNASequences.fasta ./data/tRNAstructurenumber.txt ./data/nonredundant_mutants.txt
-
-# mv output files to data folder
-```
-
-Parse out tRNAs variants that have one mutation, point mutations vs. indels and tRNA variants that have two mutations
-
-```
-perl ./bin/mutations_tRNAstructure.pl ./data/Annotated_nonredundant_mutants.txt
-# mv output files to data folder
 ```
 
 ### tRNAscan-se
@@ -240,5 +341,11 @@ The paths for searching for infernal need to be changed depending on where the i
 
 ```
 infernal_dir: /Volumes/data/bin/infernal/bin
-/Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o# -f# -X 1 UCSC_tRNA.fasta
+/Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o# -f# -X 1 -L UCSC_tRNA.fasta
+
+
+/Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o# -f# -X 1 -r# -L new_fasta_nonredundant_mutants.fasta
+
 ```
+
+/Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o# -f# -X 1 -r# -L new_fasta_nonredundant_mutants.fasta
