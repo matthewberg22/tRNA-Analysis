@@ -123,7 +123,9 @@ nohup ./bin/blast_cutoff10.sh &
 Ran coverage analysis script to determine coverage of each tRNA (or family of tRNAs) across the capture array. Also, collect summary stats for all 84 samples.
 
 ```
-perl ./bin/capturearray_coverage.pl Totalcoverage.txt
+perl ./bin/capturearray_coverage.pl ./data/blast_analysis_output/Totalcoverage.txt ./data/GtRNAdb_20flanking.fasta
+mv capturearray_coverage.txt ./data/
+
 ./bin/extract_summary.sh
 ```
 
@@ -137,6 +139,10 @@ Run tRNA allele frequency counting script to get count of how many alleles we se
 
 ```
 perl ./bin/Allele_Frequencies.pl ./data/total_alleles.txt ./data/tRNAmutants.txt
+mv allmutants_AF.txt ./data/
+mv nonredundant_mutants.txt ./data/
+mv total_counts.txt ./data/
+mv fasta_nonredundant_mutants.fasta ./data/
 ```
 
 ### Analysis of tRNA Variants
@@ -145,6 +151,9 @@ Run perl script to extract information on how many overall mutations per tRNA, h
 
 ```
 perl ./bin/nonredundant_tRNA_analysis.pl ./data/nonredundant_mutants.txt
+mv Allmutation_tRNAcount.txt ./data/
+mv Mutationsperallele.txt ./data/
+mv Uncommonmutation_tRNAcount.txt ./data/
 ```
 
 Convert genomic coordinates into tRNA numbering, based upon standard nomenclature.
@@ -152,22 +161,31 @@ Convert genomic coordinates into tRNA numbering, based upon standard nomenclatur
 ```
 #Creates a database of all genomic loci for tRNA and the coresponding tRNA number
 perl ./bin/individual_tRNA_numberingscript.pl ./data/tRNA_alignment_nonumbers.txt ./data/tRNA_numbering_isoacceptor.txt
+mv tRNAstructurenumber.txt ./data/
 
 #Numbers the specific mutants that were identified from our sequencing
-perl ./bin/tRNA_variant_annotation.pl ./data/GtRNAdb.txt ./data/tRNAstructurenumber.txt ./data/nonredundant_mutant.txt
+perl ./bin/tRNA_variant_annotation.pl ./data/GtRNAdb.txt ./data/tRNAstructurenumber.txt ./data/nonredundant_mutants.txt
+mv Annotated_nonredundant_mutants.txt ./data/
 ```
 
 Subset list of variants to create a new list of only variants occuring in high confidence tRNAs (as defined by GtRNAdb). Run second script to count how many mutations are at each position in the tRNA for all variants in the high confidence set with only one mutation.
 
 ```
-perl ./bin/highconf_tRNA_variants.pl ./data/highconf_GtRNAdb.fasta ./data/Annotated_nonredundant_mutants.txt
+perl ./bin/highconf_tRNA_variants.pl ./data/highconf_GtRNAdb.fasta ./data/GtRNAdb.txt ./data/Annotated_nonredundant_mutants.txt
+mv highconf_variants.txt ./data/
+mv confidence_tRNAs.txt ./data/
+
 perl ./bin/mutations_tRNAstructure.pl ./data/highconf_variants.txt
+mv point_one_map.txt ./data/
+mv indel_one_map.txt ./data/
 ```
 
 Create a matrix for the heatmap of each individuals tRNA profile.
 
 ```
 perl ./bin/heatmap_extraction.pl ./data/demographics.txt ./data/capturearray_coverage.txt ./data/allmutants_AF.txt
+mv alleleheatmap.txt ./data/
+mv alleleheatmap_uncommon.txt ./data/
 ```
 
 ### tRNAscan-se

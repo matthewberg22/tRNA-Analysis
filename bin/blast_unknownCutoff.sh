@@ -13,7 +13,7 @@ for sample in ./data/blast_output/*.blast; do
 DB=`basename $sample | cut -d "." -f1`
 
 # max target seqs set to 10 000 to ensure all reads are identified
-blastn -query GtRNAdb_20flanking.fasta -db all_blast_dbs/$DB -perc_identity 95 -outfmt "7 std btop sseq qlen" -max_target_seqs 10000 -num_threads 40 > blast_output/$DB.blast
+#blastn -query GtRNAdb_20flanking.fasta -db all_blast_dbs/$DB -perc_identity 95 -outfmt "7 std btop sseq qlen" -max_target_seqs 10000 -num_threads 40 > blast_output/$DB.blast
 
 # arg 0 = blast output
 # arg 1 = patient identifier
@@ -23,6 +23,7 @@ perl ./bin/BLAST_analysis.pl ./data/blast_output/$DB.blast $DB 0
 done
 
 # move to output folder
+mkdir ./data/blast_analysis_output/
 mv BLAST_analysis_*.txt ./data/blast_analysis_output/
 mv tRNA_sequence*.fasta ./data/blast_analysis_output/
 cat *Allcoverage_*.txt >> TotalCoverage.txt

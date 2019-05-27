@@ -47,7 +47,7 @@ while(<inp0>){
 
 close(inp0);
 
-#####Reads in entire tRNA database to make annotate high confidence and low confidence
+#####Reads in entire tRNA database to annotate high confidence and low confidence
 ###############################################################################
 
 open(inp2, "$alltRNAs") or die("Cannot open all tRNA database file");

@@ -20,7 +20,6 @@ my $identifier = $ARGV[1];
 ##############################################################################
 open(out1, ">>total_alleles.txt") or die("Cannot open output1 file");
 open(out2, ">>tRNAmutants.txt") or die("Cannot open output2 file");
-open(out3, ">>problem_loci.txt") or die("Cannot open output3 file");  
 
 #####Reads in tRNA variant sequences
 ###############################################################################
@@ -252,15 +251,16 @@ foreach my $key (sort keys %numberAlleles){
 	}
 	
 	elsif(scalar(@tRNALength) == 1){
+		#Checks if there are any instances of one locus having more than 2 alleles in an individial
 		if($numberAlleles{$key} > 2){
 			$allele_output{$key} = $numberAlleles{$key};
 			
-			print out3 "$identifier\n";
-			print out3 "$key\t$numberAlleles{$key}\n";
-			foreach my $names (sort keys %{$seq{$key}}){
-				print out3 "$names\tCOV:$tRNAs{$key}{$names}\n $seq{$key}{$names}\n";
-			}
-			print out3 "\n";
+			# print out3 "$identifier\n";
+			# print out3 "$key\t$numberAlleles{$key}\n";
+			# foreach my $names (sort keys %{$seq{$key}}){
+			#	print out3 "$names\tCOV:$tRNAs{$key}{$names}\n $seq{$key}{$names}\n";
+			# }
+			# print out3 "\n";
 		}
 		
 		else{

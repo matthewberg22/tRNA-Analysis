@@ -13,6 +13,7 @@ perl ./bin/BLAST_analysis.pl ./data/blast_output/$DB.blast $DB 10
 done
 
 # move to output folder
+mkdir ./data/blast_analysis_output_cov10
 mv BLAST_analysis_*.txt ./data/blast_analysis_output_cov10/
 mv tRNA_sequence*.fasta ./data/blast_analysis_output_cov10/
 rm Allcoverage_*.txt

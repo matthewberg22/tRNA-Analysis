@@ -93,7 +93,6 @@ while(<inp0>){
 		$HM{$SampleID}{$tRNA} = $counts;
 		
 		if($AF <= 0.05){
-			print "$AF\n";
 			$HMAF{$SampleID}{$tRNA} = $counts;
 		}
 
