@@ -4,7 +4,7 @@ use warnings;
 
 #By Matt Berg
 #Department of Biochemistry, University of Western Ontario
-#February 6, 2019
+#May 2019
 
 #Script to count the allele frequency in our sample and the frequency of each mutant tRNA
 #To run enter: Allele_Frequencies.pl total_alleles.txt mutant_list.txt
@@ -147,12 +147,14 @@ foreach my $keys (sort keys %tRNAID){
 	print out3 "$sequence{$keys}\n";
 	
 	my @splitkey = split(" ", $keys);
+	my @splittRNA = split(" ", $tRNAID{$keys});
+	my $singletRNA = $splittRNA[0];
 	
-	print out4 ">$tRNAID{$keys}.";
+	print out4 ">$singletRNA.";
 	foreach(@splitkey){
 		print out4 "$_.";
 	}
-	print out4 "$AFall{$keys}\n";
+	print out4 "\n";
 	if(index($sequence{$keys}, "-") != -1){
 		$sequence{$keys} =~ tr/-//d;
 		}	

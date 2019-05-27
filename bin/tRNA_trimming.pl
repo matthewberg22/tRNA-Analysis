@@ -4,7 +4,7 @@ use warnings;
 
 #By Matt Berg
 #Department of Biochemistry, University of Western Ontario
-#February 4, 2019
+#May 2019
 
 #Script to trim off flanking tRNA sequence, count allele frequency, and output mutant sequence
 #To run enter tRNA_trimming.pl tRNA_variant_sequence.fasta
@@ -28,6 +28,7 @@ open(out3, ">>problem_loci.txt") or die("Cannot open output3 file");
 print out1 "# $identifier \n";
 
 open(inp0, "$tRNAsequence") or die("Cannot open tRNA_sequence file");
+	my $tRNAname;
 	my @tRNA;
 	my @status;
 	my @mutation;
@@ -44,7 +45,8 @@ while(<inp0>){
 	
 	if($check eq ">"){
 		my @splitLine = split("\t", $_);
-		$tRNA[$sequenceCounter] = substr($splitLine[0], 1);
+		$tRNAname = substr($splitLine[0], 1);
+		$tRNA[$sequenceCounter] = $tRNAname;
 		$status[$sequenceCounter] = $splitLine[1];
 		my @Tempcoverage = split(":", $splitLine[2]);
 		$coverage[$sequenceCounter] = $Tempcoverage[1];		
@@ -64,39 +66,80 @@ while(<inp0>){
 			my @mutationholder = split(" ", $splitLine[4]);
 			foreach(@mutationholder){
 				my @splitMut = split(":", $_);
-
-				if($strand eq '+)' && $splitMut[1] < $start+20){
+				
+				if($tRNAname eq 'tRNA-Glu-TTC-3-1'){
+				
+					if($splitMut[1] < $start + 25 or $splitMut[1] > $end - 5){
+					}
+					
+					else{
+					push @mutationlist, $_;
+					}
 				}
-				elsif($strand eq '-)' && $splitMut[1] > $end-20){
+				
+				elsif($tRNAname eq 'tRNA-Glu-TTC-4-1'){
+				
+					if($splitMut[1] > $end - 25 or $splitMut[1] < $start + 5){
+					}
+					
+					else{
+					push @mutationlist, $_;
+					}
 				}
 				else{
-				push @mutationlist, $_;
+					if(($splitMut[1] < $start + 20 and $strand eq '+)') or ($splitMut[1] > $end - 5 and $strand eq '+)')){
+					}
+					elsif(($strand eq '-)' and $splitMut[1] > $end - 20) or ($splitMut[1] < $start + 5 and $strand eq '-)')){
+					}
+					else{
+						push @mutationlist, $_;
+					}
 				}
 			}
 			
 			my $changeCheck = scalar @mutationlist;
 			
 			if($changeCheck == 0){
-			$status[$sequenceCounter] = 'WT';
-
+				$status[$sequenceCounter] = 'WT';
 			}
+			
 			elsif($changeCheck >= 1){
-			$mutation[$sequenceCounter] = join(" ", @mutationlist);
+				$mutation[$sequenceCounter] = join(" ", @mutationlist);
 			}
 		}
 	}	
 	
 	else{
-		$sequence[$sequenceCounter] = substr($_, 20);
-		$sequenceCounter++;
+	
+		if($tRNAname eq 'tRNA-Glu-TTC-3-1' or $tRNAname eq 'tRNA-Glu-TTC-4-1'){
+			$sequence[$sequenceCounter] = substr($_, 25);
+			$sequence[$sequenceCounter] = substr($sequence[$sequenceCounter], 0, -5);
+			$sequenceCounter++;
 		
-		my $GapTest = substr($_, 20);
+			my $GapTest = substr($_, 25);
+			$GapTest = substr($GapTest, 0, -5);
 		
-		if(index($GapTest, "-") != -1){
-		$GapTest =~ tr/-//d;
-		$Ungapped{$GapTest}++;
-		$Location{$sequenceCounter} = $GapTest;
-		}	
+			if(index($GapTest, "-") != -1){
+				$GapTest =~ tr/-//d;
+				$Ungapped{$GapTest}++;
+				$Location{$sequenceCounter} = $GapTest;
+			}
+		}
+		
+		else{
+			$sequence[$sequenceCounter] = substr($_, 20);
+			$sequence[$sequenceCounter] = substr($sequence[$sequenceCounter], 0, -5);
+			$sequenceCounter++;
+		
+			my $GapTest = substr($_, 20);
+			$GapTest = substr($GapTest, 0, -5);
+		
+			if(index($GapTest, "-") != -1){
+			$GapTest =~ tr/-//d;
+			$Ungapped{$GapTest}++;
+			$Location{$sequenceCounter} = $GapTest;
+			}
+		}
 	}
 				
 }
@@ -196,7 +239,7 @@ foreach my $tRNA (sort keys %tRNAs){
 	}
 }
 
-#Loops through all of the allele counts and annotates them assuming a diploid organism
+#Loops through all of the allele counts and annotates them assuming a diploid (humans)
 my %allele_output;
 
 

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# By Matt Berg
+# May 2019
+
 #Script runs extract_analysis.pl for all individual samples in the dataset
 
 echo -e "Group	Identifier	TotaltRNAs	TotalReads	ConfidentReads	AmbiguousReads	DuplicatedtRNAs" > ./data/summarized_output_Cov10.txt

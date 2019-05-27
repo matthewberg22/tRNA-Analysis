@@ -4,7 +4,7 @@ use warnings;
 
 #By Patrick O'Donoghue and Matt Berg
 #Department of Biochemistry, University of Western Ontario
-#February 12, 2019
+#May 2019
 
 #Script annotates genomic coordinates with canonical tRNA numbering
 #To run enter tRNA_variant_annotation.pl GtRNAdb.txt tRNAstructurenumber.txt nonredundant_mutants.txt

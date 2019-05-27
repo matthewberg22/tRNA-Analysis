@@ -6,11 +6,11 @@ use Scalar::Util qw(looks_like_number);
 
 #By Matt Berg
 #Department of Biochemistry, University of Western Ontario
-#January 22, 2019
+#May 2019
 
 #Script to parse through BLAST output, select hits that contain full length tRNAs plus flanking sequence and sort out possibly ambiguous hits
 #To run enter script.pl BLAST.blast IDENTIFIER_Number Coverage_Cutoff_Number
-#BLAST.blast contains the output of a BLAST with reference tRNA as query and all the paired end reads as the database
+#BLAST.blast contains the output of a BLAST with reference tRNA as query and all the merged paired end reads as the database
 #IDENTIFIER_Number is the unique identifier for the sample you are analyzing
 #Coverage_Cutoff_Number is the cutoff you want to use (if you don't know the cutoff and want to get everything set this as 0)
 
@@ -39,7 +39,7 @@ open(inp0, "$BLAST") or die("Cannot open BLAST file");
               my @tRNADnCoord; #The genomic 3' co-ordinate of the tRNA with flanking sequence
               my @tRNARefname; #The name of the reference tRNA from the genome
               my @tRNAchr; #The chromosome the reference tRNA is on
-              my @strand;
+              my @strand; #The strand the reference tRNA is on
 	      my %StartStop; #A hash to store the start and stop coordinates of the hit within the read
 	      my %allele; #A hash to store the btop output
 	      my %seq; #A hash to store the sequence of the BLAST hit (read)
@@ -49,7 +49,7 @@ open(inp0, "$BLAST") or die("Cannot open BLAST file");
 while(<inp0>){
     chomp;
 
-    my $check = substr($_,0,1); #Tests if the line starts with # meaning it is not a BLAST hit
+    my $check = substr($_,0,1); #Tests if the line starts with # meaning it is not a BLAST hit but rather an information line
               
     #If the line is an information line, check if the line has information about the Query (starts with # Query) and store tRNA name and co-ordinates
     if($check eq "#"){
@@ -97,6 +97,7 @@ my %Chr;
 close(inp0); 
 
 #####Counts how many reads contain a full length tRNA and how many reads contain two 'duplicated'tRNAs
+#####NOTE: Turns out reads with two tRNAs are artifacts of the merging software (use USEARCH to merge)
 #####################################################################################################
 my $totalfulllength = 0;
 my $twotRNAreads = 0;
@@ -110,7 +111,7 @@ foreach my $readID (keys %StartStop){
 	}
 }
 
-#####Checks if readID are unique or are hits for multiple tRNAs
+#####Checks if readID matches to only one reference tRNA or if it hits for multiple tRNAs
 ##############################################################################
 
 my $MultipleMappingReadsCounter = 0;
@@ -147,7 +148,8 @@ foreach my $readID (sort keys %allele){
 	}
 }
 
-####Determines which reads are hits for only one reference tRNA and which are hits for multiple tRNAs and need to be looked at closer to be resolved
+####Determines which reads are hits for only one reference tRNA and 
+####which are hits for multiple tRNAs and need to be looked at closer to be resolved
 ###############################################################################################################
 
 my $UniqueReadsCounter = 0;
@@ -1160,7 +1162,8 @@ foreach my $readID (sort keys %allele){
 }
 
 
-#####Collects stats on how many tRNAs were identified, coverage for each allele, etc.
+#####Collects stats on how many tRNAs were identified, coverage for each 
+#####allele, etc.
 ##############################################################################
 
 my %counts; #A hash to correlate tRNA-allele (key) and number of times its seen/coverage (value)
@@ -1241,7 +1244,8 @@ print out1 "Total unique sequences: $uniquesequences\n";
 print out1 "#############################################################################\n";
 
 
-####Creates information for second output containing tRNA name, information, WT/MUT and the mutation position, 20bp flanking + tRNA sequence
+####Creates information for second output containing tRNA name, information, WT/MUT and the mutation position, 
+####20bp flanking + tRNA sequence
 ###########################################################################################################################
 
 my @sepallele;
