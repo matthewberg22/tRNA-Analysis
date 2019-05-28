@@ -14,7 +14,7 @@ Download this repository from Github, and set your working directory as the top 
 - (Blast suite from NIH)[https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download]. Version 2.2.31 was used for our analysis.
 - (USEARCH)[https://www.drive5.com/usearch/]. v11.0.667_i86linux32 was used for our analysis.
 - (tRNAscan-SE)[http://lowelab.ucsc.edu/tRNAscan-SE/] Version 2.0 was used for our analysis
--
+- (Perl) v5.26.1 for x86_64-linux-gnu-thread-multi was used for our analysis
 
 # Merge overlapped read pairs with USEARCH
 
