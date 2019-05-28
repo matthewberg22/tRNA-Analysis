@@ -4,7 +4,7 @@ use warnings;
 
 #By Matt Berg
 #Department of Biochemistry, University of Western Ontario
-#February 13, 2019
+#May 2019
 
 #Script to count how mutations are present at each position of the tRNA
 #To run, enter: mutations_tRNAstructure.pl Annotated_nonredundant_mutants.txt
@@ -21,8 +21,6 @@ system("rm point_one_map.txt");
 open(out1, ">point_one_map.txt") or die("Cannot open output1 file");
 system("rm indel_one_map.txt"); 
 open(out2, ">indel_one_map.txt") or die("Cannot open output2 file");
-system("rm doublemutation_matrix.txt"); 
-open(out3, ">doublemutation_matrix.txt") or die("Cannot open output3 file");
 
 #####Reads in annotated non-redundant tRNA mutations and parses out relavent information
 ###############################################################################
@@ -60,6 +58,7 @@ my %PositionCount1INDEL;
 my %PositionCount1INDELuncommon;
 my %Mut1;
 my %Mut2;
+my $countimig = 0;
 
 foreach my $keys (keys %NoMutations){
 
@@ -88,43 +87,6 @@ foreach my $keys (keys %NoMutations){
 		
 	}
 }
-
-my $counter =  0;
-my $tRNAtotal = 73;
-
-print out3 "N\t";
-
-for($counter; $counter <= $tRNAtotal; $counter++){
-	print out3 "$counter\t";
-}
-
-print out3 "\n";
-
-for($counter = 0; $counter <= $tRNAtotal; $counter++){
-	print out3 "$counter\t";
-	for(my $newcounter = 0; $newcounter <= $tRNAtotal; $newcounter++){
-		my $checker = 0;
-		foreach my $keys (keys %Mut1){
-			if($Mut1{$keys} eq $newcounter && $Mut2{$keys} eq $counter){
-			$checker = 1;
-			}
-			
-			else{
-			}		
-		}
-		
-		if($checker == 1){
-			print out3 "1\t";
-		}
-		else{
-			print out3 "0\t";
-		}
-	
-	}
-	print out3 "\n";
-	
-
-} 
 
 foreach my $keys (keys %NoMutations){
 	if($NoMutations{$keys} == 1 && $AF{$keys} < 0.05){

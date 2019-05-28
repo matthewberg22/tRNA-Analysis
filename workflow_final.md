@@ -1,6 +1,7 @@
 # Workflow for processing tRNA reads
 Daniel Giguere and Matthew Berg
-Last updated Februrary 8 2019.
+
+Last updated May 26 2019.
 
 **Summary:**
 
@@ -72,131 +73,6 @@ echo $NAME$'\t'"`sed -n 6p $f | awk '/[0-9]/ {print $1, "\t", $3}'`" >> usearch_
 
 done
 
-#plot stats in R
-
-R
-
-d <- read.table("usearch_output/stats.txt", sep = "\t", header=TRUE, stringsAsFactors=FALSE)
-d$percent <- (d$merged_reads/d$total_reads * 100)
-
-pdf("percent_reads_mapped.pdf")
-plot(1:96, d$percent, ylim = c(0,100), main = "Percentage of paired reads merged with USEARCH", xlab = "Sample number", ylab = "Percentage")
-dev.off()
-
-#get sample names to be thrown out, write to table
-thrown <- d$sample[which(d$percent < 5)]
-write.table(as.matrix(thrown), "usearch_output/samples_not_merged.txt", sep = "\n", quote = FALSE, col.names=FALSE, row.names=FALSE)
-
-```
-
-#trouble shoot reads that don't merge
-
-
-```
-#eg GL12471
-
-# get sub sample
-$usearch -fastx_subsample GL12471_S6_L001_R1_001.fastq -reverse GL12471_S6_L001_R2_001.fastq -fastqout GL12471_subf.fq -output2 GL12471_subr.fq -sample_size 100
-
-#troubleshooging report
-$usearch -fastq_mergepairs GL12471_subf.fq -reverse GL12471_subr.fq -tabbedout out.txt -report report.txt -alnout aln.txt
-
-
-
-
-```
-
-
-
-
-# Merge overlapped read pairs with Pandaseq
-
-Merge overlapping raw reads. Pandaseq (pandaseq 2.11 <andre@masella.name>) was run with default settings on macOS. Distrubition of length overlap by sample is plotted with proportion of reads merged by sample.
-
-```
-# run pandaseq
-
-# this needs to be done with UNTRIMMED READS
-nohup ./bin/pandaseq.sh &
-
-# since i added "FINISHED" after each pandaseq, the stats can be grepped out
-grep -B 9 "FINISHED" nohup.out > pandaseq_stats.out
-
-################################################################################
-
-# make a dataframe of the total number of reads and the number of reads that passed merging for all samples.
-
-# from pandaseq_stats.out, match third column for READS, get number, paste together with tab separation for all reads.
-# same for OK (reads that passed merging).
-# get name of sample from the FINISHED identifier I put in by pasting substring starting at the 10th character (i.e., removes "FINISHED.")
-# print SAMPLE, samples names store in header
-# print READS, number of reads stored in x
-# print OK, number of reads that passed stored in y.
-awk '$3 ~ "READS" {x = x$4"\t"} $3 ~ "OK" {y = y$4"\t"} $1 ~ "FINISHED" {name = substr($0, 10); header = header name"\t"} END {print "SAMPLE\t"header"\nREADS\t"x"\nOK\t"y}' pandaseq_stats.out > passed_merging.txt
-
-
-################################################################################
-
-# plot statistics for each sample
-
-R
-
-d <- read.table("data/passed_merging.txt", sep = "\t", row.names= 1, header = TRUE)
-# remove last column that shouldn't really be there.
-d$X <- NULL
-d.t <- data.frame(t(d))
-
-# calculate proportion of reads that passed merging
-d.t$prop <- (d.t$OK / d.t$READS) * 100
-
-#Librarys to make the graphs and clean the data
-library(ggplot2)
-library(tidyr)
-library(cowplot)
-library(ggrepel)
-
-#A list of sample groups
-Groups <- read.table("data/Samplegroup.txt"), sep = "\t", header = TRUE)
-
-#Shortens the identifiers to just the GL number
-d.t$Sample <- rownames(d.t)
-Split <- d.t %>% separate(Sample, c("Sample", NA, NA, NA, NA), "_")
-d.t$Sample <- Split$Sample
-
-#Adds which group corresponds to which GL number
-d.t$group <- ordered(d.t$Sample, levels = Groups$Sample, labels = Groups$Group)
-d.t <- d.t[order(d.t$group),]
-
-#Graphs the percent merged
-PercentMerged <- ggplot(d.t, aes(order(d.t$group), prop, col = group, label = Sample)) + geom_point() + theme(axis.text.x=element_blank(), axis.ticks=element_blank()) + xlab('') + ylab('Percent Merged') + geom_text_repel(aes(label=ifelse(prop<80,as.character(Sample),'')), force =50) + coord_cartesian(ylim = c(30,100))
-svg("percentage_reads_merged_all_samples.svg")
-PercentMerged
-dev.off()
-
-
-# plot length of overlaps for each sample now
-awk '$3 ~ "OVERLAPS" {$1=$2=$3=""; x = $0} $1 ~ "FINISHED" {name = substr($0, 10); print name x} END {exit}' pandaseq_stats.out > overlaps.txt
-
-R
-
-d <- read.table("overlaps.txt", header = FALSE)
-
-#only the integer
-e <- data.frame(t(d[,2:153]))
-colnames(e) <- d$V1
-
-# plot each distribution
-pdf("figs/overlap_distribution_all_samples.pdf")
-colours <- colorRampPalette(c("blue", "red"))(96)
-plot(e[,1], type="n", ylim=c(0, 12000), ylab = "Number of read pairs", xlab = "Length of overlap")
-
-for (i in seq(e)) {
-    points(e[,i], col=colours[i], pch = 19, cex = 0.2)
-}
-
-legend("topright", col=c("blue", "red"), pch = 19, legend = c("Sample 1", "Sample 96"))
-
-dev.off()
 ```
 
 ### Blast against db of reads
@@ -217,131 +93,110 @@ sed 's/M00388:[0-9]*:000000000-[a-zA-Z0-9]*//' $sample > $NAME-merged-edited.fas
 done
 ```
 
-Make the DBs for each file and BLAST them.
+Make the DBs for each file.
 
 ```
 #start with just sample GL141
 nohup makeblastdb -in GL141_S2_L001_R1_001_edited.merged.fasta -dbtype nucl -out all_blast_dbs/GL141 &
 
 DB="all_blast_dbs/GL141"
-nohup blastn -query all20_tRNAquery.fasta -db $DB  -perc_identity 95 -outfmt "7 std btop sseq qlen"   -max_target_seqs 10000 -num_threads 1 > $DB.blast &
+nohup blastn -query GtRNAdb_20flanking.fasta -db $DB  -perc_identity 95 -outfmt "7 std btop sseq qlen"   -max_target_seqs 10000 -num_threads 1 > $DB.blast &
 
 #the rest of the files
 nohup ./bin/makeblastdbs.sh &
 ```
+
 Then blast the tRNAs against each database and run the blast anaylsis script.
 
 ```
-nohup ./bin/blast.sh &
+nohup ./bin/blast_unknownCutoff.sh &
 ```
 
-Next, determine the ideal cutoff by graphing total coverage for every unique tRNA sequence observed from all individuals sequenced.
+Next, determine the ideal cutoff by graphing total coverage for every unique tRNA sequence observed from all individuals sequenced. Scripts to make the graphs are found in tRNASeq_Script.R
 
-```
-R
-#Packages needed to make the graphs
-library(ggplot2)
-library(cowplot)
-library(compositions)
-
-#Reads in coverage summary file that is the output from my perl script
-#setwd in top of analysis directory
-all.coverage <- read.table("blast_analysis_output/TotalCoverage.txt", sep = "\t")
-
-colnames(all.coverage) <- c("Patient_id", "tRNA", "allele", "Coverage")
-#Plots the frequency of coverage for all unique sequences seen in the 96 individuals sequenced
-#Limits the x-axis to 300 to scale plot better
-#Red line indicates the mean coverage
-#Blue line is my coverage cut off right now
-p0 <- ggplot(all.coverage, aes(x = Coverage)) +
-  geom_histogram(binwidth = 1) +
-  coord_cartesian(xlim=c(0, 300), ylim=c(0,1000)) + xlab("Coverage of tRNA allele") +
-  ylab("Frequency") +
-  geom_vline(aes(xintercept = 5), color = 'orange') +
-  geom_vline(aes(xintercept = 10), color = 'red') +
-  geom_vline(aes(xintercept = 15), color = 'blue') +
-  theme(legend.position="none")
-
-#Centered log ratio transformation of the data
-clr <- all.coverage[which(all.coverage$Coverage == 5), 5]
-clr5 <- clr[1]
-
-clr <- all.coverage[which(all.coverage$Coverage == 10), 5]
-clr10 <- clr[1]
-
-clr <- all.coverage[which(all.coverage$Coverage == 15), 5]
-clr15 <- clr[1]
-
-all.coverage$CLR <- as.vector(clr((all.coverage$Coverage)))
-
-# this line has to be run separately.
-p1 <- ggplot(all.coverage, aes(x = CLR)) +
-  geom_histogram(binwidth = 0.5) +
-  coord_cartesian(ylim=c(0,10000)) + xlab("clr(Coverage of tRNA allele)") +
-  ylab("Frequency") +
-  theme(legend.position="none") +
-  geom_vline(aes_(xintercept = clr15), color = 'blue') +
-  geom_vline(aes_(xintercept = clr10), color = 'red') +
-  geom_vline(aes_(xintercept = clr5), color = 'orange')
-
-# this line has to be run separately.
-CoveragePlots <- plot_grid(p0, p1, labels = c("A", "B"))
-
-pdf("CoveragePlots.pdf")
-CoveragePlots
-dev.off()
-
-```
 After looking at the cutoff graphs, cutoff was selected as 10x coverage. Ran perl script again to get list of tRNAs with >10x coverage.
 
 ```
-nohup ./bin/tRNA_sequences_cutoff10.sh &
+nohup ./bin/blast_cutoff10.sh &
 ```
 
-*NEW*
-
-Ran coverage analysis script to determine coverage of each tRNA (or family of tRNAs) across the capture array.
+Ran coverage analysis script to determine coverage of each tRNA (or family of tRNAs) across the capture array. Also, collect summary stats for all 84 samples.
 
 ```
-perl capturearray_coverage.pl all_coverage.txt
+perl ./bin/capturearray_coverage.pl ./data/blast_analysis_output/Totalcoverage.txt ./data/GtRNAdb_20flanking.fasta
+mv capturearray_coverage.txt ./data/
+
+./bin/extract_summary.sh
 ```
 
-Ran tRNA trimming perl script on all samples to get tRNA mutant sequences without 20 bp 5' flanking, concatenates all individual samples into one file
+Run tRNA trimming perl script on all samples to get tRNA mutant sequences without 20 bp 5' flanking or 5 bp 3' flanking, concatenates all individual samples into one file.
 
 ```
-
-# change tRNA_trimming.pl to the corerct name
 ./bin/tRNA_trimming_run.sh
-# mv output files to data folder
-# add sanity check that output exists and looks correct
 ```
 
-Ran tRNA allele frequency counting script to get count of how many alleles we see for each tRNA total across all individuals and how many times we see each variant tRNA in our sample. Also outputs non-redundant list of mutant tRNA sequences with allele frequencies
+Run tRNA allele frequency counting script to get count of how many alleles we see for each tRNA total across all individuals and how many times we see each variant tRNA in our sample. Also outputs non-redundant list of mutant tRNA sequences with allele frequencies.
 
 ```
-perl ./bin/Allele_Frequencies.pl total_alleles.txt tRNAmutants.txt
-# mv output files to data folder
-# add sanity check that output exists and looks correct
-# lots of things call from the output, "master file"
+perl ./bin/Allele_Frequencies.pl ./data/total_alleles.txt ./data/tRNAmutants.txt
+mv allmutants_AF.txt ./data/
+mv nonredundant_mutants.txt ./data/
+mv total_counts.txt ./data/
+mv fasta_nonredundant_mutants.fasta ./data/
 ```
 
 ### Analysis of tRNA Variants
 
-Ran perl script to extract information on how many overall mutations per tRNA, how many uncommon ( AF < 5%) mutations per tRNA and how many mutations per allele.
+Run perl script to extract information on how many overall mutations per tRNA, how many uncommon ( AF < 5%) mutations per tRNA and how many mutations per allele.
 
 ```
-perl ./bin/nonredundant_tRNA_analysis.pl nonredundant_mutants.txt
-# mv output files to data folder
-# add sanity check that output exists and looks correct
+perl ./bin/nonredundant_tRNA_analysis.pl ./data/nonredundant_mutants.txt
+mv Allmutation_tRNAcount.txt ./data/
+mv Mutationsperallele.txt ./data/
+mv Uncommonmutation_tRNAcount.txt ./data/
+```
+
+Convert genomic coordinates into tRNA numbering, based upon standard nomenclature.
+
+```
+#Creates a database of all genomic loci for tRNA and the coresponding tRNA number
+perl ./bin/individual_tRNA_numberingscript.pl ./data/tRNA_alignment_nonumbers.txt ./data/tRNA_numbering_isoacceptor.txt
+mv tRNAstructurenumber.txt ./data/
+
+#Numbers the specific mutants that were identified from our sequencing
+perl ./bin/tRNA_variant_annotation.pl ./data/GtRNAdb.txt ./data/tRNAstructurenumber.txt ./data/nonredundant_mutants.txt
+mv Annotated_nonredundant_mutants.txt ./data/
+```
+
+Subset list of variants to create a new list of only variants occuring in high confidence tRNAs (as defined by GtRNAdb). Run second script to count how many mutations are at each position in the tRNA for all variants in the high confidence set with only one mutation.
+
+```
+perl ./bin/highconf_tRNA_variants.pl ./data/highconf_GtRNAdb.fasta ./data/GtRNAdb.txt ./data/Annotated_nonredundant_mutants.txt
+mv highconf_variants.txt ./data/
+mv confidence_tRNAs.txt ./data/
+
+perl ./bin/mutations_tRNAstructure.pl ./data/highconf_variants.txt
+mv point_one_map.txt ./data/
+mv indel_one_map.txt ./data/
+```
+
+Create a matrix for the heatmap of each individuals tRNA profile.
+
+```
+perl ./bin/heatmap_extraction.pl ./data/demographics.txt ./data/capturearray_coverage.txt ./data/allmutants_AF.txt
+mv alleleheatmap.txt ./data/
+mv alleleheatmap_uncommon.txt ./data/
 ```
 
 ### tRNAscan-se
+
+Run tRNAscan (both Eufind and Infernal seperately) to calculate scores for each reference tRNA and the variant tRNA sequence.
 
 The paths for searching for infernal need to be changed depending on where the install was. Open tRNAscan-SE.conf and change the infernal_dir setting to the location of the cmsearch executable. (https://bioinformatics.stackexchange.com/questions/4637/trnascan-se-error-fatal-unable-to-find-usr-local-bin-cmsearch-executable)
 
 ```
 infernal_dir: /Volumes/data/bin/infernal/bin
-/Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o# -f# -X 1 -L UCSC_tRNA.fasta
+/Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o# -f# -X 1 -L GtRNAdb.fasta
 
 
 /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o# -f# -X 1 -r# -L new_fasta_nonredundant_mutants.fasta

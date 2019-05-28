@@ -4,7 +4,7 @@ use warnings;
 
 #By Matt Berg
 #Department of Biochemistry, University of Western Ontario
-#February 8, 2019
+#May 2019
 
 #Script to count coverage for each tRNA targeted for sequencing
 #To run enter script.pl Total_Coverage.txt GtRNAdb_20bpflanking.txt
@@ -15,7 +15,7 @@ use warnings;
 ##############################################################################
 
 my $coverage = $ARGV[0];
-my $tRNAsequence = $ARGV[0];
+my $tRNAsequence = $ARGV[1];
 
 #####OUTPUT FILES
 ##############################################################################
@@ -82,9 +82,10 @@ while(<inp1>){
 	if($check eq ">"){
 		my @splitLine = split("\t", $_);
 		my @tRNA = split("_", $splitLine[0]);
+		my @tRNA2 = split(" ", $tRNA[2]);
 		
-		$tRNAgene{$tRNA[2]} = 0;
-	
+		$tRNAgene{$tRNA2[0]} = 0;
+		
 	}
 }
 
@@ -105,5 +106,11 @@ foreach my $keys (keys %tRNAgene){
 }
 
 foreach my $keys (keys %totalcoverage){
-	print out1 "$keys\t$totalcoverage{$keys}\n";
+	my @multipletRNAs = split(" ", $keys);
+	
+	my $division = scalar @multipletRNAs;
+	foreach(@multipletRNAs){
+		my $correctedcoverage = $totalcoverage{$keys}/$division;
+		print out1 "$_\t$correctedcoverage\n";
+	}
 }

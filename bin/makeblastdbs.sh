@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Dec 19 2018
+# May 2019
 # Daniel Giguere
 
 # make blast db for each sample

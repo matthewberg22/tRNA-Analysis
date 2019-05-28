@@ -4,7 +4,7 @@ use warnings;
 
 #By Matt Berg
 #Department of Biochemistry, University of Western Ontario
-#February 12, 2019
+#May 2019
 
 #Script to analyze file of nonredundant tRNAs mutants
 #To run, enter: nonredundant_tRNA_analysis.pl nonredundant_mutants.txt

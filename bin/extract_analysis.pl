@@ -4,9 +4,9 @@ use warnings;
 
 #By Matt Berg
 #Department of Biochemistry, University of Western Ontario
-#December 28, 2018
+#May 2019
 
-#Short script to extract how many tRNAs were identified for each individual and list of tRNAs that are missing or low coverage
+#Script to extract how many tRNAs were identified for each individual and list of tRNAs that are missing or low coverage
 #To run enter extract_analysis.pl BLAST_analysis.txt
 #BLAST_analysis.txt comes from BLAST_analysis.pl and there will be one file for each sample in dataset
 
