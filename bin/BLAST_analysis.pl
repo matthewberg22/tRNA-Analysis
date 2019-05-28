@@ -14,6 +14,18 @@ use Scalar::Util qw(looks_like_number);
 #IDENTIFIER_Number is the unique identifier for the sample you are analyzing
 #Coverage_Cutoff_Number is the cutoff you want to use (if you don't know the cutoff and want to get everything set this as 0)
 
+# Copyright (C) 2019 Matthew Berg
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
 #####Reads in input files
 ##############################################################################
 
