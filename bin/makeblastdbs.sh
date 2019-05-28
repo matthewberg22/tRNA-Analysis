@@ -9,9 +9,9 @@
 # make directory for output if it doesn't exist
 mkdir -p all_blast_dbs
 
-for sample in merged_reads/*merged-edited.fasta; do
+for sample in merged_fasta_edited/*merged-edited.fasta; do
 
-# get only sample name (i.e., GL141)
+# get only sample name (i.e., GL141) by cutting on first "-"
 NAME=`basename $sample | cut -d "-" -f1`
 
 #test

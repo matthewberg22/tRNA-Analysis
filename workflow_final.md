@@ -1,30 +1,32 @@
 # Workflow for processing tRNA reads
 Daniel Giguere and Matthew Berg
 
-Last updated May 26 2019.
+Last updated May 28 2019.
 
 **Summary:**
 
 Reads were checked for quality with fastqc. The first 10 and last 2 bases were originally trimmed due to unexpected variations in per base sequence content. This interfered with read overlapping so raw reads were used.
 
-```
-# assign variables
-FASTQC='/Volumes/data/bin/FastQC/fastqc'
-READS='/Volumes/data/trna/reads/'
+Download this repository from Github, and set your working directory as the top level directory (i.e., ~/tRNA-analysis). When running these scripts, ensure that your working directory is **always** this top directory for the project.
 
-# output in fastqc_output
-$FASTQC $READS -o .
-```
+**Software requirements**
+
+- (Blast suite from NIH)[https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download]. Version 2.2.31 was used for our analysis.
+- (USEARCH)[https://www.drive5.com/usearch/]. v11.0.667_i86linux32 was used for our analysis.
+- (tRNAscan-SE)[http://lowelab.ucsc.edu/tRNAscan-SE/] Version 2.0 was used for our analysis
+-
 
 # Merge overlapped read pairs with USEARCH
 
 ```
-usearch='/Volumes/data/bin/usearch'
-READS='/Volumes/data/trna/reads'
+################################################################################
+# Insert the path to your usearch install and downloaded reads.
+# usearch='/path/to/usearch'
+# READS='/path/to/compressed/reads'
+################################################################################
 
-#test
-#$usearch -report usearch_output/GL13.report -fastq_mergepairs $READS/GL13_S1_L001_R1_001.fastq -reverse $READS/GL13_S1_L001_R2_001.fastq -fastqout usearch_output/GL13.fastq -fastaout usearch_output/GL13.fasta
-
+# make directory to store the uncompressed reads. usearch requires uncompressed reads.
+mkdir -p reads
 
 # merge all paired reads with a loop
 for f in $READS/*.gz; do
@@ -32,11 +34,15 @@ for f in $READS/*.gz; do
 B=`basename $f`
 NAME=`echo $B | cut -d "." -f1`
 
-zcat -v $f > $READS/$NAME.fastq
+# this outputs them in the newly created reads directory
+zcat -v $f > $READS/reads/$NAME.fastq
 
 done
 
-for f in $READS/*R1*.fastq; do
+# make output directory for usearch files
+mkdir -p usearch_output
+
+for f in reads/*R1*.fastq; do
 
 #get basename
 B=`basename $f`
@@ -48,7 +54,7 @@ R='R2'
 REV=`echo ${B/R1/$R}`
 REVNAME=`echo ${NAME/R1/$R}`
 
-$usearch -report usearch_output/$SAMPLE.report -fastq_mergepairs $READS/$NAME.fastq -reverse $READS/$REVNAME.fastq -fastqout usearch_output/$SAMPLE.fastq -fastaout usearch_output/$SAMPLE.fasta
+$usearch -report usearch_output/$SAMPLE.report -fastq_mergepairs reads/$NAME.fastq -reverse reads/$REVNAME.fastq -fastqout usearch_output/$SAMPLE.fastq -fastaout usearch_output/$SAMPLE.fasta
 
 echo $SAMPLE.done
 
@@ -58,17 +64,18 @@ done
 # Get % of reads merging for each sample
 
 ```
-#create file
+# create file with headers
 echo sample$'\t'merged_reads$'\t'total_reads > usearch_output/stats.txt
 
-#extract info from each output file
+# extract info from each output file
 for f in usearch_output/*.report; do
 
-#get sample name
+# get sample name
 B=`basename $f`
 NAME=`echo $B | cut -d "." -f1`
 
-#get merged and total reads number, add to stats file
+# get merged and total reads number, add to stats file
+# paste sample name, 6th line contains info we want, print only 1st and 3rd column with awk for line that has numbers
 echo $NAME$'\t'"`sed -n 6p $f | awk '/[0-9]/ {print $1, "\t", $3}'`" >> usearch_output/stats.txt
 
 done
@@ -82,13 +89,15 @@ For each sample, a BLAST database of the merged reads needs to be made.
 Before making blastdb, you need to remove the long string that is common to each of the sample. eg. M00388:388:000000000-BGJ2L from M00388:388:000000000-BGJ2L:1:1101:15326:1913:2. BLAST will cut the identifier to a limited number of characters.
 
 ```
-for sample in ./*.fasta; do
+# make directory for output
+mkdir -p merged_fasta_edited
+for sample in usearch_output/*.fasta; do
 
 # get the sample name (i.e., GL141 from GL141_001_R1...)
 NAME=`basename $sample | cut -d "." -f1`
 
 # the regex is required since difference samples have different values
-sed 's/M00388:[0-9]*:000000000-[a-zA-Z0-9]*//' $sample > $NAME-merged-edited.fasta
+sed 's/M00388:[0-9]*:000000000-[a-zA-Z0-9]*//' $sample > merged_fasta_edited/$NAME-merged-edited.fasta
 
 done
 ```
@@ -96,13 +105,9 @@ done
 Make the DBs for each file.
 
 ```
-#start with just sample GL141
-nohup makeblastdb -in GL141_S2_L001_R1_001_edited.merged.fasta -dbtype nucl -out all_blast_dbs/GL141 &
-
-DB="all_blast_dbs/GL141"
-nohup blastn -query GtRNAdb_20flanking.fasta -db $DB  -perc_identity 95 -outfmt "7 std btop sseq qlen"   -max_target_seqs 10000 -num_threads 1 > $DB.blast &
-
-#the rest of the files
+# ensure that makeblastdbs.sh is executable
+# the rest of the files
+# this takes a while to push it to the background.
 nohup ./bin/makeblastdbs.sh &
 ```
 
