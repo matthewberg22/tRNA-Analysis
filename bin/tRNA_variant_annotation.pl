@@ -12,6 +12,18 @@ use warnings;
 #tRNAstructurenumber comes from individual_tRNA_numberingscript.pl
 #nonredundant_mutants.txt comes from Allele_Frequencies.pl
 
+# Copyright (C) 2019 Matthew Berg and Patrick O'Donoghue
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
 #Reads in input files
 my $GtRNAdb = $ARGV[0]; 
 my $numbering = $ARGV[1];
