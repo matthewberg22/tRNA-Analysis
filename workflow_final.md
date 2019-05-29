@@ -128,7 +128,7 @@ nohup ./bin/blast_cutoff10.sh &
 Ran coverage analysis script to determine coverage of each tRNA (or family of tRNAs) across the capture array. Also, collect summary stats for all 84 samples.
 
 ```
-perl ./bin/capturearray_coverage.pl ./data/blast_analysis_output/Totalcoverage.txt ./data/GtRNAdb_20flanking.fasta
+perl ./bin/capturearray_coverage.pl ./data/blast_analysis_output/TotalCoverage.txt ./data/GtRNAdb_20flanking.fasta
 mv capturearray_coverage.txt ./data/
 
 ./bin/extract_summary.sh
@@ -176,7 +176,7 @@ mv Annotated_nonredundant_mutants.txt ./data/
 Subset list of variants to create a new list of only variants occuring in high confidence tRNAs (as defined by GtRNAdb). Run second script to count how many mutations are at each position in the tRNA for all variants in the high confidence set with only one mutation.
 
 ```
-perl ./bin/highconf_tRNA_variants.pl ./data/highconf_GtRNAdb.fasta ./data/GtRNAdb.txt ./data/Annotated_nonredundant_mutants.txt
+perl ./bin/highconf_tRNA_variants.pl ./data/highconf_GtRNAdb.fasta ./data/Annotated_nonredundant_mutants.txt ./data/GtRNAdb.txt
 mv highconf_variants.txt ./data/
 mv confidence_tRNAs.txt ./data/
 
@@ -208,59 +208,19 @@ infernal_dir: /Volumes/data/bin/infernal/bin
 
 ```
 
+# Run tRNA scan on reference and mutants using Eufind
 
-# blast mutants against the reference
-makeblast db -type nucl
-DB='./all_blast_dbs/GtRNAdb'
-nohup blastn -query fasta_nonredundant_mutants-2.fasta -db $DB  -perc_identity 100 -outfmt "7 std btop sseq qlen"  -max_target_seqs 10000 -num_threads 20 > fasta_nonredundant_mutants.blast &
+```
+nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o# -f# -X 1 -r# -e data/GtRNAdb.txt &
 
-# blast reference against the samples
-nohup ./dan_blast.sh &
-
-
-# run tRNA scan on mutants
-nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o# -f# -X 1 -r# -E fasta_nonredundant_mutants.fasta > mutants.eu &
-
-# run tRNA scan on reference using Eufind
-
-nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o# -f# -X 1 -r# -e GtRNAdb.txt &
-
-nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o fasta_nonredund2.eufind -f fasta_nonredund2.fp -X 1 -r# -e fasta_nonredundant_mutants-2.fasta &
+nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o fasta_nonredund.eufind -f fasta_nonredund.fp -X 1 -r# -e data/fasta_nonredundant_mutants.fasta &
+```
 
 # run tRNA scan on reference using Infernal
 
-nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o Gt.infernal -f Gt_struct.infernal -X 1 -r Gt_firstpass.infernal -I GtRNAdb_trimforscore.fasta &
-
-nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o mutants.infernal -f fasta_nonredund2.infernal -X 1 -r fasta_nonredund2_fp.infernal -I -E fasta_nonredundant_mutants-2.fasta &
-
-# run tRNA scan on double mutants using Infernal
-
-nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o dblmutants.infernal -f dblmutant_struct.infernal -X 1 -r dblmutant_firstpass.infernal -I highconf_variants_twomutants.txt &
-
-### Calculate number of reads
-
-for file in ./reads/*.fastq; do
-
-    # print reads, count lines, divide by 4 to get number of reads
-    READS=`expr $(cat $file | wc -l) / 4`
-
-    # get sample name
-    SAMPLE=`basename $file | cut -d "_" -f1`
-
-    # print to file (tab separated
-    echo $SAMPLE$'\t'$READS >> read_counts_per_sample.txt
-
-done
-
-
-### plotting number of mutations information
 ```
-d <- read.table("alleleheatmap_uncommon.txt", row.names = 1, header = TRUE, sep = "\t", stringsAsFactors=FALSE)
+nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o Gt.infernal -f Gt_struct.infernal -X 1 -r Gt_firstpass.infernal -I data/GtRNAdb_20flanking.fasta &
 
-d.sums <- colSums(d)
-d.rsums <- rowSums(d)
+nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o mutants.infernal -f fasta_nonredund.infernal -X 1 -r fasta_nonredund_fp.infernal -I -E data/fasta_nonredundant_mutants.fasta &
 
-hist(d.sums, breaks = 30, xlab = "Number of mutations", ylab = "Number of tRNAs", main = "Distribution of mutations among tRNAs")
-hist(d.rsums, breaks = 10, xlab = "Number of mutations", ylab = "Number of samples", main = "Distribution of number of mutations among samples")r
-
-````
+```
