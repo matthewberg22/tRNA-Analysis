@@ -17,8 +17,8 @@ library(reshape2)
 library(RColorBrewer)
 
 
-#Set the directory
-setwd("C:/Users/Matt/Desktop/tRNASeq_Data")
+#Set the directory to the top directory of the Github
+setwd()
 
 ################################################
 #### Plot read merging and BLAST statistics ####
