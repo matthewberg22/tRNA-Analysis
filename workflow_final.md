@@ -82,7 +82,7 @@ done
 
 ```
 
-### Blast against db of reads
+# Blast against db of reads
 
 For each sample, a BLAST database of the merged reads needs to be made.
 
@@ -125,6 +125,8 @@ After looking at the cutoff graphs, cutoff was selected as 10x coverage. Ran per
 nohup ./bin/blast_cutoff10.sh &
 ```
 
+# Analyze coverage
+
 Ran coverage analysis script to determine coverage of each tRNA (or family of tRNAs) across the capture array. Also, collect summary stats for all 84 samples.
 
 ```
@@ -133,6 +135,8 @@ mv capturearray_coverage.txt ./data/
 
 ./bin/extract_summary.sh
 ```
+
+# Trim flanking sequence
 
 Run tRNA trimming perl script on all samples to get tRNA mutant sequences without 20 bp 5' flanking or 5 bp 3' flanking, concatenates all individual samples into one file.
 
@@ -150,7 +154,7 @@ mv total_counts.txt ./data/
 mv fasta_nonredundant_mutants.fasta ./data/
 ```
 
-### Analysis of tRNA Variants
+# Analysis of tRNA Variants
 
 Run perl script to extract information on how many overall mutations per tRNA, how many uncommon ( AF < 5%) mutations per tRNA and how many mutations per allele.
 
@@ -193,7 +197,7 @@ mv alleleheatmap.txt ./data/
 mv alleleheatmap_uncommon.txt ./data/
 ```
 
-### tRNAscan-se
+# tRNAscan-se
 
 Run tRNAscan (both Eufind and Infernal seperately) to calculate scores for each reference tRNA and the variant tRNA sequence.
 
@@ -208,7 +212,7 @@ infernal_dir: /Volumes/data/bin/infernal/bin
 
 ```
 
-# Run tRNA scan on reference and mutants using Eufind
+### Run tRNA scan on reference and mutants using Eufind
 
 ```
 nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o# -f# -X 1 -r# -e data/GtRNAdb.txt &
@@ -216,7 +220,7 @@ nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o# -f# -X 1 -r# -e data/GtRN
 nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o fasta_nonredund.eufind -f fasta_nonredund.fp -X 1 -r# -e data/fasta_nonredundant_mutants.fasta &
 ```
 
-# run tRNA scan on reference using Infernal
+### Run tRNA scan on reference using Infernal
 
 ```
 nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o Gt.infernal -f Gt_struct.infernal -X 1 -r Gt_firstpass.infernal -I data/GtRNAdb_20flanking.fasta &
