@@ -29,10 +29,10 @@ my $tRNAList = $ARGV[1];
 my $variants = $ARGV[2];
 
 # Output files
-system("rm testalleleheatmap.txt");
-open(out1, ">testalleleheatmap.txt") or die("Cannot open output file");
-system("rm testalleleheatmap_uncommon.txt");
-open(out2, ">testalleleheatmap_uncommon.txt") or die("Cannot open output file");
+system("rm alleleheatmap.txt");
+open(out1, ">alleleheatmap.txt") or die("Cannot open output file");
+system("rm alleleheatmap_uncommon.txt");
+open(out2, ">alleleheatmap_uncommon.txt") or die("Cannot open output file");
 system("rm multipletRNAs.txt");
 open(out3, ">multipletRNAs.txt") or die("Cannot open output file");
 
