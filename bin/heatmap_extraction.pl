@@ -29,10 +29,12 @@ my $tRNAList = $ARGV[1];
 my $variants = $ARGV[2];
 
 # Output files
-system("rm alleleheatmap.txt");
-open(out1, ">alleleheatmap.txt") or die("Cannot open output file");
-system("rm alleleheatmap_uncommon.txt");
-open(out2, ">alleleheatmap_uncommon.txt") or die("Cannot open output file");
+system("rm testalleleheatmap.txt");
+open(out1, ">testalleleheatmap.txt") or die("Cannot open output file");
+system("rm testalleleheatmap_uncommon.txt");
+open(out2, ">testalleleheatmap_uncommon.txt") or die("Cannot open output file");
+system("rm multipletRNAs.txt");
+open(out3, ">multipletRNAs.txt") or die("Cannot open output file");
 
 # Reads in samples and tRNA lists to initalize matrix (with 0s for everything)
 open(inp0, "$Samples") or die("Cannot open sample file");
@@ -68,6 +70,16 @@ while(<inp1>){
 		my @splitLine = split("\t", $_);
 		my @splitLine2 = split(" ", $splitLine[0]);
 		push @tRNAs, $splitLine2[0];
+	
+		print out3 "$splitLine2[0]\t";
+	
+		if(scalar @splitLine2 > 1){
+			print out3 "Multiple\n";
+		}
+		
+		else{
+			print out3 "Single\n";
+		}
 	
 	}
 }
@@ -112,7 +124,7 @@ while(<inp0>){
 	}
 }
 
-foreach(@tRNAs){
+foreach(sort @tRNAs){
 	print out1 "\t$_";
 }
 print out1 "\n";
@@ -127,7 +139,7 @@ foreach my $sample (@samples){
 
 
 
-foreach(@tRNAs){
+foreach(sort @tRNAs){
 	print out2 "\t$_";
 }
 print out2 "\n";
