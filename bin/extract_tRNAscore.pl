@@ -7,10 +7,10 @@ use warnings;
 #May 2019
 
 ## This is a script to extract the tRNAscan Infernal and eufinder tRNA scores and compare reference score to variant scores
-## Input 1: GtRNAdb_eufind.out
-## Input 2: GtRNAdb_infernal.out
-## Input 3: Variants_eufind.out
-## Input 4: Variants_infernal.out
+## Input 1: GtRNAdb.eufind
+## Input 2: GtRNAdb.infernal
+## Input 3: mutants.eufind
+## Input 4: mutants.infernal
 
 # Copyright (C) 2019 Matthew Berg
 
