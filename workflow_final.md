@@ -215,16 +215,16 @@ infernal_dir: /Volumes/data/bin/infernal/bin
 ### Run tRNA scan on reference and mutants using Eufind
 
 ```
-nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o# -f# -X 1 -r# -e data/GtRNAdb.txt &
+nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o GtRNAdb.eufind -X 1 -r# -e data/GtRNAdb.txt &
 
-nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o fasta_nonredund.eufind -f fasta_nonredund.fp -X 1 -r# -e data/fasta_nonredundant_mutants.fasta &
+nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o mutants.eufind -X 1 -e data/fasta_nonredundant_mutants.fasta &
 ```
 
 ### Run tRNA scan on reference using Infernal
 
 ```
-nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o Gt.infernal -f Gt_struct.infernal -X 1 -r Gt_firstpass.infernal -I data/GtRNAdb_20flanking.fasta &
+nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o GtRNAdb.infernal -X 1 -I data/GtRNAdb_20flanking.fasta &
 
-nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o mutants.infernal -f fasta_nonredund.infernal -X 1 -r fasta_nonredund_fp.infernal -I -E data/fasta_nonredundant_mutants.fasta &
+nohup /Volumes/data/bin/trnascanse/bin/tRNAscan-SE -o mutants.infernal -X 1 -I data/fasta_nonredundant_mutants.fasta &
 
 ```
